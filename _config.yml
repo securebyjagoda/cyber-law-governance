@@ -1,0 +1,17 @@
+title: "Cybersecurity and Legal Governnace of Real Estate Due Diligence Data"
+subtitle: "Framework for governing corporate third-party screeniing data."
+name: "Jagoda Szczepaniak"
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-include-cache
+
+search: true
+
+minimal_mistakes_skin: "dark"
+
+breadcrumbs: true
+
+atom_feed:
+  hide: true
