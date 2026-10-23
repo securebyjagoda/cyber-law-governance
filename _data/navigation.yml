@@ -1,0 +1,21 @@
+main:
+  - title: "Home"
+    url: /
+
+  - title: "Workflow Explorer"
+    url: /workflow/
+
+  - title: "Data Classification"
+    url: /data-classification/
+
+  - title: "Laws & Regulations"
+    url: /laws/
+
+  - title: "Security Controls"
+    url: /controls/
+
+  - title: "Assessment Tool"
+    url: /assessment/
+
+  - title: "Resources"
+    url: /resources/
