@@ -1,12 +1,13 @@
 ---
 layout: home
 author_profile: false
-title: "Cyber Law Governance Hub"
+title: "Cybersecurity and Legal Governance of Due-Diligence Data"
 ---
 
-# Cybersecurity and Legal Governance of Due-Diligence Data
+#
 
-A framework for governing third-party screening, background check, and due-diligence information.
+A framework for governing data collected in corporate third-party screening and background check processes.
+Learn about the process workflow and understand how to collect, store, and process the data in compliance with state, federal, and international laws, regulations, and best practices.
 
 ## Explore
 
