@@ -1,13 +1,10 @@
 ---
 layout: home
 author_profile: false
-title: "Cybersecurity and Legal Governance of Due-Diligence Data"
+title: "Everthing You Need to Know. Everything in One Place."
 ---
 
-#
-
-A framework for governing data collected in corporate third-party screening and background check processes.
-Learn about the process workflow and understand how to collect, store, and process the data in compliance with state, federal, and international laws, regulations, and best practices.
+A centralized resource for understanding and governing data collected in corporate due diligence and third-party background check processes. Learn how sensitive information moves through the screening lifecycle and how to manage it in compliance with privacy laws, cybersecurity requirements, regulatory obligations, and industry best practices.
 
 ## Explore
 
