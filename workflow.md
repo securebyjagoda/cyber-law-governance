@@ -9,7 +9,7 @@ permalink: /workflow/
 
 Corporate third-party due diligence is a structured process used to collect, verify, and evaluate information about a vendor, investor, contractor, supplier, or other third party before entering or maintaining a business relationship.
 
-The process helps organizations identify legal, financial, operational, cybersecurity, regulatory, and reputational risks.
+The process helps organizations identify, assess, and manage risks associated with third-party relationships and the data collected throughout the due diligence process.
 
 ---
 
@@ -40,40 +40,33 @@ E --> F[Decision Documentation and Monitoring]
 
 Collecting basic information about the entity and establishing an initial risk profile.
 
-### Data Collected
-- Company Name
-- Registered Address
-- Contact Information
-- Corporate Registration Details
-- Geographic Location
-- Industry Sector
-- Transaction Value
+### Data Categories
+- Corporate Information
+- Identity & Personal Information
 
 ### Applicable Laws
-- GDPR Article 5 – Data Minimization & Purpose Limitation
-- GDPR Article 32 – Security of Processing
+- GDPR Article 5
+- GDPR Article 32
 - Massachusetts General Laws Chapter 93H
 - 201 CMR 17.00
 
 ### Privacy & Security Risks
+- Excessive Data Collection
 - Unauthorized Access
 - Unauthorized Disclosure
-- Excessive Data Collection
 - Inaccurate Records
-- Third-Party Data Exposure
 
 ### Governance Requirements
-- Third-Party Risk Assessment
-- Vendor Management Program
-- Data Classification Policy
 - Written Information Security Program (WISP)
+- Vendor Management Program
+- Third-Party Risk Assessment
+- Data Classification Policy
 
 ### Cybersecurity Controls
-- Data Classification & Labeling
 - Access Control
-- Security Awareness Training
+- Encryption
 - Audit Logging
-- Secure Data Transmission
+- Data Classification & Labeling
 
 ---
 
@@ -81,47 +74,39 @@ Collecting basic information about the entity and establishing an initial risk p
 
 ### Purpose
 
-Validate provided information and establish legitimacy of the entity.
+Validating information provided by the entity and establishing legitimacy.
 
-### Data Collected
-- Corporate Registration Records
-- Beneficial Ownership Information
-- Corporate Officers & Leadership Data
-- Government-Issued Identification
-- Physical Addresses
-- Business Continuity Documentation
-- Organizational Structure Information
+### Data Categories
+- Corporate Information
+- Identity & Personal Information
+- Legal & Regulatory Information
 
 ### Applicable Laws
 - Corporate Transparency Act (CTA)
 - GDPR Article 5
-- GDPR Article 6 – Lawful Basis for Processing
+- GDPR Article 6
 - GDPR Article 32
 - Massachusetts General Laws Chapter 93H
 - 201 CMR 17.00
 
 ### Privacy & Security Risks
 - Identity Theft
+- Unauthorized Disclosure
 - Unauthorized Access
 - Excessive Data Collection
-- Unauthorized Disclosure
-- Insider Threats
 - Inaccurate Records
 
 ### Governance Requirements
-- Beneficial Ownership Verification Procedure
 - Lawful Basis Assessment
 - Records of Processing Activities (ROPA)
 - Vendor Risk Assessment
 - Data Retention Schedule
 
 ### Cybersecurity Controls
-- Multi-Factor Authentication (MFA)
-- Role-Based Access Control (RBAC)
-- Encryption at Rest
-- Encryption in Transit
+- Authentication
+- Access Control
+- Encryption
 - Audit Logging
-- Identity Verification Controls
 
 ---
 
@@ -129,18 +114,14 @@ Validate provided information and establish legitimacy of the entity.
 
 ### Purpose
 
-Assess legal, criminal, regulatory, and litigation exposure associated with the entity.
+Assessing criminal, legal, and regulatory exposure associated with the entity.
 
-### Data Collected
-- Criminal Records
-- Litigation History
-- Regulatory Enforcement Actions
-- Government Investigations
-- Complaints & Claims
-- Tax Liabilities
+### Data Categories
+- Criminal & Background Information
+- Legal & Regulatory Information
 
 ### Applicable Laws
-- GDPR Article 10 – Processing of Criminal Conviction Data
+- GDPR Article 10
 - GDPR Article 5
 - GDPR Article 32
 - Fair Credit Reporting Act (FCRA)
@@ -150,28 +131,24 @@ Assess legal, criminal, regulatory, and litigation exposure associated with the 
 ### Privacy & Security Risks
 - Unauthorized Disclosure
 - Unauthorized Access
-- Unauthorized Secondary Use
 - Excessive Retention
-- Inaccurate Background Information
-- Automated Decision-Making Risks
-- Cross-Border Data Transfer Risks
+- Automated Decision-Making
+- Cross-Border Data Transfers
+- Inaccurate Records
 
 ### Governance Requirements
 - Data Protection Impact Assessment (DPIA)
 - Lawful Basis Assessment
 - Records of Processing Activities (ROPA)
-- Data Retention Schedule
 - Human Review Procedure
-- Third-Party Risk Assessment
+- Data Retention Schedule
 
 ### Cybersecurity Controls
-- Encryption at Rest
-- Encryption in Transit
-- Role-Based Access Control (RBAC)
-- Multi-Factor Authentication (MFA)
+- Encryption
+- Access Control
 - Audit Logging
-- Data Loss Prevention (DLP)
 - Security Monitoring
+- Data Loss Prevention (DLP)
 
 ---
 
@@ -179,16 +156,14 @@ Assess legal, criminal, regulatory, and litigation exposure associated with the 
 
 ### Purpose
 
-Evaluate financial health, stability, and potential financial risk.
+Evaluating financial health, stability, and financial risk.
 
-### Data Collected
-- Audited Financial Statements
-- Bankruptcy Records
-- Credit Reports
-- Financial Liabilities
-- Fraud Indicators
+### Data Categories
+- Financial Information
+- Corporate Information
 
 ### Applicable Laws
+- Gramm-Leach-Bliley Act (GLBA)
 - Fair Credit Reporting Act (FCRA)
 - GDPR Article 5
 - GDPR Article 32
@@ -198,23 +173,21 @@ Evaluate financial health, stability, and potential financial risk.
 ### Privacy & Security Risks
 - Unauthorized Disclosure
 - Unauthorized Access
+- Data Breach
 - Excessive Retention
-- Third-Party Data Exposure
 - Inaccurate Financial Records
 
 ### Governance Requirements
 - Data Retention Schedule
 - Vendor Risk Assessment
 - Records of Processing Activities (ROPA)
-- Third-Party Due Diligence Procedure
+- Written Information Security Program (WISP)
 
 ### Cybersecurity Controls
-- Encryption at Rest
-- Encryption in Transit
-- Role-Based Access Control (RBAC)
+- Encryption
+- Access Control
 - Audit Logging
-- Data Integrity Controls
-- Access Reviews
+- Security Monitoring
 
 ---
 
@@ -222,17 +195,14 @@ Evaluate financial health, stability, and potential financial risk.
 
 ### Purpose
 
-Identify prohibited, restricted, or high-risk relationships.
+Identifying prohibited, restricted, or high-risk relationships.
 
-### Data Collected
-- OFAC Screening Results
-- EU Sanctions Records
-- UN Sanctions Records
-- Politically Exposed Persons (PEP) Information
-- Adverse Media Findings
+### Data Categories
+- Sanctions & Watchlist Information
+- Criminal & Background Information
 
 ### Applicable Laws
-- Office of Foreign Assets Control (OFAC) Sanctions Programs
+- OFAC Sanctions Programs
 - Bank Secrecy Act (BSA)
 - Anti-Money Laundering (AML) Requirements
 - GDPR Article 5
@@ -242,20 +212,18 @@ Identify prohibited, restricted, or high-risk relationships.
 - Unauthorized Disclosure
 - Unauthorized Access
 - Inaccurate Screening Results
+- Cross-Border Data Transfers
 - Excessive Retention
-- Cross-Border Data Transfer Risks
 
 ### Governance Requirements
-- Sanctions Screening Procedure
-- Escalation Procedure
 - Continuous Monitoring Program
+- Escalation Procedure
 - Vendor Risk Assessment
 - Data Retention Schedule
 
 ### Cybersecurity Controls
-- Encryption at Rest
-- Encryption in Transit
-- Role-Based Access Control (RBAC)
+- Encryption
+- Access Control
 - Audit Logging
 - Security Monitoring
 - Third-Party Risk Management
@@ -266,45 +234,37 @@ Identify prohibited, restricted, or high-risk relationships.
 
 ### Purpose
 
-Make a risk-based decision, maintain supporting documentation, and continuously monitor third-party risk.
+Making a risk-based decision, retaining supporting evidence, and maintaining continuous monitoring of third-party risk.
 
-### Operations
-- Risk Scoring
-- Approval or Rejection
-- Risk Acceptance
-- Documentation Retention
-- Ongoing Monitoring
-- Periodic Reviews
-- Re-Screening Activities
+### Data Categories
+- all collected due diligence information
 
 ### Applicable Laws
-- GDPR Article 5 – Storage Limitation
-- GDPR Article 30 – Records of Processing Activities
+- GDPR Article 5
+- GDPR Article 30
 - GDPR Article 32
 - Massachusetts General Laws Chapter 93H
 - 201 CMR 17.00
 
 ### Privacy & Security Risks
-- Excessive Data Retention
+- Excessive Retention
 - Failure to Dispose of Data Securely
 - Unauthorized Access
 - Unauthorized Disclosure
 - Incomplete Audit Trails
-- Inadequate Monitoring
 
 ### Governance Requirements
 - Written Information Security Program (WISP)
+- Records of Processing Activities (ROPA)
 - Data Retention Schedule
 - Data Disposal Procedure
-- Records of Processing Activities (ROPA)
-- Continuous Monitoring Program
-- Risk Acceptance Documentation
 - Incident Response Plan
+- Continuous Monitoring Program
 
 ### Cybersecurity Controls
 - Audit Logging
 - Security Monitoring
 - Secure Data Disposal
-- Role-Based Access Control (RBAC)
-- Encryption at Rest
+- Access Control
+- Encryption
 - Data Loss Prevention (DLP)
