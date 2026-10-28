@@ -41,8 +41,8 @@ E --> F[Decision Documentation and Monitoring]
 Collecting basic information about the entity and establishing an initial risk profile.
 
 ### Data Categories
-- Corporate Information
-- Identity & Personal Information
+- [Corporate Information](/data/corporate-information/)
+- [Identity & Personal Information](/data/identity-personal-information/)
 
 ### Applicable Laws
 - GDPR Article 5
@@ -77,9 +77,9 @@ Collecting basic information about the entity and establishing an initial risk p
 Validating information provided by the entity and establishing legitimacy.
 
 ### Data Categories
-- Corporate Information
-- Identity & Personal Information
-- Legal & Regulatory Information
+- [Corporate Information](/data/corporate-information/)
+- [Identity & Personal Information](/data/identity-personal-information/)
+- [Legal & Regulatory Information](/data/legal-regulatory-information/)
 
 ### Applicable Laws
 - Corporate Transparency Act (CTA)
@@ -117,9 +117,9 @@ Validating information provided by the entity and establishing legitimacy.
 Assessing criminal, legal, and regulatory exposure associated with the entity.
 
 ### Data Categories
-- Criminal & Background Information
-- Legal & Regulatory Information
-
+- [Criminal & Background Information](/data/criminal-background-information/)
+- [Legal & Regulatory Information](/data/legal-regulatory-information/)
+  
 ### Applicable Laws
 - GDPR Article 10
 - GDPR Article 5
@@ -159,8 +159,8 @@ Assessing criminal, legal, and regulatory exposure associated with the entity.
 Evaluating financial health, stability, and financial risk.
 
 ### Data Categories
-- Financial Information
-- Corporate Information
+- [Financial Information](/data/financial-information/)
+- [Corporate Information](/data/corporate-information/)
 
 ### Applicable Laws
 - Gramm-Leach-Bliley Act (GLBA)
@@ -198,9 +198,9 @@ Evaluating financial health, stability, and financial risk.
 Identifying prohibited, restricted, or high-risk relationships.
 
 ### Data Categories
-- Sanctions & Watchlist Information
-- Criminal & Background Information
-
+- [Sanctions & Watchlist Information](/data/sanctions-watchlist-information/)
+- [Criminal & Background Information](/data/criminal-background-information/)
+  
 ### Applicable Laws
 - OFAC Sanctions Programs
 - Bank Secrecy Act (BSA)
