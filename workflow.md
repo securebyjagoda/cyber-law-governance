@@ -41,8 +41,8 @@ E --> F[Decision Documentation and Monitoring]
 Collecting basic information about the entity and establishing an initial risk profile.
 
 ### Data Categories
-- [Corporate Information](/data/corporate-information/)
-- [Identity & Personal Information](/data/identity-personal-information/)
+- [Corporate Information]({{'/data/corporate-information/' | relative_url }})
+- [Identity & Personal Information]({{'/data/identity-personal-information/' | relative_url }})
 
 ### Applicable Laws
 - GDPR Article 5
@@ -77,9 +77,9 @@ Collecting basic information about the entity and establishing an initial risk p
 Validating information provided by the entity and establishing legitimacy.
 
 ### Data Categories
-- [Corporate Information](/data/corporate-information/)
-- [Identity & Personal Information](/data/identity-personal-information/)
-- [Legal & Regulatory Information](/data/legal-regulatory-information/)
+- [Corporate Information]({{'/data/corporate-information/' | relative_url }})
+- [Identity & Personal Information]({{'/data/identity-personal-information/' | relative_url }})
+- [Legal & Regulatory Information]({{'/data/legal-regulatory-information/' | relative_url }})
 
 ### Applicable Laws
 - Corporate Transparency Act (CTA)
@@ -117,8 +117,8 @@ Validating information provided by the entity and establishing legitimacy.
 Assessing criminal, legal, and regulatory exposure associated with the entity.
 
 ### Data Categories
-- [Criminal & Background Information](/data/criminal-background-information/)
-- [Legal & Regulatory Information](/data/legal-regulatory-information/)
+- [Criminal & Background Information]({{'/data/criminal-background-information/' | relative_url }})
+- [Legal & Regulatory Information]({{'/data/legal-regulatory-information/' | relative_url }})
   
 ### Applicable Laws
 - GDPR Article 10
@@ -159,8 +159,8 @@ Assessing criminal, legal, and regulatory exposure associated with the entity.
 Evaluating financial health, stability, and financial risk.
 
 ### Data Categories
-- [Financial Information](/data/financial-information/)
-- [Corporate Information](/data/corporate-information/)
+- [Financial Information]({{'/data/financial-information/' | relative_url }})
+- [Corporate Information]({{'/data/corporate-information/' | relative_url }})
 
 ### Applicable Laws
 - Gramm-Leach-Bliley Act (GLBA)
@@ -198,8 +198,8 @@ Evaluating financial health, stability, and financial risk.
 Identifying prohibited, restricted, or high-risk relationships.
 
 ### Data Categories
-- [Sanctions & Watchlist Information](/data/sanctions-watchlist-information/)
-- [Criminal & Background Information](/data/criminal-background-information/)
+- [Sanctions & Watchlist Information]({{'/data/sanctions-watchlist-information/' | relative_url }})
+- [Criminal & Background Information]({{'/data/criminal-background-information/' | relative_url }})
   
 ### Applicable Laws
 - OFAC Sanctions Programs
