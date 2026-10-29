@@ -47,7 +47,7 @@ Collecting basic information about the entity and establishing an initial risk p
 ### Applicable Laws
 - GDPR Article 5
 - GDPR Article 32
-- Massachusetts General Laws Chapter 93H
+- [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
 
 ### Privacy & Security Risks
@@ -86,7 +86,7 @@ Validating information provided by the entity and establishing legitimacy.
 - GDPR Article 5
 - GDPR Article 6
 - GDPR Article 32
-- Massachusetts General Laws Chapter 93H
+- [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
 
 ### Privacy & Security Risks
@@ -125,7 +125,7 @@ Assessing criminal, legal, and regulatory exposure associated with the entity.
 - GDPR Article 5
 - GDPR Article 32
 - Fair Credit Reporting Act (FCRA)
-- Massachusetts General Laws Chapter 93H
+- [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
 
 ### Privacy & Security Risks
@@ -167,7 +167,7 @@ Evaluating financial health, stability, and financial risk.
 - Fair Credit Reporting Act (FCRA)
 - GDPR Article 5
 - GDPR Article 32
-- Massachusetts General Laws Chapter 93H
+- [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
   
 ### Privacy & Security Risks
@@ -243,7 +243,7 @@ Making a risk-based decision, retaining supporting evidence, and maintaining con
 - GDPR Article 5
 - GDPR Article 30
 - GDPR Article 32
-- Massachusetts General Laws Chapter 93H
+- [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
 
 ### Privacy & Security Risks
