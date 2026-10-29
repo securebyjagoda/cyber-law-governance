@@ -163,7 +163,7 @@ Evaluating financial health, stability, and financial risk.
 - [Corporate Information]({{'/data/corporate-information/' | relative_url }})
 
 ### Applicable Laws
-- Gramm-Leach-Bliley Act (GLBA)
+- [Gramm-Leach-Bliley Act (GLBA)]({{'/laws/glba/' | relative_url }})
 - Fair Credit Reporting Act (FCRA)
 - GDPR Article 5
 - GDPR Article 32
