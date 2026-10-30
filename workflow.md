@@ -1,9 +1,19 @@
 ---
 title: Workflow Explorer
 permalink: /workflow/
+layout: single
+classes: wide
+toc: true
+toc_sticky: true
+toc_label: "Phases"
+toc_levels: 2
 ---
 
+<div id="workflow-top"></div>
+
 # Third-Party Due Diligence Workflow
+
+<div class="wf-intro" markdown="1">
 
 ## What is Due Diligence?
 
@@ -11,28 +21,27 @@ Corporate third-party due diligence is a structured process used to collect, ver
 
 The process helps organizations identify, assess, and manage risks associated with third-party relationships and the data collected throughout the due diligence process.
 
----
+</div>
 
 ## Typical Workflow
 
-```mermaid
+<!-- GRAPHIC PLACEHOLDER: replace the line below with {% include workflow.html anchors=true %} once the graphic is ready -->
+<div class="wf-placeholder" id="workflow-graphic"></div>
+
+{% comment %}
+Original diagram, kept for reference:
+
 flowchart LR
-
-A[Pre-Screening]
---> B[Verification]
-
+A[Pre-Screening] --> B[Verification]
 B --> C[Criminal & Legal Checks]
-
 C --> D[Financial Checks]
-
 D --> E[Sanctions Screening]
-
 E --> F[Decision Documentation and Monitoring]
-```
-
----
+{% endcomment %}
 
 # Workflow Phases
+
+<section class="phase" id="pre-screening" markdown="1">
 
 ## Phase 1 – Pre-Screening
 
@@ -68,7 +77,11 @@ Collecting basic information about the entity and establishing an initial risk p
 - Audit Logging
 - Data Classification & Labeling
 
----
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
+
+<section class="phase" id="verification" markdown="1">
 
 ## Phase 2 – Verification
 
@@ -108,7 +121,11 @@ Validating information provided by the entity and establishing legitimacy.
 - Encryption
 - Audit Logging
 
----
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
+
+<section class="phase" id="criminal-legal-checks" markdown="1">
 
 ## Phase 3 – Criminal & Legal Checks
 
@@ -119,7 +136,7 @@ Assessing criminal, legal, and regulatory exposure associated with the entity.
 ### Data Categories
 - [Criminal & Background Information]({{'/data/criminal-background-information/' | relative_url }})
 - [Legal & Regulatory Information]({{'/data/legal-regulatory-information/' | relative_url }})
-  
+
 ### Applicable Laws
 - GDPR Article 10
 - GDPR Article 5
@@ -150,7 +167,11 @@ Assessing criminal, legal, and regulatory exposure associated with the entity.
 - Security Monitoring
 - Data Loss Prevention (DLP)
 
----
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
+
+<section class="phase" id="financial-checks" markdown="1">
 
 ## Phase 4 – Financial Checks
 
@@ -169,7 +190,7 @@ Evaluating financial health, stability, and financial risk.
 - GDPR Article 32
 - [Massachusetts General Laws Chapter 93H]({{'/laws/mgl-c93h/' | relative_url }})
 - [201 CMR 17.00]({{'/laws/201-cmr-17/' | relative_url }})
-  
+
 ### Privacy & Security Risks
 - Unauthorized Disclosure
 - Unauthorized Access
@@ -189,7 +210,11 @@ Evaluating financial health, stability, and financial risk.
 - Audit Logging
 - Security Monitoring
 
----
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
+
+<section class="phase" id="sanctions-screening" markdown="1">
 
 ## Phase 5 – Sanctions Screening
 
@@ -200,7 +225,7 @@ Identifying prohibited, restricted, or high-risk relationships.
 ### Data Categories
 - [Sanctions & Watchlist Information]({{'/data/sanctions-watchlist-information/' | relative_url }})
 - [Criminal & Background Information]({{'/data/criminal-background-information/' | relative_url }})
-  
+
 ### Applicable Laws
 - OFAC Sanctions Programs
 - Bank Secrecy Act (BSA)
@@ -228,7 +253,11 @@ Identifying prohibited, restricted, or high-risk relationships.
 - Security Monitoring
 - Third-Party Risk Management
 
----
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
+
+<section class="phase" id="decision-monitoring" markdown="1">
 
 ## Phase 6 – Decision, Documentation & Monitoring
 
@@ -268,3 +297,7 @@ Making a risk-based decision, retaining supporting evidence, and maintaining con
 - Access Control
 - Encryption
 - Data Loss Prevention (DLP)
+
+[↑ Back to workflow](#workflow-top){: .phase-top}
+
+</section>
