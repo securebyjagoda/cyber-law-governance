@@ -108,7 +108,7 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 3rem;
   margin-top: 2rem;
-  margin-left: -80px;
+  margin-left: -120px;
   overflow: visible;
   padding-bottom: 600px;
   justify-items: start;
@@ -142,7 +142,7 @@
 .phase-popup {
   position: absolute;
   top: 0px;
-  left: calc(100% + 15px);
+  left: calc(100% + 20px);
   width: 700px;
   min-height: 280px;
   overflow: visible;
@@ -331,6 +331,7 @@
 
   .phase-grid {
     grid-template-columns: 1fr;
+    padding-bottom: 700px;
   }
 
   .flip-card {
