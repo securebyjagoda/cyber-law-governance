@@ -20,7 +20,6 @@ The process helps organizations identify, assess, and manage risks associated wi
 </div>
 
 ## Typical Workflow
-<div class="workflow-dashboard">
 <div class="workflow-diagram">
 
 <a href="#phase1" class="workflow-step phase-blue">
@@ -132,5 +131,4 @@ Monitoring
 
   </div>
 
-</div>
 </div>
