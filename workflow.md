@@ -90,6 +90,9 @@ Monitoring
 
   <div class="phase-popup">
 
+  <div class="phase-popup-content">
+
+  <div>
     <h4>Applicable Laws</h4>
 
     <ul>
@@ -105,7 +108,9 @@ Monitoring
         </a>
       </li>
     </ul>
+  </div>
 
+  <div>
     <h4>Privacy & Security Risks</h4>
 
     <ul>
@@ -113,14 +118,18 @@ Monitoring
       <li>Unauthorized Access</li>
       <li>Unauthorized Disclosure</li>
     </ul>
+</div>
 
+<div>
     <h4>Governance Requirements</h4>
 
     <ul>
       <li>WISP</li>
       <li>Vendor Risk Assessment</li>
     </ul>
+</div?
 
+<div>
     <h4>Cybersecurity Controls</h4>
 
     <ul>
@@ -128,6 +137,10 @@ Monitoring
       <li>Access Control</li>
       <li>Audit Logging</li>
     </ul>
+    </div>
+
+    </div>
+    </div>
 
   </div>
 
