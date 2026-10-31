@@ -8,13 +8,6 @@
   margin-bottom: 2rem;
 }
 
-.workflow-dashboard {
-  background: #0f172a;
-  padding: 2rem;
-  border-radius: 20px;
-  margin-top: 2rem;
-}
-
 /* WORKFLOW DIAGRAM */
 
 .workflow-diagram {
@@ -117,41 +110,28 @@
   margin-top: 2rem;
 }
 
-/* PHASE CARDS */
+/* FLIP CARD */
 
-.phase-card {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+.flip-card {
+  background: transparent;
+  width: 100%;
+  height: 600px;
+  perspective: 1400px;
 }
 
-.phase-card summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 2rem;
+.flip-card-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.8s;
+
+  transform-style: preserve-3d;
 }
 
-.phase-card summary::-webkit-details-marker {
-  display: none;
-}
-
-.phase-content {
-  background: #111827;
-  color: #f3f4f6;
-  padding: 2rem;
-  border-top: 1px solid rgba(255,255,255,.1);
-}
-
-.phase-content h4 {
-  color: white;
-}
-
-.phase-content a {
-  color: #60a5fa;
-}
-
-.phase-content a:hover {
-  text-decoration: underline;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
 /* FRONT & BACK */
