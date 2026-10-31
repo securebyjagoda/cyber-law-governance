@@ -25,7 +25,7 @@ The process helps organizations identify, assess, and manage risks associated wi
 
 ## Typical Workflow
 
-<!-- GRAPHIC PLACEHOLDER: replace the line below with {% include workflow.html anchors=true %} once the graphic is ready -->
+<!-- GRAPHIC -->
 <div class="wf-placeholder" id="workflow-graphic"></div>
 
 {% comment %}
