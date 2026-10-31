@@ -59,95 +59,77 @@ Monitoring
 
 # Workflow Phases
 
-<div class="phase-grid">
+<div class="phase-card">
 
-<div id="phase1" class="flip-card">
+  <div class="phase-front phase-blue">
 
-<div class="flip-card-inner">
+    <h2>Phase 1</h2>
 
-<div class="flip-card-front phase-blue">
+    <h3>Pre-Screening</h3>
 
-<h2>Phase 1</h2>
+    <p>
+      Collecting basic information about the entity and establishing an initial risk profile.
+    </p>
 
-<h3>Pre-Screening</h3>
+    <h4>Data Collected</h4>
 
-<p>
-Collecting basic information about the entity and establishing an initial risk profile.
-</p>
+    <ul>
+      <li>
+        <a href="{{ '/data/corporate-information/' | relative_url }}">
+          Corporate Information
+        </a>
+      </li>
 
-<h4>Data Collected</h4>
+      <li>
+        <a href="{{ '/data/identity-personal-information/' | relative_url }}">
+          Identity & Personal Information
+        </a>
+      </li>
+    </ul>
 
-<ul>
-<li>
-<a href="{{ '/data/corporate-information/' | relative_url }}">
-Corporate Information
-</a>
-</li>
+  </div>
 
-<li>
-<a href="{{ '/data/identity-personal-information/' | relative_url }}">
-Identity & Personal Information
-</a>
-</li>
-</ul>
+  <div class="phase-popup">
 
-<p>
-<strong>Hover to View Governance Details →</strong>
-</p>
+    <h4>Applicable Laws</h4>
 
-</div>
+    <ul>
+      <li>
+        <a href="{{ '/laws/201-cmr-17/' | relative_url }}">
+          201 CMR 17.00
+        </a>
+      </li>
 
-<div class="flip-card-back">
+      <li>
+        <a href="{{ '/laws/mgl-c93h/' | relative_url }}">
+          M.G.L. c.93H
+        </a>
+      </li>
+    </ul>
 
-<h4>Applicable Laws</h4>
+    <h4>Privacy & Security Risks</h4>
 
-<ul>
-<li>GDPR Articles 5 &amp; 32</li>
+    <ul>
+      <li>Excessive Data Collection</li>
+      <li>Unauthorized Access</li>
+      <li>Unauthorized Disclosure</li>
+    </ul>
 
-<li>
-<a href="{{ '/laws/mgl-c93h/' | relative_url }}">
-M.G.L. c.93H
-</a>
-</li>
+    <h4>Governance Requirements</h4>
 
-<li>
-<a href="{{ '/laws/201-cmr-17/' | relative_url }}">
-201 CMR 17.00
-</a>
-</li>
-</ul>
+    <ul>
+      <li>WISP</li>
+      <li>Vendor Risk Assessment</li>
+    </ul>
 
-<h4>Privacy & Security Risks</h4>
+    <h4>Cybersecurity Controls</h4>
 
-<ul>
-<li>Excessive Data Collection</li>
-<li>Unauthorized Access</li>
-<li>Unauthorized Disclosure</li>
-<li>Inaccurate Records</li>
-</ul>
+    <ul>
+      <li>Encryption</li>
+      <li>Access Control</li>
+      <li>Audit Logging</li>
+    </ul>
 
-<h4>Governance Requirements</h4>
-
-<ul>
-<li>Written Information Security Program (WISP)</li>
-<li>Vendor Management Program</li>
-<li>Third-Party Risk Assessment</li>
-<li>Data Classification Policy</li>
-</ul>
-
-<h4>Cybersecurity Controls</h4>
-
-<ul>
-<li>Encryption</li>
-<li>Access Control</li>
-<li>Audit Logging</li>
-<li>Data Classification &amp; Labeling</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </div>
