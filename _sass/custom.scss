@@ -134,11 +134,11 @@
 
 .phase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
   margin-top: 2rem;
   overflow: visible;
-  padding-bottom: 350px;
+  padding-bottom: 600px;
 }
 
 /* FLIP CARD */
@@ -156,7 +156,7 @@
   padding: 1.5rem;
   border-radius: 16px;
   color: white;
-  min-height: 260px;
+  min-height: 220px;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -168,10 +168,10 @@
 
 .phase-popup {
   position: absolute;
-  top: -10px;
-  left: 0;
-  width: 320px;
-  max-height: 260px;
+  top: 0px;
+  left: calc(100% + 20px);
+  width: 450px;
+  max-height: 500px;
   overflow-y: auto;
   background: #111827;
   color: white;
@@ -182,7 +182,7 @@
   visibility: hidden;
   transform: translateY(15px);
   transition: all .3s ease;
-  z-index: 50;
+  z-index: 9999;
 }
 
 .phase-card:hover .phase-popup {
