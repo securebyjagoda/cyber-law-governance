@@ -15,3 +15,6 @@ breadcrumbs: true
 
 atom_feed:
   hide: true
+
+sass:
+  style: compressed
