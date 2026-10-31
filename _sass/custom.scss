@@ -51,6 +51,35 @@
   color: #64748b;
 }
 
+/* WORKFLOW DASHBOARD */
+
+.workflow-dashboard {
+
+  background: #0f172a;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+}
+
+.workflow-dashboard h1,
+.workflow-dashboard h2,
+.workflow-dashboard h3,
+.workflow-dashboard h4 {
+
+  color: white;
+}
+
+.workflow-dashboard p {
+
+  color: #cbd5e1;
+}
+
 /* PHASE COLOR THEMES */
 
 .phase-blue {
@@ -105,9 +134,11 @@
 
 .phase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  overflow: visible;
+  padding-bottom: 350px;
 }
 
 /* FLIP CARD */
@@ -122,15 +153,10 @@
 }
 
 .phase-front {
-
-  padding: 2rem;
-
+  padding: 1.5rem;
   border-radius: 16px;
-
   color: white;
-
-  min-height: 400px;
-
+  min-height: 260px;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -141,33 +167,21 @@
 }
 
 .phase-popup {
-
   position: absolute;
-
-  top: 0;
-
-  left: calc(100% + 15px);
-
-  width: 350px;
-
+  top: -10px;
+  left: 0;
+  width: 320px;
+  max-height: 260px;
+  overflow-y: auto;
   background: #111827;
-
   color: white;
-
   padding: 1.5rem;
-
   border-radius: 16px;
-
   box-shadow: 0 15px 35px rgba(0,0,0,.35);
-
   opacity: 0;
-
   visibility: hidden;
-
-  transform: translateX(20px);
-
+  transform: translateY(15px);
   transition: all .3s ease;
-
   z-index: 50;
 }
 
@@ -177,7 +191,7 @@
 
   visibility: visible;
 
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .phase-popup h4 {
