@@ -20,7 +20,7 @@ A centralized resource for understanding how information collected during corpor
 
 <div style="background:#ffffff;border-left:6px solid #2563eb;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-<h3>🏢 Corporate Information</h3>
+<h3> Corporate Information</h3>
 
 <p>
 Business information used to identify and evaluate organizations during due diligence and third-party screening activities.
@@ -45,7 +45,7 @@ Business information used to identify and evaluate organizations during due dili
 
 <div style="background:#ffffff;border-left:6px solid #dc2626;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-<h3>👤 Identity & Personal Information</h3>
+<h3> Identity & Personal Information</h3>
 
 <p>
 Personal information collected to verify identities and conduct screening activities.
@@ -70,7 +70,7 @@ Personal information collected to verify identities and conduct screening activi
 
 <div style="background:#ffffff;border-left:6px solid #f97316;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-<h3>⚖️ Legal & Regulatory Information</h3>
+<h3> Legal & Regulatory Information</h3>
 
 <p>
 Information relating to litigation, regulatory compliance, enforcement actions, and legal history.
@@ -120,7 +120,7 @@ Information used to assess criminal history and other background screening outco
 
 <div style="background:#ffffff;border-left:6px solid #7c3aed;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-<h3>💰 Financial Information</h3>
+<h3> Financial Information</h3>
 
 <p>
 Financial records used to assess financial integrity, risk exposure, and ownership interests.
@@ -145,7 +145,7 @@ Financial records used to assess financial integrity, risk exposure, and ownersh
 
 <div style="background:#ffffff;border-left:6px solid #ca8a04;padding:22px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-<h3>🌐 Sanctions & Watchlist Information</h3>
+<h3> Sanctions & Watchlist Information</h3>
 
 <p>
 Information used to identify sanctions exposure, watchlist matches, and other elevated-risk indicators.
