@@ -112,6 +112,91 @@
 
 /* FLIP CARD */
 
+.phase-card {
+
+  position: relative;
+
+  border-radius: 16px;
+
+  overflow: visible;
+}
+
+.phase-front {
+
+  padding: 2rem;
+
+  border-radius: 16px;
+
+  color: white;
+
+  min-height: 400px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.phase-front a {
+
+  color: white;
+  text-decoration: underline;
+}
+
+.phase-popup {
+
+  position: absolute;
+
+  top: 0;
+
+  left: calc(100% + 15px);
+
+  width: 350px;
+
+  background: #111827;
+
+  color: white;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.35);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateX(20px);
+
+  transition: all .3s ease;
+
+  z-index: 50;
+}
+
+.phase-card:hover .phase-popup {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+.phase-popup h4 {
+
+  color: white;
+
+  margin-top: 1rem;
+}
+
+.phase-popup a {
+
+  color: #60a5fa;
+}
+
+.phase-popup a:hover {
+
+  text-decoration: underline;
+}
+
 .flip-card {
   background: transparent;
   width: 100%;
