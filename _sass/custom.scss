@@ -117,25 +117,45 @@
 
 .phase-card {
   position: relative;
-  width: 400px;
-  max-width: 400px;
+  width: 380px;
+  max-width: 380px;
   margin-left: 0;
   overflow: visible;
 }
 
 .phase-front {
-  padding: 1.25rem;
+  padding: 1rem 1.25rem;
   border-radius: 16px;
   color: white;
-  min-height: 170px;
-  max-width: 400px;
+  min-height: auto;
+  max-width: 380px;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
 .phase-front a {
-
   color: white;
   text-decoration: underline;
+}
+
+.phase-front h2 {
+  margin: 0 0 .4rem 0;
+}
+
+.phase-front h3 {
+  margin: 0 0 .75rem 0;
+}
+
+.phase-front p {
+  margin-bottom: 1rem;
+}
+
+.phase-front h4 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.phase-front ul {
+  margin-bottom: 0;
 }
 
 .phase-popup {
@@ -160,8 +180,12 @@
 }
 
 .phase-popup li {
+  margin-bottom: 0.2rem;
+}
 
-  margin-bottom: 0.3rem;
+.phase-popup ul {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 .phase-popup-content {
