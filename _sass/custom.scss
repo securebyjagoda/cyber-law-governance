@@ -107,27 +107,28 @@
   display: flex;
   align-items: flex-start;
   overflow: visible;
-  min-height: 850px;
+  min-height: 900px;
   padding-bottom: 300px;
   justify-content: flex-start;
+  margin-left: -80px;
 }
 
 /* FLIP CARD */
 
 .phase-card {
   position: relative;
-  width: 480px;
-  max-width: 480px;
+  width: 400px;
+  max-width: 400px;
   margin-left: 0;
   overflow: visible;
 }
 
 .phase-front {
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 16px;
   color: white;
-  min-height: 220px;
-  max-width: 700px;
+  min-height: 170px;
+  max-width: 400px;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -140,14 +141,14 @@
 .phase-popup {
   position: absolute;
   top: 0px;
-  left: 520px;
-  width: 600px;
-  min-height: 280px;
+  left: 430px;
+  width: 700px;
+  min-height: 380px;
   max-height: 350px;
   overflow: visible;
   background: #0b1120;
   color: white;
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,.35);
   opacity: 0;
@@ -155,12 +156,18 @@
   transform: translateY(15px);
   transition: all .3s ease;
   z-index: 9999;
+  font-size: 0.9rem;
+}
+
+.phase-popup li {
+
+  margin-bottom: 0.3rem;
 }
 
 .phase-popup-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .phase-card:hover .phase-popup {
@@ -171,7 +178,7 @@
 
 .phase-popup h4 {
   color: white;
-
+  font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: .75rem;
 }
