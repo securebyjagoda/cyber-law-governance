@@ -104,22 +104,20 @@
 /* CARD GRID */
 
 .phase-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 3rem;
-  margin-top: 2rem;
-  margin-left: -120px;
+  display: flex;
+  align-items: flex-start;
   overflow: visible;
-  padding-bottom: 600px;
-  justify-items: start;
+  min-height: 850px;
+  padding-bottom: 300px;
+  justify-content: flex-start;
 }
 
 /* FLIP CARD */
 
 .phase-card {
   position: relative;
-  border-radius: 16px;
-  max-width: 650px;
+  width: 480px;
+  max-width: 480px;
   margin-left: 0;
   overflow: visible;
 }
@@ -142,9 +140,10 @@
 .phase-popup {
   position: absolute;
   top: 0px;
-  left: calc(100% + 20px);
-  width: 700px;
+  left: 520px;
+  width: 600px;
   min-height: 280px;
+  max-height: 350px;
   overflow: visible;
   background: #0b1120;
   color: white;
