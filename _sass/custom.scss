@@ -14,18 +14,6 @@
   color: #e5e7eb;
 }
 
-body {
-  background: #0f172a;
-}
-
-.page {
-  background: transparent;
-}
-
-.page__content {
-  background: transparent;
-}
-
 /* WORKFLOW DIAGRAM */
 
 .workflow-diagram {
@@ -124,22 +112,22 @@ body {
 .phase-grid {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
   align-items: flex-start;
   overflow: visible;
   margin-left: -80px;
-  padding-bottom: 900px;
+  padding-bottom: 700px;
 }
 
 /* FLIP CARD */
 
 .phase-card {
-  width: 290px;
-  max-width: 290px;
+  width: 360px;
+  max-width: 360px;
 }
 
 .phase-front {
-  padding: 0.85rem;
+  padding: 0.9rem;
   border-radius: 16px;
   color: white;
   min-height: auto;
@@ -178,10 +166,10 @@ body {
 
 .phase-popup {
   position: absolute;
+  left: 420px;
   top: 0;
-  left: 350px;
   width: 850px;
-  background: #030712;
+  background: #020617;
   color: white;
   padding: 1.25rem;
   border-radius: 16px;
@@ -191,8 +179,8 @@ body {
   transform: translateY(15px);
   transition: all .3s ease;
   z-index: 9999;
-  overflow: visible;
   height: auto;
+  overflow: visible;
 }
 
 .phase-popup li {
@@ -208,7 +196,7 @@ body {
 .phase-popup-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 2rem;
+  gap: 1rem 2rem;
   align-items: start;
 }
 
