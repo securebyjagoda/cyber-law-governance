@@ -140,7 +140,6 @@ Monitoring
     </div>
 
     </div>
-    </div>
 
   </div>
 
