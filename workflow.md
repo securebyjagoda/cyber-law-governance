@@ -58,8 +58,8 @@ Monitoring
 
 # Workflow Phases
 
-<div class="phase-card">
-
+<div id="phase1" class="phase-card">
+  
   <div class="phase-front phase-blue">
 
     <h2>Phase 1</h2>
