@@ -127,7 +127,7 @@ Monitoring
       <li>WISP</li>
       <li>Vendor Risk Assessment</li>
     </ul>
-</div?
+</div>
 
 <div>
     <h4>Cybersecurity Controls</h4>
