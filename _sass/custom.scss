@@ -117,18 +117,18 @@
 
 .phase-card {
   position: relative;
-  width: 380px;
-  max-width: 380px;
+  width: 340px;
+  max-width: 340px;
   margin-left: 0;
   overflow: visible;
 }
 
 .phase-front {
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1rem;
   border-radius: 16px;
   color: white;
   min-height: auto;
-  max-width: 380px;
+  max-width: 340px;
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -138,15 +138,18 @@
 }
 
 .phase-front h2 {
-  margin: 0 0 .4rem 0;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
 }
 
 .phase-front h3 {
+  font-size: 1.2rem;
   margin: 0 0 .75rem 0;
 }
 
 .phase-front p {
-  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
 }
 
 .phase-front h4 {
@@ -163,7 +166,7 @@
   top: 0px;
   left: 430px;
   width: 700px;
-  min-height: 380px;
+  min-height: 560px;
   max-height: 350px;
   overflow: visible;
   background: #0b1120;
@@ -180,11 +183,11 @@
 }
 
 .phase-popup li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .phase-popup ul {
-  margin-top: .5rem;
+  margin-top: 0.15rem;
   margin-bottom: .5rem;
 }
 
@@ -202,9 +205,9 @@
 
 .phase-popup h4 {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-top: 0;
-  margin-bottom: .75rem;
+  margin-bottom: 0.4rem;
 }
 
 .phase-popup a {
@@ -312,6 +315,20 @@
 
 .flip-card-back li {
   margin-bottom: .35rem;
+}
+
+.page__content {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4 {
+  color: white;
 }
 
 /* LINKS */

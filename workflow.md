@@ -58,7 +58,7 @@ Monitoring
 
 # Workflow Phases
 
-// PHASE I
+/* PHASE I */
 <div id="phase1" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -146,7 +146,7 @@ Monitoring
 
 </div>
 
-//PHASE II
+/* PHASE II */
 <div id="phase2" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -262,7 +262,7 @@ Monitoring
 </div>
 
 
-//PHASE III
+/* PHASE III */
 <div id="phase3" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -375,7 +375,7 @@ Monitoring
 </div>
 
 
-//PHASE IV
+/* PHASE IV */
 <div id="phase4" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -487,7 +487,7 @@ Monitoring
 </div>
 
 
-//PHASE V
+/* PHASE V */
 <div id="phase5" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -602,7 +602,7 @@ Monitoring
 </div>
 
 
-//PHASE VI
+/* PHASE VI */
 <div id="phase6" class="phase-card">
   
   <div class="phase-front phase-blue">
