@@ -105,31 +105,19 @@
 .phase-grid {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   gap: 140px;
   align-items: flex-start;
   overflow: visible;
   margin-left: -40px;
   padding-bottom: 1200px;
-=======
-  gap: 80px;
-  align-items: flex-start;
-  margin-left: -40px;
-  padding-bottom: 900px;
->>>>>>> 2cd00e1ad8fa1e177138aebec4fd6db5e20cded6
 }
 
 /* FLIP CARD */
 
 .phase-card {
   position: relative;
-<<<<<<< HEAD
   width: 320px;
   max-width: 320px;
-=======
-  width: 340px;
-  max-width: 340px;
->>>>>>> 2cd00e1ad8fa1e177138aebec4fd6db5e20cded6
 }
 
 .phase-front {
