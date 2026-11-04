@@ -57,7 +57,7 @@ Monitoring
 ---
 
 # Workflow Phases
-
+<div class="phase-grid">
 <div id="phase1" class="phase-card">
   
   <div class="phase-front phase-blue">
@@ -695,4 +695,5 @@ Monitoring
 
   </div>
 
+</div>
 </div>
