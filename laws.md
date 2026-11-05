@@ -5,8 +5,6 @@ layout: single
 classes: wide
 ---
 
-# Laws & Regulations
-
 Explore how laws and regulations apply throughout the third-party due diligence workflow.
 
 <div class="law-filter-bar">
@@ -36,13 +34,6 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 
 ## Law-to-Workflow Matrix
 
-<div class="law-legend">
-<span><i class="heat high"></i> High relevance</span>
-<span><i class="heat medium"></i> Medium</span>
-<span><i class="heat low"></i> Low</span>
-<span><i class="heat none"></i> Not applicable</span>
-</div>
-
 <div class="law-matrix">
 <div class="law-header">
 <div>Law</div>
@@ -54,68 +45,68 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <div>Monitoring</div>
 </div>
 
-<a class="law-row" href="{{ '/laws/gdpr/' | relative_url }}" data-jurisdiction="eu" data-types="identity financial criminal sanctions">
-<div class="law-name">GDPR<small>European Union</small></div>
+<div class="law-row" data-jurisdiction="eu" data-types="identity financial criminal sanctions">
+<div class="law-name" data-tip="Data protection and privacy requirements.">GDPR</div>
 <div class="heat none"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-</a>
-
-<a class="law-row" href="{{ '/laws/201-cmr-17/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
-<div class="law-name">201 CMR 17.00<small>Massachusetts</small></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-</a>
-
-<a class="law-row" href="{{ '/laws/mgl-c93h/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
-<div class="law-name">M.G.L. c.93H<small>Massachusetts</small></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-</a>
-
-<a class="law-row" href="{{ '/laws/fcra/' | relative_url }}" data-jurisdiction="us" data-types="criminal financial">
-<div class="law-name">FCRA<small>United States</small></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat high"></div>
-<div class="heat high"></div>
-<div class="heat none"></div>
-<div class="heat low"></div>
-</a>
-
-<a class="law-row" href="{{ '/laws/glba/' | relative_url }}" data-jurisdiction="us" data-types="financial">
-<div class="law-name">GLBA<small>United States</small></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat high"></div>
-<div class="heat none"></div>
-<div class="heat low"></div>
-</a>
-
-<a class="law-row" href="{{ '/laws/ofac/' | relative_url }}" data-jurisdiction="us" data-types="sanctions">
-<div class="law-name">OFAC<small>United States</small></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat none"></div>
-<div class="heat high"></div>
-<div class="heat medium"></div>
-</a>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
 </div>
 
-<p class="law-note">Relevance ratings are an educational mapping of this project's workflow, not legal advice.</p>
+<div class="law-row" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<div class="law-name" data-tip="Massachusetts data security regulation.">201 CMR 17.00</div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+</div>
+
+<div class="law-row" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<div class="law-name" data-tip="Massachusetts personal information security law.">M.G.L. c.93H</div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+</div>
+
+<div class="law-row" data-jurisdiction="us" data-types="criminal financial">
+<div class="law-name" data-tip="Consumer reporting requirements.">FCRA</div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+<div class="heat none"></div>
+<div class="heat yes"></div>
+</div>
+
+<div class="law-row" data-jurisdiction="us" data-types="financial">
+<div class="law-name" data-tip="Financial information safeguards.">GLBA</div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat yes"></div>
+<div class="heat none"></div>
+<div class="heat yes"></div>
+</div>
+
+<div class="law-row" data-jurisdiction="us" data-types="sanctions">
+<div class="law-name" data-tip="Sanctions compliance obligations.">OFAC</div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat yes"></div>
+<div class="heat yes"></div>
+</div>
+</div>
+
+<p class="law-note">Applicability is an educational mapping of this project's workflow, not legal advice.</p>
 
 ## Regulatory Reference Library
 
@@ -176,6 +167,24 @@ var count = document.getElementById('law-count');
 var empty = document.getElementById('law-empty');
 var rows = document.querySelectorAll('.law-row');
 var cards = document.querySelectorAll('.law-card');
+var phases = document.querySelectorAll('.law-header div');
+
+rows.forEach(function (row) {
+
+  var lawName = row.querySelector('.law-name').textContent;
+  var cells = row.querySelectorAll('.heat');
+
+  cells.forEach(function (cell, i) {
+
+    var phase = phases[i + 1].textContent;
+
+    if (cell.classList.contains('yes')) {
+      cell.dataset.tip = lawName + ' applies in ' + phase;
+    } else {
+      cell.dataset.tip = lawName + ' does not apply in ' + phase;
+    }
+  });
+});
 
 function matches(item) {
 

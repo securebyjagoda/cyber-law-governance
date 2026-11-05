@@ -290,39 +290,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* LEGEND */
-
-.law-legend {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 1.5rem;
-
-  margin-bottom: 1rem;
-
-  font-size: .9rem;
-}
-
-.law-legend span {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: .5rem;
-}
-
-.law-legend .heat {
-
-  width: 32px;
-
-  height: 24px;
-
-  margin: 0;
-}
-
 /* MATRIX */
 
 .law-matrix {
@@ -357,11 +324,35 @@
 
   font-weight: 700;
 
-  padding: 1rem;
+  padding: 0 1rem;
+
+  font-size: 0.9rem;
+
+  align-items: stretch;
+}
+
+.law-header div {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 
   text-align: center;
 
-  font-size: 0.9rem;
+  padding: 1rem .5rem;
+
+  border-left: 1px solid #4b5563;
+}
+
+.law-header div:first-child {
+
+  justify-content: flex-start;
+
+  padding-left: 0;
+
+  border-left: none;
 }
 
 .law-row {
@@ -405,14 +396,95 @@
 
 .law-note {
 
-  font-size: .85rem;
+  font-size: 0.75rem;
 
   color: #9ca3af;
 
   margin-bottom: 3rem;
 }
 
-/* HEAT LEVELS */
+/* HOVER TOOLTIPS */
+
+.heat,
+.law-name {
+
+  position: relative;
+}
+
+.heat[data-tip]::after,
+.law-name[data-tip]::after {
+
+  content: attr(data-tip);
+
+  position: absolute;
+
+  background: #020617;
+
+  color: white;
+
+  border: 1px solid #374151;
+
+  border-radius: 8px;
+
+  padding: .4rem .7rem;
+
+  font-size: .8rem;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: all .2s ease;
+
+  z-index: 10;
+}
+
+.heat[data-tip]::after {
+
+  bottom: 100%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  margin-bottom: 6px;
+}
+
+.heat:last-child[data-tip]::after {
+
+  left: auto;
+
+  right: 0;
+
+  transform: none;
+}
+
+.law-name[data-tip]::after {
+
+  left: 100%;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  margin-left: 10px;
+}
+
+.heat:hover::after,
+.law-name:hover::after {
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+/* APPLICABILITY */
 
 .heat {
 
@@ -429,44 +501,20 @@
   border-radius: 6px;
 
   margin: 0 auto;
+
+  font-weight: 700;
 }
 
-.heat.high {
+.heat.yes {
 
   background: #2563eb;
 
   color: white;
 }
 
-.heat.high::before {
+.heat.yes::before {
 
-  content: "\25CF";
-}
-
-.heat.medium {
-
-  background: #1e3a8a;
-
-  color: #bfdbfe;
-}
-
-.heat.medium::before {
-
-  content: "\25D0";
-}
-
-.heat.low {
-
-  background: transparent;
-
-  border: 2px solid #60a5fa;
-
-  color: #60a5fa;
-}
-
-.heat.low::before {
-
-  content: "\25CB";
+  content: "\2713";
 }
 
 .heat.none {
@@ -474,13 +522,6 @@
   background: transparent;
 
   border: 1px dashed #374151;
-
-  color: #374151;
-}
-
-.heat.none::before {
-
-  content: "\2013";
 }
 
 /* LAW CARDS */
