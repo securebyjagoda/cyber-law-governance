@@ -286,6 +286,10 @@
   font-weight: 700;
 
   padding: 1rem;
+
+  text-align: center;
+
+  font-size: 0.9rem;
 }
 
 .law-row {
@@ -306,23 +310,37 @@
   background: #1e293b;
 }
 
-.dot {
+.heat {
 
-  width: 14px;
-  height: 14px;
+  width: 90%;
 
-  border-radius: 50%;
+  height: 28px;
 
-  background: #374151;
+  border-radius: 6px;
 
-  justify-self: center;
+  margin: 0 auto;
 }
 
-.applicable {
+.high {
+
+  background: #2563eb;
+}
+
+.medium {
 
   background: #3b82f6;
+  opacity:0.65;
+}
 
-  box-shadow: 0 0 10px rgba(59,130,246,.5);
+.low {
+
+  background: #93c5fd;
+  opacity:0.45;
+}
+
+.none {
+
+  background: transparent;
 }
 
 /* LAW CARDS */
@@ -359,4 +377,25 @@
   transform: translateY(-4px);
 
   border-color: #3b82f6;
+}
+
+.law-filter-btn,
+.law-reset-btn {
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: .7rem 1.2rem;
+
+  cursor: pointer;
+}
+
+.law-reset-btn {
+
+  background: #374151;
 }

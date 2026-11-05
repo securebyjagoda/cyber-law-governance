@@ -26,13 +26,13 @@ Explore how laws and regulations apply throughout the third-party due diligence 
   <option>European Union</option>
 </select>
 
-<select>
-  <option>All Third Parties</option>
-  <option>Vendor</option>
-  <option>Supplier</option>
-  <option>Investor</option>
-  <option>Contractor</option>
-</select>
+<button class="law-filter-btn">
+Apply
+</button>
+
+<button class="law-reset-btn">
+Reset
+</button>
 
 </div>
 
@@ -42,77 +42,77 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 
 <div class="law-header">
 <div>Law</div>
-<div>P1</div>
-<div>P2</div>
-<div>P3</div>
-<div>P4</div>
-<div>P5</div>
-<div>P6</div>
+<div>Pre-Screening</div>
+<div>Verification</div>
+<div>Criminal & Legal</div>
+<div>Financial</div>
+<div>Sanctions</div>
+<div>Monitoring</div>
 </div>
 
 <a class="law-row" href="{{ '/laws/gdpr/' | relative_url }}">
 <div>GDPR</div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
 </a>
 
 <a class="law-row" href="{{ '/laws/201-cmr-17/' | relative_url }}">
 <div>201 CMR 17.00</div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
 </a>
 
 <a class="law-row" href="{{ '/laws/mgl-c93h/' | relative_url }}">
 <div>M.G.L. c.93H</div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
 </a>
 
 <a class="law-row" href="{{ '/laws/fcra/' | relative_url }}">
 <div>FCRA</div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot applicable"></div>
-<div class="dot applicable"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat high"></div>
+<div class="heat high"></div>
+<div class="heat none"></div>
+<div class="heat low"></div>
 </a>
 
 <a class="law-row" href="{{ '/laws/glba/' | relative_url }}">
 <div>GLBA</div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot applicable"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat high"></div>
+<div class="heat none"></div>
+<div class="heat low"></div>
 </a>
 
 <a class="law-row" href="{{ '/laws/ofac/' | relative_url }}">
 <div>OFAC</div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot applicable"></div>
-<div class="dot"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat none"></div>
+<div class="heat high"></div>
+<div class="heat medium"></div>
 </a>
 
 </div>
 
-## Quick Access
+## Regulatory Reference Library
 
 <div class="law-card-grid">
 
