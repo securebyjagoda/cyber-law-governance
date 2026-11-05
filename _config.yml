@@ -9,7 +9,7 @@ plugins:
 
 search: true
 
-minimal_mistakes_skin: "midnight"
+minimal_mistakes_skin: "dark"
 
 breadcrumbs: true
 
