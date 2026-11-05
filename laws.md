@@ -21,7 +21,7 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <label>
 <span>Jurisdiction</span>
 <select id="filter-jurisdiction">
-<option value="all">All Jurisdictions</option>
+<option value="all">All Regions</option>
 <option value="massachusetts">Massachusetts</option>
 <option value="us">United States</option>
 <option value="eu">European Union</option>

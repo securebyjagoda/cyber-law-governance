@@ -309,9 +309,7 @@
   display: grid;
 
   grid-template-columns:
-    3fr repeat(6,1fr);
-
-  gap: 6px;
+    minmax(0,3fr) repeat(6,minmax(0,1fr));
 
   align-items: center;
 
@@ -396,7 +394,7 @@
 
 .law-note {
 
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 
   color: #9ca3af;
 
