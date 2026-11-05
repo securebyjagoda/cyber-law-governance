@@ -106,7 +106,7 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 </div>
 </div>
 
-<p class="law-note">Applicability is an educational mapping of this project's workflow, not legal advice.</p>
+<p class="law-note" style="font size: 0.5rem;">Applicability is an educational mapping of this project's workflow, not legal advice.</p>
 
 ## Regulatory Reference Library
 
