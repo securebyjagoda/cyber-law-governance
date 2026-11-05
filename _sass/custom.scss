@@ -3,8 +3,6 @@
 .wf-intro {
   padding: 1rem 0;
   margin-bottom: 2rem;
-  background: transparent;
-  border: none;
 }
 
 /* WORKFLOW DIAGRAM */
@@ -13,7 +11,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 14px;
   margin: 2rem 0 3rem;
 }
@@ -27,30 +24,22 @@
   justify-content: center;
 
   text-align: center;
-  text-decoration: none !important;
 
   color: #fff !important;
+  text-decoration: none !important;
+
   font-weight: 700;
 
   border-radius: 14px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-
-  transition: all .3s ease;
+  transition: all .25s ease;
 }
 
 .workflow-step:hover {
-  color: #fff !important;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+  transform: translateY(-4px);
 }
 
-.workflow-arrow {
-  font-size: 1.4rem;
-  color: #64748b;
-}
-
-/* PHASE COLOR THEMES */
+/* PHASE COLORS */
 
 .phase-blue {
   background: linear-gradient(
@@ -100,109 +89,134 @@
   );
 }
 
-/* CARD GRID */
+/* PHASES */
 
 .phase-grid {
+
   display: flex;
   flex-direction: column;
-  gap: 140px;
+
+  row-gap: 60px;
+
   align-items: flex-start;
-  overflow: visible;
-  margin-left: -40px;
-  padding-bottom: 1200px;
+
+  margin-left: 0;
+
+  padding-bottom: 800px;
 }
 
-/* FLIP CARD */
-
 .phase-card {
+
   position: relative;
-  width: 320px;
-  max-width: 320px;
+
+  width: 360px;
 }
 
 .phase-front {
-  padding: 0.8rem;
-  border-radius: 16px;
-  color: white;
-  min-height: auto;
+
   width: 100%;
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+  padding: 1rem;
+
+  border-radius: 16px;
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.15);
+}
+
+.phase-front h2 {
+
+  font-size: 1.6rem;
+
+  margin: 0 0 .25rem 0;
+}
+
+.phase-front h3 {
+
+  font-size: 1.1rem;
+
+  margin: 0 0 .8rem 0;
+}
+
+.phase-front p {
+
+  font-size: .95rem;
 }
 
 .phase-front a {
+
   color: white;
   text-decoration: underline;
 }
 
-.phase-front h2 {
-  font-size: 1.5rem;
-  margin: 0.2rem;
-}
-
-.phase-front h3 {
-  font-size: 0.95rem;
-  margin: 0 0 .75rem 0;
-}
-
-.phase-front p {
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
-}
-
-.phase-front h4 {
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-}
-
-.phase-front ul {
-  margin-bottom: 0;
-}
+/* POPUP */
 
 .phase-popup {
+
   position: absolute;
-  left: 370px;
+
+  left: 400px;
+
   top: 0;
-  width: 700px;
-  background: #0b1120;
+
+  width: 720px;
+
+  background: #020617;
+
   color: white;
+
   padding: 1rem;
+
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.35);
+
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+
   transition: all .25s ease;
+
   z-index: 9999;
 }
 
-.phase-popup li {
-  margin-bottom: 0.1rem;
-  font-size: 0.85rem;
-}
+.phase-card:hover .phase-popup {
 
-.phase-popup ul {
-  margin-top: 0.15rem;
-  margin-bottom: .5rem;
+  opacity: 1;
+  visibility: visible;
 }
 
 .phase-popup-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 1.5rem;
-  align-items: start;
-}
 
-.phase-card:hover .phase-popup {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1rem 2rem;
 }
 
 .phase-popup h4 {
-  color: white;
-  font-size: 0.95rem;
+
   margin-top: 0;
-  margin-bottom: 0.25rem;
+  margin-bottom: .35rem;
+
+  color: white;
+}
+
+.phase-popup ul {
+
+  margin-top: .25rem;
+}
+
+.phase-popup li {
+
+  font-size: .9rem;
+
+  margin-bottom: .1rem;
 }
 
 .phase-popup a {
@@ -217,34 +231,30 @@
 
 /* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
-  .phase-grid {
-    grid-template-columns: 1fr;
-    padding-bottom: 700px;
-  }
+  .phase-popup {
 
-  .flip-card {
-    height: 700px;
+    width: 600px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-  .workflow-diagram {
-    flex-direction: column;
+  .phase-grid {
+
+    row-gap: 50px;
   }
 
-  .workflow-step {
+  .phase-popup {
+
+    position: static;
+
     width: 100%;
-    max-width: 320px;
-  }
 
-  .workflow-arrow {
-    transform: rotate(90deg);
-  }
+    margin-top: 1rem;
 
-  .flip-card {
-    height: 760px;
+    opacity: 1;
+    visibility: visible;
   }
 }
