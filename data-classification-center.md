@@ -7,100 +7,41 @@ classes: wide
 
 <p class="dc-kicker">Classify. Govern. Protect.</p>
 
-A centralized resource for understanding how information collected during corporate due diligence, third-party screening, and background check processes should be classified, governed, protected, retained, and disposed of. Select a data category to see its sensitivity, risks, governing laws, and recommended controls, then open its full page for more detail.
+A centralized library of the data categories collected during corporate due diligence, third-party screening, and background checks. Select a category for a quick summary of its sensitivity, risks, and governing laws, then open its full page for the details.
 
-<div class="dc-layout">
-
-<div class="dc-index">
-{% for type in site.data.data_types %}<button type="button" class="dc-item lvl-{{ type.level }}" data-id="{{ type.id }}">{{ type.name }}<small>{{ type.sensitivity }} sensitivity</small></button>
+<div class="dc-cards">
+{% for type in site.data.data_types %}<button type="button" class="dc-card lvl-{{ type.level }}" data-id="{{ type.id }}">
+<span class="dc-card-name">{{ type.name }}</span>
+<span class="dc-card-text">{{ type.tagline }}</span>
+<span class="dc-card-level"><span class="dc-bars">{% for i in (1..3) %}<i class="{% if i <= type.level %}on{% endif %}"></i>{% endfor %}</span>{{ type.sensitivity }} sensitivity</span>
+</button>
 {% endfor %}
-<p class="dc-note">Sensitivity ratings and handling guidance are an educational assessment for this project, not legal advice.</p>
 </div>
 
 <div class="dc-profiles">
 {% for type in site.data.data_types %}
-<div class="dc-profile" id="profile-{{ type.id }}" hidden>
+<div class="dc-profile lvl-{{ type.level }}" id="profile-{{ type.id }}" hidden>
 
 <div class="dc-head">
 <h2>{{ type.name }}</h2>
 <span class="dc-tier lvl-{{ type.level }}">{{ type.sensitivity }}</span>
 </div>
 
-<div class="dc-scale lvl-{{ type.level }}">
-<div class="dc-bars">{% for i in (1..3) %}<span class="{% if i <= type.level %}on{% endif %}"></span>{% endfor %}</div>
-<div class="dc-scale-labels"><span>Medium</span><span>High</span><span>Very High</span></div>
+<p class="dc-summary">{{ type.summary }}</p>
+
+<div class="dc-facts">
+<div><h4>Why it is sensitive</h4><p>{{ type.sensitive }}</p></div>
+<div><h4>Typical data</h4><p>{{ type.typical }}</p></div>
+<div><h4>Main risks</h4><p>{{ type.risks }}</p></div>
+<div><h4>How to protect it</h4><p>{{ type.protect }}</p></div>
 </div>
 
-<p class="dc-summary">{{ type.overview }}</p>
-<p class="dc-sens">{{ type.sensitivity_note }}</p>
-<p class="dc-where"><b>Workflow phases:</b> {{ type.phases }} (<a href="{{ '/workflow/' | relative_url }}">see workflow</a>)</p>
-
-<div class="dc-blocks">
-
-<div class="dc-block">
-<h4>Common examples</h4>
-<ul>
-{% for item in type.examples %}<li>{{ item }}</li>
-{% endfor %}
-</ul>
-</div>
-
-<div class="dc-block">
-<h4>{{ type.why_title | default: "Why it matters" }}</h4>
-<ul>
-{% for item in type.why %}<li>{{ item }}</li>
-{% endfor %}
-</ul>
-</div>
-
-<div class="dc-block">
-<h4>Risks</h4>
-<ul>
-{% for risk in type.risks %}<li>{{ risk }}</li>
-{% endfor %}
-</ul>
-</div>
-
-<div class="dc-block">
+<div class="dc-laws">
 <h4>Governing laws</h4>
-<ul>
-{% for law in type.laws %}<li>{% if law.url %}<a href="{{ law.url | relative_url }}">{{ law.name }}</a>{% else %}{{ law.name }}{% endif %}{% if law.note %} <small>({{ law.note }})</small>{% endif %}</li>
-{% endfor %}
-</ul>
+<div class="dc-law-list">{% for law in type.laws %}{% if law.url %}<a href="{{ law.url | relative_url }}">{{ law.name }}</a>{% else %}<span>{{ law.name }}</span>{% endif %}{% endfor %}</div>
 </div>
 
-<div class="dc-block wide">
-<h4>Recommended governance approach</h4>
-<ul>
-{% for item in type.governance %}<li>{{ item }}</li>
-{% endfor %}
-</ul>
-</div>
-
-{% if type.special %}<div class="dc-block wide">
-<h4>{{ type.special_title | default: "Special considerations" }}</h4>
-<p>{{ type.special_intro }}</p>
-<ul>
-{% for item in type.special %}<li>{{ item }}</li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
-
-<div class="dc-block wide">
-<h4>Recommended security controls</h4>
-<div class="dc-controls">
-{% for group in type.controls %}<div><b>{{ group.group }}</b>
-<ul>
-{% for item in group.items %}<li>{{ item }}</li>
-{% endfor %}
-</ul>
-</div>
-{% endfor %}
-</div>
-</div>
-
-</div>
+<p class="dc-phases"><b>Workflow phases:</b> {{ type.phases }} (<a href="{{ '/workflow/' | relative_url }}">see workflow</a>)</p>
 
 <a class="dc-open" href="{{ type.url | relative_url }}">View full page &rarr;</a>
 
@@ -108,29 +49,29 @@ A centralized resource for understanding how information collected during corpor
 {% endfor %}
 </div>
 
-</div>
+<p class="dc-note">Sensitivity ratings and handling guidance are an educational assessment for this project, not legal advice.</p>
 
 <script>
 
-var items = document.querySelectorAll('.dc-item');
+var cards = document.querySelectorAll('.dc-card');
 var profiles = document.querySelectorAll('.dc-profile');
 
 function showProfile(id) {
 
   var found = false;
 
-  items.forEach(function (item) {
-    if (item.dataset.id == id) {
+  cards.forEach(function (card) {
+    if (card.dataset.id == id) {
       found = true;
     }
   });
 
   if (!found) {
-    id = items[0].dataset.id;
+    id = cards[0].dataset.id;
   }
 
-  items.forEach(function (item) {
-    item.classList.toggle('active', item.dataset.id == id);
+  cards.forEach(function (card) {
+    card.classList.toggle('active', card.dataset.id == id);
   });
 
   profiles.forEach(function (profile) {
@@ -138,10 +79,10 @@ function showProfile(id) {
   });
 }
 
-items.forEach(function (item) {
-  item.addEventListener('click', function () {
-    showProfile(item.dataset.id);
-    history.replaceState(null, '', '#' + item.dataset.id);
+cards.forEach(function (card) {
+  card.addEventListener('click', function () {
+    showProfile(card.dataset.id);
+    history.replaceState(null, '', '#' + card.dataset.id);
   });
 });
 

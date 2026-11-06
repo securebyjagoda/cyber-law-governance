@@ -612,3 +612,381 @@
 
   padding: 2rem;
 }
+
+/* DATA CLASSIFICATION CENTER */
+
+.dc-kicker {
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+
+  color: #f59e0b;
+
+  margin-bottom: .5rem;
+}
+
+/* CARDS */
+
+.dc-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 1rem;
+
+  margin: 1.5rem 0 2rem;
+}
+
+.dc-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .4rem;
+
+  text-align: left;
+
+  background: #1f232b;
+
+  color: white;
+
+  border: 1px solid #3a3f4b;
+
+  border-top: 4px solid #3a3f4b;
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.dc-card.lvl-1 {
+
+  border-top-color: #f59e0b;
+}
+
+.dc-card.lvl-2 {
+
+  border-top-color: #f97316;
+}
+
+.dc-card.lvl-3 {
+
+  border-top-color: #f87171;
+}
+
+.dc-card:hover {
+
+  background: #252a34;
+}
+
+.dc-card.active {
+
+  background: #2a2f39;
+
+  border-color: #9ca3af;
+}
+
+.dc-card.lvl-1.active {
+
+  border-top-color: #f59e0b;
+}
+
+.dc-card.lvl-2.active {
+
+  border-top-color: #f97316;
+}
+
+.dc-card.lvl-3.active {
+
+  border-top-color: #f87171;
+}
+
+.dc-card-name {
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+}
+
+.dc-card-text {
+
+  font-size: .85rem;
+
+  color: #9ca3af;
+
+  flex-grow: 1;
+}
+
+.dc-card-level {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: .6rem;
+
+  font-size: .75rem;
+
+  color: #d1d5db;
+}
+
+/* SENSITIVITY BARS */
+
+.dc-bars {
+
+  display: inline-flex;
+
+  gap: 3px;
+}
+
+.dc-bars i {
+
+  width: 18px;
+
+  height: 6px;
+
+  border-radius: 3px;
+
+  background: #3a3f4b;
+}
+
+.dc-card.lvl-1 .dc-bars .on {
+
+  background: #f59e0b;
+}
+
+.dc-card.lvl-2 .dc-bars .on {
+
+  background: #f97316;
+}
+
+.dc-card.lvl-3 .dc-bars .on {
+
+  background: #f87171;
+}
+
+/* PROFILE */
+
+.dc-profile {
+
+  background: #1f232b;
+
+  border: 1px solid #3a3f4b;
+
+  border-radius: 16px;
+
+  padding: 1.5rem;
+}
+
+.dc-profile[hidden] {
+
+  display: none;
+}
+
+.dc-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-bottom: .8rem;
+}
+
+.dc-head h2 {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: none;
+}
+
+.dc-tier {
+
+  padding: .25rem .8rem;
+
+  border: 2px solid;
+
+  border-radius: 6px;
+
+  font-size: .75rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+  white-space: nowrap;
+}
+
+.dc-tier.lvl-1 {
+
+  color: #f59e0b;
+}
+
+.dc-tier.lvl-2 {
+
+  color: #f97316;
+}
+
+.dc-tier.lvl-3 {
+
+  color: #f87171;
+}
+
+.dc-summary {
+
+  margin-bottom: 1.2rem;
+}
+
+/* FACTS */
+
+.dc-facts {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1.2rem 2rem;
+
+  margin-bottom: 1.2rem;
+
+  padding: 1.2rem 0;
+
+  border-top: 1px solid #3a3f4b;
+
+  border-bottom: 1px solid #3a3f4b;
+}
+
+.dc-facts h4,
+.dc-laws h4 {
+
+  margin: 0 0 .3rem 0;
+
+  font-size: .75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .06em;
+
+  color: #f59e0b;
+}
+
+.dc-facts p {
+
+  margin: 0;
+
+  font-size: .92rem;
+}
+
+/* LAWS */
+
+.dc-law-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .5rem;
+}
+
+.dc-law-list a,
+.dc-law-list span {
+
+  padding: .25rem .8rem;
+
+  border: 1px solid #3a3f4b;
+
+  border-radius: 999px;
+
+  font-size: .82rem;
+}
+
+.dc-law-list a {
+
+  color: #2dd4bf;
+
+  border-color: #2dd4bf;
+}
+
+.dc-law-list a:hover {
+
+  background: #252a34;
+}
+
+.dc-law-list span {
+
+  color: #9ca3af;
+}
+
+.dc-phases {
+
+  margin: 1.2rem 0 0 0;
+
+  font-size: .88rem;
+
+  color: #9ca3af;
+}
+
+.dc-phases a,
+.dc-open {
+
+  color: #2dd4bf;
+}
+
+.dc-open {
+
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  font-weight: 700;
+}
+
+.page__content .dc-note {
+
+  font-size: .6rem;
+
+  color: #9ca3af;
+
+  margin-top: 1rem;
+
+  margin-bottom: 3rem;
+}
+
+/* DATA CENTER MOBILE */
+
+@media (max-width: 900px) {
+
+  .dc-cards {
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .dc-cards,
+  .dc-facts {
+
+    grid-template-columns: 1fr;
+  }
+}

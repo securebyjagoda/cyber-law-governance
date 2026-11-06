@@ -3,136 +3,96 @@
   level: 1
   sensitivity: "Medium"
   url: /data/corporate-information/
-  overview: "Information used to establish the legitimacy, ownership, management, and operational structure of an organization. It forms the foundation of most due diligence investigations."
-  sensitivity_note: "Although less sensitive than personal information, corporate information may contain confidential business information and ownership details that require protection."
-  examples:
-    - "Corporate Registration Records"
-    - "Company History"
-    - "Leadership Information"
-    - "Shareholder Information"
-    - "Beneficial Ownership Records"
-    - "Organizational Structure"
-    - "Capital Asset Documentation"
-    - "Business Continuity Plans"
-  why:
-    - "Whether the entity legally exists"
-    - "Who owns and controls the organization"
-    - "Whether ownership structures present risk"
-    - "Whether the organization can meet contractual obligations"
-  risks:
-    - "Excessive data collection"
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Inaccurate records"
+  tagline: "Ownership, structure, and legitimacy of an organization."
+  summary: "Information used to establish that an entity legally exists, who owns and controls it, and whether it can meet its obligations. It forms the foundation of most due diligence investigations."
+  sensitive: "Less sensitive than personal information, but ownership details and confidential business information still need protection."
+  typical: "Registration records, ownership and shareholder information, leadership, organizational structure."
+  risks: "Excessive data collection, unauthorized access or disclosure, and inaccurate records."
+  protect: "Verify information against authoritative sources, limit access, encrypt records, and log activity."
   laws:
     - name: "201 CMR 17.00"
       url: /laws/201-cmr-17/
     - name: "M.G.L. c.93H"
       url: /laws/mgl-c93h/
     - name: "Corporate Transparency Act"
-      note: "beneficial ownership"
     - name: "GDPR"
       url: /laws/gdpr/
-      note: "Arts. 5, 6, 32"
-  governance:
-    - "Verify information using authoritative sources"
-    - "Maintain documentation supporting verification decisions"
-    - "Periodically review ownership and leadership information"
-    - "Retain records according to established schedules"
-  controls:
-    - group: "Data Protection"
-      items: ["Access Control", "Encryption"]
-    - group: "Governance"
-      items: ["Vendor Risk Assessment", "Data Classification Policy"]
-    - group: "Monitoring"
-      items: ["Audit Logging", "Security Monitoring"]
   phases: "Pre-Screening, Verification, Financial Checks"
+
+- id: identity
+  name: "Identity & Personal Information"
+  level: 2
+  sensitivity: "High"
+  url: /data/identity-personal-information/
+  tagline: "Information that can identify an individual."
+  summary: "Information that can identify, relate to, describe, or reasonably be associated with an individual. It is often the most heavily regulated data collected during due diligence."
+  sensitive: "Frequently targeted by attackers for identity theft, account takeover, social engineering, and fraud."
+  typical: "Names, dates of birth, addresses, Social Security numbers, driver's license and passport information."
+  risks: "Identity theft, unauthorized access or disclosure, and excessive data collection."
+  protect: "Collect only what is necessary, document a lawful purpose, encrypt, and restrict access to authorized staff."
+  laws:
+    - name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+    - name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+    - name: "GDPR"
+      url: /laws/gdpr/
+  phases: "Pre-Screening, Verification"
 
 - id: legal
   name: "Legal & Regulatory Information"
   level: 2
   sensitivity: "High"
   url: /data/legal-regulatory-information/
-  overview: "Records used to evaluate compliance, legal obligations, contractual relationships, and regulatory history."
-  sensitivity_note: "These records frequently contain confidential business information, contractual obligations, and legal strategies."
-  examples:
-    - "Contracts"
-    - "Partnership Agreements"
-    - "License Agreements"
-    - "Regulatory Filings"
-    - "Government Audits"
-    - "Tax Filings"
-    - "Compliance Documentation"
-  why:
-    - "Legal compliance"
-    - "Existing liabilities"
-    - "Regulatory exposure"
-    - "Contractual obligations"
-  risks:
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Excessive retention"
-    - "Inaccurate records"
+  tagline: "Contracts, filings, audits, and regulatory history."
+  summary: "Records used to evaluate compliance, legal obligations, contractual relationships, and regulatory history."
+  sensitive: "Frequently contains confidential business information, contractual obligations, and legal strategies."
+  typical: "Contracts, license and partnership agreements, regulatory filings, government audits, tax filings."
+  risks: "Unauthorized access or disclosure, excessive retention, and inaccurate records."
+  protect: "Restrict access to business need, keep retention schedules and audit trails, and encrypt records."
   laws:
     - name: "201 CMR 17.00"
       url: /laws/201-cmr-17/
     - name: "M.G.L. c.93H"
       url: /laws/mgl-c93h/
     - name: "Corporate Transparency Act"
-      note: "ownership reporting"
     - name: "GDPR"
       url: /laws/gdpr/
-      note: "Arts. 5, 10, 32"
-  governance:
-    - "Maintain appropriate retention schedules"
-    - "Restrict access based on business need"
-    - "Document legal review procedures"
-    - "Preserve audit trails"
-  controls:
-    - group: "Data Protection"
-      items: ["Encryption", "Access Control"]
-    - group: "Monitoring"
-      items: ["Audit Logging", "Security Monitoring"]
-    - group: "Governance"
-      items: ["Records Management Program", "Vendor Risk Assessment"]
   phases: "Verification, Criminal & Legal Checks"
+
+- id: criminal
+  name: "Criminal & Background Information"
+  level: 3
+  sensitivity: "Very High"
+  url: /data/criminal-background-information/
+  tagline: "Criminal history, litigation, and investigations."
+  summary: "Information used to assess legal exposure, past misconduct, litigation, and criminal history associated with a third party. It is often one of the most sensitive categories processed during background checks."
+  sensitive: "Improper processing can create significant privacy, regulatory, and reputational risks."
+  typical: "Criminal records, court filings, litigation history, government investigations, enforcement actions."
+  risks: "Inaccurate records, automated decision-making, cross-border transfers, and excessive retention."
+  protect: "Confirm the information is necessary and accurate, include human review in decisions, document retention, and restrict access."
+  laws:
+    - name: "FCRA"
+      url: /laws/fcra/
+    - name: "GDPR"
+      url: /laws/gdpr/
+    - name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+    - name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+  phases: "Criminal & Legal Checks, Sanctions Screening"
 
 - id: financial
   name: "Financial Information"
   level: 2
   sensitivity: "High"
   url: /data/financial-information/
-  overview: "Data used to evaluate an organization's financial health, stability, creditworthiness, and ability to satisfy contractual obligations."
-  sensitivity_note: "Financial information often contains confidential business information and, in some cases, nonpublic personal financial information protected by federal and state regulations."
-  examples:
-    - "Audited Financial Statements"
-    - "Balance Sheets"
-    - "Revenue, Profit, and Margin Information"
-    - "Credit Reports"
-    - "Bankruptcy Records"
-    - "Financial Liabilities"
-    - "Funding History"
-    - "Cash Flow Reports"
-    - "Fraud Indicators"
-  why:
-    - "Evaluate financial stability"
-    - "Assess creditworthiness"
-    - "Identify fraud indicators"
-    - "Determine contractual and investment risk"
-    - "Support risk-based decision-making"
-  special_intro: "Financial information may be subject to additional regulatory requirements when it contains consumer financial information or originates from consumer reporting agencies. Organizations should ensure:"
-  special:
-    - "Information is collected for a legitimate business purpose"
-    - "Access is limited on a need-to-know basis"
-    - "Financial records remain accurate and current"
-    - "Retention periods are documented"
-    - "Disclosure is appropriately controlled"
-  risks:
-    - "Data breach"
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Excessive retention"
-    - "Inaccurate financial records"
+  tagline: "Financial health, credit, and fraud indicators."
+  summary: "Data used to evaluate an organization's financial health, stability, creditworthiness, and ability to satisfy contractual obligations."
+  sensitive: "Often contains confidential business information and, in some cases, nonpublic personal financial information protected by federal and state rules."
+  typical: "Financial statements, credit reports, bankruptcy records, liabilities, cash flow reports."
+  risks: "Data breach, unauthorized access or disclosure, excessive retention, and inaccurate records."
+  protect: "Maintain a WISP, limit access to need-to-know, document retention periods, and assess vendors."
   laws:
     - name: "GLBA"
       url: /laws/glba/
@@ -144,183 +104,27 @@
       url: /laws/mgl-c93h/
     - name: "GDPR"
       url: /laws/gdpr/
-      note: "Arts. 5, 32"
-  governance:
-    - "Maintain a Written Information Security Program (WISP)"
-    - "Establish a Data Retention Schedule"
-    - "Conduct Vendor Risk Assessments"
-    - "Maintain Records of Processing Activities (ROPA)"
-    - "Document business justification for collection and use"
-  controls:
-    - group: "Data Protection"
-      items: ["Encryption", "Access Control"]
-    - group: "Governance"
-      items: ["Data Retention Schedule", "Vendor Risk Assessment", "Records of Processing Activities (ROPA)"]
-    - group: "Monitoring"
-      items: ["Audit Logging", "Security Monitoring"]
   phases: "Verification, Financial Checks, Decision, Documentation & Monitoring"
-
-- id: identity
-  name: "Identity & Personal Information"
-  level: 2
-  sensitivity: "High"
-  url: /data/identity-personal-information/
-  overview: "Information that can identify, relate to, describe, or reasonably be associated with an individual. This category often contains the most heavily regulated information collected during due diligence and background check processes due to its potential impact on privacy, identity theft, and fraud."
-  sensitivity_note: "Identity information is frequently targeted by attackers."
-  examples:
-    - "Full Name"
-    - "Date of Birth"
-    - "Residential Address"
-    - "Email Address"
-    - "Phone Number"
-    - "Social Security Number (SSN)"
-    - "Driver's License Number"
-    - "Passport Information"
-    - "State-Issued Identification"
-    - "Beneficial Ownership Information"
-  why_title: "Why it is targeted"
-  why:
-    - "Identity theft"
-    - "Account takeover"
-    - "Social engineering"
-    - "Fraudulent transactions"
-    - "Unauthorized access"
-  special_title: "Key regulatory considerations"
-  special_intro: "Identity information may qualify as:"
-  special:
-    - "Personal Information under 201 CMR 17.00"
-    - "Personal Data under GDPR"
-    - "Consumer Information under various state and federal regulations"
-  risks:
-    - "Identity theft"
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Excessive data collection"
-    - "Inaccurate records"
-  laws:
-    - name: "201 CMR 17.00"
-      url: /laws/201-cmr-17/
-    - name: "M.G.L. c.93H"
-      url: /laws/mgl-c93h/
-    - name: "GDPR"
-      url: /laws/gdpr/
-      note: "Arts. 5, 6, 32"
-  governance:
-    - "Collect only what is necessary"
-    - "Document a lawful purpose"
-    - "Establish retention limits"
-    - "Restrict access to authorized personnel"
-    - "Include identity information within the WISP"
-  controls:
-    - group: "Data Protection"
-      items: ["Encryption", "Secure Storage", "Secure Disposal"]
-    - group: "Access Management"
-      items: ["Authentication", "Access Control", "Privileged Access Reviews"]
-    - group: "Monitoring"
-      items: ["Audit Logging", "Security Monitoring"]
-  phases: "Pre-Screening, Verification"
 
 - id: sanctions
   name: "Sanctions & Watchlist Information"
   level: 2
   sensitivity: "High"
   url: /data/sanctions-watchlist-information/
-  overview: "Information used to identify restricted, prohibited, or high-risk individuals and organizations. Organizations use screening processes to comply with sanctions, anti-money laundering, and financial crime obligations."
-  sensitivity_note: "Although largely derived from public sources, sanctions information may significantly impact eligibility decisions and therefore requires careful handling."
-  examples:
-    - "OFAC Screening Results"
-    - "EU Sanctions Results"
-    - "UN Sanctions Records"
-    - "Politically Exposed Persons (PEP)"
-    - "Adverse Media Information"
-  why:
-    - "Comply with sanctions laws"
-    - "Reduce financial crime risk"
-    - "Identify high-risk associations"
-    - "Support risk-based decision-making"
-  risks:
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Inaccurate screening results"
-    - "Cross-border data transfers"
-    - "Excessive retention"
+  tagline: "Sanctions lists, PEPs, and adverse media."
+  summary: "Information used to identify restricted, prohibited, or high-risk individuals and organizations, in support of sanctions, anti-money laundering, and financial crime obligations."
+  sensitive: "Largely derived from public sources, but results can affect eligibility decisions and need careful handling."
+  typical: "OFAC, EU, and UN sanctions results, politically exposed persons, adverse media."
+  risks: "Inaccurate screening results, unauthorized disclosure, cross-border transfers, and excessive retention."
+  protect: "Follow escalation procedures, document screening decisions, re-screen periodically, and monitor continuously."
   laws:
     - name: "OFAC Sanctions Programs"
       url: /laws/ofac/
-    - name: "BSA / AML requirements"
+    - name: "BSA / AML"
     - name: "201 CMR 17.00"
       url: /laws/201-cmr-17/
     - name: "M.G.L. c.93H"
       url: /laws/mgl-c93h/
     - name: "GDPR"
       url: /laws/gdpr/
-      note: "Arts. 5, 32"
-  governance:
-    - "Establish escalation procedures"
-    - "Document screening decisions"
-    - "Maintain continuous monitoring programs"
-    - "Periodically re-screen parties"
-  controls:
-    - group: "Data Protection"
-      items: ["Encryption", "Access Control"]
-    - group: "Monitoring"
-      items: ["Security Monitoring", "Audit Logging"]
-    - group: "Governance"
-      items: ["Continuous Monitoring Program", "Vendor Risk Assessment"]
   phases: "Sanctions Screening, Decision, Documentation & Monitoring"
-
-- id: criminal
-  name: "Criminal & Background Information"
-  level: 3
-  sensitivity: "Very High"
-  url: /data/criminal-background-information/
-  overview: "Information used to assess legal exposure, past misconduct, litigation, and criminal history associated with a third party. This is often one of the most sensitive categories processed during background checks."
-  sensitivity_note: "Improper processing of criminal and legal information can create significant privacy, regulatory, and reputational risks."
-  examples:
-    - "Criminal Records"
-    - "Court Filings"
-    - "Litigation History"
-    - "Complaints and Claims"
-    - "Government Investigations"
-    - "Regulatory Enforcement Actions"
-  why:
-    - "Identify misconduct risks"
-    - "Evaluate legal exposure"
-    - "Assess reputational concerns"
-    - "Make risk-based decisions"
-  special_intro: "Criminal records are subject to heightened protections in many jurisdictions. Organizations should ensure:"
-  special:
-    - "The information is necessary"
-    - "The information is accurate"
-    - "Decisions involving criminal records include human review"
-    - "Retention periods are documented"
-  risks:
-    - "Unauthorized access"
-    - "Unauthorized disclosure"
-    - "Excessive retention"
-    - "Automated decision-making"
-    - "Cross-border data transfers"
-    - "Inaccurate records"
-  laws:
-    - name: "FCRA"
-      url: /laws/fcra/
-    - name: "GDPR"
-      url: /laws/gdpr/
-      note: "Art. 10 and Arts. 5, 32"
-    - name: "201 CMR 17.00"
-      url: /laws/201-cmr-17/
-    - name: "M.G.L. c.93H"
-      url: /laws/mgl-c93h/
-  governance:
-    - "Conduct a DPIA when appropriate"
-    - "Document lawful basis for processing"
-    - "Maintain human review procedures"
-    - "Establish retention requirements"
-  controls:
-    - group: "Data Protection"
-      items: ["Encryption", "Access Control"]
-    - group: "Governance"
-      items: ["Data Retention Schedule", "Human Review Procedure"]
-    - group: "Monitoring"
-      items: ["Audit Logging", "Security Monitoring", "Data Loss Prevention (DLP)"]
-  phases: "Criminal & Legal Checks, Sanctions Screening"
