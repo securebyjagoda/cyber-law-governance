@@ -19,3 +19,6 @@ main:
 
   - title: "Resources"
     url: /resources/
+
+  - title: "Security Controls"
+    url: /security-controls/

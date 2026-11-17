@@ -1,0 +1,441 @@
+- id: encryption
+  name: "Encryption"
+  short: "Encryption"
+  lane: "Protect"
+  tagline: "Makes data unreadable without the key."
+  objectives: [confidentiality, integrity]
+  triad: [220, 149]
+  label: left
+  purpose: "Converts data into an unreadable, encoded form that can be read only with the correct cryptographic key. It protects data stored on systems and data in transit, so a lost device or intercepted file does not expose its contents."
+  phases: [1, 2, 3, 4, 5, 6]
+  laws:
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.04(3), 17.04(5)"
+      kind: named
+      note: "Requires encrypting personal information sent across public networks or wirelessly, and personal information stored on laptops and other portable devices."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(3)"
+      kind: named
+      note: "Requires encrypting customer information in transit over external networks and at rest, with approved alternative controls if encryption is infeasible."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 32(1)(a)"
+      kind: named
+      note: "Lists encryption as an example of an appropriate security measure, depending on the risk."
+    - key: mglc93h
+      name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+      ref: "§1 (breach definition)"
+      kind: supports
+      note: "Encrypted data is generally outside the definition of a breach unless the key was also compromised."
+  governance: "Most encryption today is built into devices and vendor services, so the organization's job is to confirm it is turned on wherever sensitive data is kept, and to record that. It should also document whether vendor-managed keys are acceptable and approve any exception in writing."
+  csf: "PR.DS (Data Security)"
+  nist80053: "SC-8, SC-12, SC-13, SC-28"
+  cis: "Control 3"
+  iso: "8.24"
+  references:
+    - name: "SP 800-111: Guide to Storage Encryption Technologies for End User Devices"
+      publisher: "NIST"
+      detail: "Final, 2007"
+      url: "https://csrc.nist.gov/pubs/sp/800/111/final"
+    - name: "SP 800-52 Rev. 2: Guidelines for the Selection and Use of TLS Implementations"
+      publisher: "NIST"
+      detail: "Final, 2019"
+      url: "https://csrc.nist.gov/pubs/sp/800/52/r2/final"
+    - name: "SP 800-57 Part 1 Rev. 5: Recommendation for Key Management"
+      publisher: "NIST"
+      detail: "Final, 2020"
+      url: "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+    - name: "SP 800-53 Rev. 5 browser: System and Communications Protection (SC) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: access-control
+  name: "Access Control"
+  short: "Access Control"
+  lane: "Protect"
+  tagline: "Limits who can see or change data."
+  objectives: [confidentiality, integrity, availability]
+  triad: [280, 268]
+  label: right
+  purpose: "Grants or denies access to information and resources, keeping confidential data from being viewed, changed, or deleted by unauthorized users. Once a user's identity has been authenticated, access control policies assign specific permissions."
+  phases: [1, 2, 3, 4, 5, 6]
+  laws:
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.04(2)"
+      kind: named
+      note: "Requires access limited to those who need it for their job duties, with a unique ID and password for each person."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(1)"
+      kind: named
+      note: "Requires access controls that limit users to the customer information they need, reviewed periodically."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 5(1)(f), Art. 25, Art. 32"
+      kind: supports
+      note: "Confidentiality, data protection by design and by default, and security of processing all point toward need-to-know access."
+  governance: "Access should follow need-to-know and job roles, with a named owner who approves requests and reviews privileged accounts on a regular schedule. Access should be removed promptly when people change roles or leave, and the reviews should be kept as evidence."
+  csf: "PR.AA (Identity Management, Authentication, and Access Control)"
+  nist80053: "AC family"
+  cis: "Control 6"
+  iso: "5.15, 8.2"
+  references:
+    - name: "Role Based Access Control (RBAC) project"
+      publisher: "NIST"
+      detail: "Project page"
+      url: "https://csrc.nist.gov/projects/role-based-access-control"
+    - name: "Access Control Policy and Implementation Guides project"
+      publisher: "NIST"
+      detail: "Project page"
+      url: "https://csrc.nist.gov/projects/access-control-policy-and-implementation-guides"
+    - name: "SP 800-192: Verification and Test Methods for Access Control Policies/Models"
+      publisher: "NIST"
+      detail: "Final, 2017"
+      url: "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-192.pdf"
+    - name: "SP 800-53 Rev. 5 browser: Access Control (AC) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: authentication
+  name: "Authentication"
+  short: "Authentication"
+  lane: "Protect"
+  tagline: "Confirms who a user is."
+  objectives: [confidentiality, integrity]
+  triad: [180, 215]
+  label: left
+  purpose: "Verifies a claimed identity by checking the validity of authenticators, such as passwords, tokens, or biometrics, that back up the claim. It is the step that confirms who a user is before access control decides what they may do."
+  phases: [2]
+  laws:
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.04(1)"
+      kind: named
+      note: "Requires secure user authentication protocols, including controlled user IDs and passwords, active accounts only, and blocking access after repeated failed attempts."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(5)"
+      kind: named
+      note: "Requires multi-factor authentication for anyone accessing an information system, unless the Qualified Individual approves an equivalent or more secure control in writing."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 32"
+      kind: supports
+      note: "Appropriate security measures include controlling who can access personal data."
+  governance: "The organization should set a written rule for which systems require multi-factor authentication and who may approve an exception. Accounts should be verified when created and disabled promptly when someone leaves."
+  csf: "PR.AA (Identity Management, Authentication, and Access Control)"
+  nist80053: "IA family"
+  cis: "Control 6"
+  iso: "8.5"
+  references:
+    - name: "SP 800-63B-4: Authentication and Authenticator Management"
+      publisher: "NIST"
+      detail: "Final, web edition"
+      checked: "Nov 2026"
+      url: "https://pages.nist.gov/800-63-4/sp800-63b.html"
+    - name: "SP 800-63B-4: Authenticators and authenticator types"
+      publisher: "NIST"
+      detail: "Web edition, section"
+      url: "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+    - name: "SP 800-53 Rev. 5 browser: Identification and Authentication (IA) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: dlp
+  name: "Data Loss Prevention (DLP)"
+  short: "DLP"
+  lane: "Protect"
+  tagline: "Stops sensitive data from leaving."
+  objectives: [confidentiality]
+  triad: [280, 116]
+  label: right
+  purpose: "Strategies, processes, and technologies that prevent data from being stolen, lost, or misused, focusing on how data is accessed, used, and shared. It is a proactive measure that reduces the risk of exposure and supports policies for how data should be handled."
+  phases: [3, 6]
+  laws:
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 5(1)(f), Art. 32"
+      kind: supports
+      note: "Does not mention DLP, but requires protection against unauthorized disclosure and measures appropriate to the risk."
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.04(4)"
+      kind: supports
+      note: "Requires reasonable monitoring for unauthorized use of or access to personal information. DLP is one way to do that, and no rule in this library requires it by name."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(8)"
+      kind: supports
+      note: "Requires monitoring the activity of authorized users to detect unauthorized access, which DLP can support."
+  governance: "The organization should decide which data types DLP protects, where it applies (email, uploads, removable media), and who reviews and resolves its alerts. Because DLP can block legitimate work, exceptions and rule changes should be approved and documented."
+  csf: "PR.DS (Data Security)"
+  nist80053: "AC-4, SC-7"
+  cis: "Control 3"
+  iso: "8.12"
+  references:
+    - name: "Data Loss Prevention (Liu and Kuhn, IEEE IT Professional, 2010)"
+      publisher: "NIST-authored article"
+      detail: "Background reading, not a standard"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/pubs/journal/2010/03/data-loss-prevention/final"
+    - name: "Glossary: data loss prevention"
+      publisher: "NIST CSRC"
+      detail: "Definition from CNSSI 4009"
+      url: "https://csrc.nist.gov/glossary/term/data_loss_prevention"
+    - name: "SP 800-53 Rev. 5 browser: information flow and boundary protection controls"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: secure-data-disposal
+  name: "Secure Data Disposal"
+  short: "Disposal"
+  lane: "Protect"
+  tagline: "Destroys data so it cannot be recovered."
+  objectives: [confidentiality]
+  triad: [280, 150]
+  label: right
+  purpose: "Permanently and irretrievably destroys data so it cannot be recovered or accessed by unauthorized parties. NIST SP 800-88 recommends verifying sanitization and documenting it, for example with a certificate listing serial numbers, methods, tools, and verification results."
+  phases: [6]
+  laws:
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(6)"
+      kind: named
+      note: "Requires procedures for securely disposing of customer information no later than two years after it was last used, unless it is needed for business, required by law, or targeted disposal is not feasible."
+    - key: fcra
+      name: "FCRA Disposal Rule"
+      url: /laws/fcra/
+      ref: "16 CFR Part 682"
+      kind: named
+      note: "Requires reasonable measures to prevent unauthorized access when disposing of consumer report information."
+    - key: other
+      name: "M.G.L. c.93I"
+      ref: "Disposal of records"
+      kind: named
+      note: "Massachusetts law on destroying paper and electronic records that contain personal information."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 5(1)(e)"
+      kind: supports
+      note: "Personal data may be kept in identifiable form only as long as necessary for its purpose, which makes timely deletion an expectation."
+  governance: "The organization should set retention periods and disposal methods in writing, with a named owner and a record of each disposal, including data held by vendors. The record should show what was destroyed, when, how, and who verified it, so disposal can be demonstrated."
+  csf: "PR.DS (Data Security)"
+  nist80053: "MP-6"
+  cis: "Control 3"
+  iso: "8.10, 7.14"
+  references:
+    - name: "SP 800-88 Rev. 2: Guidelines for Media Sanitization"
+      publisher: "NIST"
+      detail: "Final, September 2025 (replaced Rev. 1)"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/pubs/sp/800/88/r2/final"
+    - name: "SP 800-53 Rev. 5 browser: Media Protection (MP) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: audit-logging
+  name: "Audit Logging"
+  short: "Audit Logging"
+  lane: "Monitor"
+  tagline: "Records who did what, and when."
+  objectives: [integrity]
+  marker: "Accountability"
+  outside: detection
+  purpose: "A chronological record of system activities, including accesses and operations performed. It lets an organization trace actions to the people or systems behind them, investigate incidents, and show what happened."
+  phases: [1, 2, 3, 4, 5, 6]
+  laws:
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(c)(8)"
+      kind: named
+      note: "Requires policies and controls to monitor and log the activity of authorized users and detect unauthorized access to customer information."
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.03(2)(h), 17.04(4)"
+      kind: supports
+      note: "Require monitoring of systems for unauthorized use and regular monitoring of whether the program works. Logs are the usual evidence."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 5(2), Art. 33"
+      kind: supports
+      note: "Accountability and breach notification both depend on being able to show what happened."
+    - key: mglc93h
+      name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+      ref: "§3"
+      kind: supports
+      note: "Breach notice duties depend on being able to tell what personal information was accessed."
+  governance: "The organization should decide which systems and events must be logged, who reviews the logs and how often, and how long they are kept. Logs should be protected from alteration, since they are the evidence that regulators and investigators rely on."
+  csf: "PR.PS, DE.CM"
+  nist80053: "AU family"
+  cis: "Control 8"
+  iso: "8.15"
+  references:
+    - name: "SP 800-92: Guide to Computer Security Log Management"
+      publisher: "NIST"
+      detail: "Final, 2006 (Rev. 1 is still a draft)"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/pubs/sp/800/92/final"
+    - name: "Log Management project"
+      publisher: "NIST"
+      detail: "Tracks the SP 800-92 Rev. 1 draft"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/log-management"
+    - name: "SP 800-53 Rev. 5 browser: Audit and Accountability (AU) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+
+- id: security-monitoring
+  name: "Security Monitoring"
+  short: "Security Monitoring"
+  lane: "Monitor"
+  tagline: "Watches for problems as they happen."
+  objectives: [confidentiality, integrity, availability]
+  marker: "Detection"
+  outside: detection
+  purpose: "Maintains ongoing awareness of information security, vulnerabilities, and threats, using automated procedures where possible, to support risk decisions. It lets an organization notice unusual activity early enough to respond."
+  phases: [3, 4, 5, 6]
+  laws:
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.04(4)"
+      kind: named
+      note: "Requires reasonable monitoring of systems for unauthorized use of or access to personal information."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(d)(2)"
+      kind: named
+      note: "Requires continuous monitoring or, without it, annual penetration testing and vulnerability assessments at least every six months."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 32(1)(d), Art. 33"
+      kind: supports
+      note: "Requires regularly testing how effective security measures are, and breach detection fast enough for the 72-hour notice."
+    - key: mglc93h
+      name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+      ref: "§3"
+      kind: supports
+      note: "Notice is due as soon as practicable after a breach is known, which requires detecting it."
+  governance: "Someone should own the monitoring tools, decide which alerts matter, and make sure alerts are actually reviewed and acted on. Because many organizations rely on a vendor for this, the responsibilities should be written down, along with the point at which an alert becomes an incident."
+  csf: "DE.CM (Continuous Monitoring)"
+  nist80053: "SI-4, CA-7"
+  cis: "Control 13"
+  iso: "8.16"
+  references:
+    - name: "SP 800-137: Information Security Continuous Monitoring (ISCM)"
+      publisher: "NIST"
+      detail: "Final, 2011"
+      url: "https://csrc.nist.gov/pubs/sp/800/137/final"
+    - name: "Glossary: automated security monitoring"
+      publisher: "NIST CSRC"
+      detail: "Definition from CNSSI 4009-2015"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/glossary/term/automated_security_monitoring"
+    - name: "Cybersecurity Framework 2.0 (NIST CSWP 29)"
+      publisher: "NIST"
+      detail: "Final, 2024"
+      url: "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+    - name: "CSF 2.0 Reference Tool (Detect function)"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/CSF_2_0_0/home"
+
+- id: third-party-risk-assessment
+  name: "Third-Party Risk Assessment"
+  short: "Third-Party Risk Assessment"
+  lane: "Govern"
+  tagline: "Checks the vendors that hold your data."
+  objectives: []
+  marker: "Program-level"
+  outside: program
+  purpose: "Assesses the risks of outsourcing processes to third-party vendors, since vendors with access to sensitive information widen the organization's exposure to cyberattacks. Assessing and managing those risks strengthens security and supports regulatory compliance."
+  phases: [5]
+  laws:
+    - key: cmr17
+      name: "201 CMR 17.00"
+      url: /laws/201-cmr-17/
+      ref: "17.03(2)(f)"
+      kind: named
+      note: "Requires taking reasonable steps to select service providers that can maintain appropriate security, and requiring it by contract."
+    - key: glba
+      name: "GLBA Safeguards Rule"
+      url: /laws/glba/
+      ref: "16 CFR 314.4(f)"
+      kind: named
+      note: "Requires choosing capable service providers, requiring safeguards by contract, and periodically assessing them."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Art. 28"
+      kind: named
+      note: "Requires using only processors that give sufficient guarantees, and binding them with a contract."
+    - key: gdpr
+      name: "GDPR"
+      url: /laws/gdpr/
+      ref: "Arts. 44-46"
+      kind: supports
+      note: "Transfers of personal data to a vendor outside the EU need an adequacy decision or other safeguards."
+    - key: mglc93h
+      name: "M.G.L. c.93H"
+      url: /laws/mgl-c93h/
+      ref: "§3(a)"
+      kind: named
+      note: "A vendor that maintains or stores personal information it does not own must notify the owner or licensor of a breach as soon as practicable."
+  governance: "Vendors should be assessed before they receive sensitive data and reviewed on a schedule, with contracts that require safeguards and prompt breach notice. The organization remains responsible for the data, so results and decisions should be documented and owned by a named person."
+  csf: "GV.SC (Supply Chain Risk Management)"
+  nist80053: "SR family"
+  cis: "Control 15"
+  iso: "5.19-5.22"
+  references:
+    - name: "SP 800-161 Rev. 1: Cybersecurity Supply Chain Risk Management Practices"
+      publisher: "NIST"
+      detail: "Final, 2022"
+      url: "https://csrc.nist.gov/pubs/sp/800/161/r1/final"
+    - name: "SP 800-53 Rev. 5 browser: Supply Chain Risk Management (SR) family"
+      publisher: "NIST"
+      detail: "Reference tool"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/projects/cprt/catalog#/cprt/framework/version/SP_800_53_5_2_0/home"
+    - name: "SP 800-18 Rev. 2: Developing Security, Privacy, and C-SCRM Plans for Systems"
+      publisher: "NIST"
+      detail: "Final, June 2026 (supplementary)"
+      checked: "Nov 2026"
+      url: "https://csrc.nist.gov/pubs/sp/800/18/r2/final"
