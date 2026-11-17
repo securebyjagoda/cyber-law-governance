@@ -12,13 +12,10 @@ main:
     url: /laws/
 
   - title: "Security Controls"
-    url: /controls/
+    url: /security-controls/
 
   - title: "Assessment Tool"
     url: /assessment/
 
   - title: "Resources"
     url: /resources/
-
-  - title: "Security Controls"
-    url: /security-controls/
