@@ -1,0 +1,189 @@
+- id: art-5
+  number: "Article 5"
+  short: "Art. 5"
+  title: "Principles relating to processing of personal data"
+  theme: "Principles and lawfulness"
+  summary: "Sets the core principles that every use of personal data must follow, and makes the controller responsible for showing that it complies."
+  requires: "Personal data must be handled according to the principles below. The controller is responsible for complying with them and must be able to demonstrate that it does (Art. 5(2))."
+  points:
+    - "Lawfulness, fairness, and transparency: processed lawfully and in a transparent manner in relation to the individual."
+    - "Purpose limitation: collected for specified, explicit, and legitimate purposes, and not used in ways that conflict with them."
+    - "Data minimization: limited to what is necessary for those purposes."
+    - "Accuracy: kept up to date, with inaccurate data corrected or erased."
+    - "Storage limitation: kept in an identifiable form no longer than necessary."
+    - "Integrity and confidentiality: processed securely, with protection against unauthorized access, unlawful processing, loss, destruction, or damage."
+  controls: [access-control, secure-data-disposal]
+  phases: [2, 3, 4, 5, 6]
+  references:
+    - name: "GDPR full text, Article 5"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+
+- id: art-6
+  number: "Article 6"
+  short: "Art. 6"
+  title: "Lawfulness of processing"
+  theme: "Principles and lawfulness"
+  summary: "Lists the legal grounds that make processing of personal data lawful."
+  requires: "Processing is lawful only if at least one of the following grounds applies. Criminal-offence data has additional conditions under Art. 10, which matters for background checks."
+  points:
+    - "Consent to the processing for one or more specific purposes."
+    - "Necessity for a contract with the individual, or for steps taken at their request before a contract."
+    - "Necessity to comply with a legal obligation."
+    - "Necessity to protect someone's vital interests."
+    - "Necessity for a task carried out in the public interest or under official authority."
+    - "Legitimate interests of the controller or a third party, unless overridden by the individual's rights and interests."
+  phases: [2]
+  references:
+    - name: "GDPR full text, Article 6"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Guidelines 05/2020 on consent under Regulation 2016/679"
+      publisher: "European Data Protection Board"
+      detail: "Find it in the EDPB guidelines index"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+
+- id: art-25
+  number: "Article 25"
+  short: "Art. 25"
+  title: "Data protection by design and by default"
+  theme: "Principles and lawfulness"
+  summary: "Requires privacy to be built into systems from the start and set to the most protective defaults."
+  requires: "The controller must implement appropriate technical and organizational measures, such as pseudonymization, designed to apply the data protection principles, both when deciding how the processing will work and while it runs. By default, only personal data necessary for each specific purpose may be processed, which covers how much is collected, how far it is used, how long it is kept, and who can access it. Data should not be made accessible to an indefinite number of people without the individual's involvement. This connects with Article 5."
+  controls: [access-control]
+  references:
+    - name: "GDPR full text, Article 25"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Guidelines 4/2019 on Article 25: Data Protection by Design and by Default"
+      publisher: "European Data Protection Board"
+      detail: "Find it in the EDPB guidelines index"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+
+- id: art-32
+  number: "Article 32"
+  short: "Art. 32"
+  title: "Security of processing"
+  theme: "Security and breaches"
+  summary: "Requires security measures appropriate to the risk, and names encryption, resilience, recovery, and regular testing as examples."
+  requires: "Controllers and processors must implement technical and organizational measures that provide a level of security appropriate to the risk, taking into account the state of the art, the cost, and the nature, scope, context, and purposes of the processing. In assessing the right level, they must consider the risks of accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to personal data. Measures may include:"
+  points:
+    - "Pseudonymization and encryption of personal data."
+    - "The ability to ensure ongoing confidentiality, integrity, availability, and resilience of systems and services."
+    - "The ability to restore availability of and access to personal data in a timely manner after a physical or technical incident (backup, recovery, and business continuity)."
+    - "A process for regularly testing and evaluating how effective the measures are."
+  after: "Anyone acting under the authority of the controller or processor who has access to personal data may process it only on the controller's instructions, unless required to do so by law."
+  relevance: "This is the strongest article for a technical cybersecurity analysis. It requires risk-appropriate security measures, potentially including encryption, system resilience, recovery capabilities, and regular security testing."
+  question: "What cybersecurity measures must international real estate companies implement to satisfy GDPR security obligations when protecting property transactions and tenant information?"
+  controls: [encryption, authentication, access-control, security-monitoring, dlp]
+  phases: [2, 3, 4, 5, 6]
+  references:
+    - name: "GDPR full text, Article 32"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+
+- id: art-33
+  number: "Article 33"
+  short: "Art. 33"
+  title: "Notification of a personal data breach to the supervisory authority"
+  theme: "Security and breaches"
+  summary: "Requires reporting a personal data breach to the supervisory authority within 72 hours of becoming aware of it."
+  requires: "The controller must notify the supervisory authority without undue delay and, where feasible, no later than 72 hours after becoming aware of a personal data breach, unless the breach is unlikely to result in a risk to individuals. If notice is later than 72 hours, the delay must be explained, and information that is not available at once may be provided in phases. A processor must tell the controller without undue delay. The notification must:"
+  points:
+    - "Describe the nature of the breach, including the approximate number of individuals and records concerned."
+    - "Give the name and contact details of the data protection officer or another contact point."
+    - "Describe the likely consequences of the breach."
+    - "Describe the measures taken or proposed to address the breach and reduce its possible harm."
+  after: "Every breach must be documented, including the facts, its effects, and the remedial action taken, so the supervisory authority can verify compliance. Article 34 separately requires telling affected individuals when the breach is likely to result in a high risk to them."
+  relevance: "Examines the legal consequences of ransomware, database compromises, and unauthorized disclosure. Where notification is required, controllers generally must notify the supervisory authority within 72 hours of becoming aware of a personal data breach."
+  question: "How should multinational real estate organizations coordinate cybersecurity incident response and GDPR breach reporting across jurisdictions?"
+  controls: [audit-logging, security-monitoring]
+  references:
+    - name: "GDPR full text, Article 33"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Guidelines 9/2022 on personal data breach notification under GDPR"
+      publisher: "European Data Protection Board"
+      detail: "Final version, 2023 (find it in the EDPB guidelines index)"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+
+- id: art-35
+  number: "Article 35"
+  short: "Art. 35"
+  title: "Data protection impact assessment"
+  theme: "Security and breaches"
+  summary: "Requires an assessment of privacy risks before starting processing that is likely to be high risk."
+  requires: "Before starting processing that is likely to result in a high risk to individuals, the controller must assess the impact of the planned processing. An assessment is required in particular for:"
+  points:
+    - "Systematic and extensive evaluation of individuals based on automated processing, including profiling, that leads to decisions with legal or similarly significant effects."
+    - "Large-scale processing of special categories of data, or of data on criminal convictions and offences."
+    - "Large-scale systematic monitoring of a publicly accessible area."
+  after: "The assessment must describe the planned processing and its purposes, assess whether it is necessary and proportionate, assess the risks to individuals, and set out the measures to address those risks."
+  relevance: "Evaluating high-risk smart buildings, surveillance systems, and tenant monitoring technologies."
+  phases: [3]
+  references:
+    - name: "GDPR full text, Article 35"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Guidelines on Data Protection Impact Assessment (WP248 rev.01)"
+      publisher: "Article 29 Working Party, endorsed by the EDPB"
+      detail: "Find it in the EDPB guidelines index"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+
+- id: art-28
+  number: "Article 28"
+  short: "Art. 28"
+  title: "Processor"
+  theme: "Third parties and transfers"
+  summary: "Controls how a controller may use outside providers to process personal data on its behalf."
+  requires: "A controller must use only processors that provide sufficient guarantees of appropriate technical and organizational measures. A processor cannot engage another processor without the controller's written authorization. The processing must be governed by a contract or other legal act that requires, among other things:"
+  points:
+    - "Processing only on the controller's documented instructions."
+    - "Implementation of all the security measures in Article 32."
+    - "Assistance to the controller in meeting its obligations under Articles 32 to 36."
+    - "Deletion or return of the data when the services end."
+    - "Making available all information needed to demonstrate compliance, and allowing audits."
+  relevance: "Useful for studying third-party risks associated with cloud-hosted property management systems, tenant screening services, virtual tours, and payment processors."
+  question: "How should liability and cybersecurity responsibilities be allocated between real estate firms and their third-party technology providers?"
+  controls: [third-party-risk-assessment]
+  references:
+    - name: "GDPR full text, Article 28"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Guidelines 07/2020 on the concepts of controller and processor in the GDPR"
+      publisher: "European Data Protection Board"
+      detail: "Find it in the EDPB guidelines index"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+
+- id: art-44-46
+  number: "Articles 44-46"
+  short: "Arts. 44-46"
+  title: "Transfers of personal data to third countries"
+  theme: "Third parties and transfers"
+  summary: "Restricts sending personal data outside the European Economic Area unless its level of protection travels with it."
+  requires: "Personal data may be transferred to a country outside the EEA only if the protection it receives is not undermined (Art. 44). Under Art. 45, the European Commission can decide that a country, territory, or sector ensures an adequate level of protection. In assessing this, it considers the rule of law and human rights, whether independent supervisory authorities exist and work effectively, and the country's international commitments, and it must review the decision at least every four years. Without an adequacy decision, a transfer is allowed only if the exporter provides appropriate safeguards, such as standard contractual clauses (Art. 46), and individuals have enforceable rights and effective remedies."
+  status: "The European Commission adopted an adequacy decision for the EU-US Data Privacy Framework in July 2023, covering certified US organizations. The EU General Court dismissed a challenge to it on 3 September 2025, and an appeal is pending before the Court of Justice (Case C-703/25 P). Some commentators say the US Supreme Court's June 2026 ruling in Trump v. Slaughter raises new questions about the independence of the FTC oversight the decision relies on. Check the European Commission's page for the current position."
+  relevance: "Particularly relevant when European property information is shared with firms, investors, or service providers outside the European Economic Area. Article 45 addresses adequacy decisions, while Article 46 provides mechanisms such as Standard Contractual Clauses."
+  question: "How do international data transfer restrictions affect cybersecurity obligations in cross-border real estate transactions?"
+  controls: [third-party-risk-assessment]
+  phases: [3, 5]
+  references:
+    - name: "GDPR full text, Chapter V (Articles 44-50)"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    - name: "Adequacy decisions"
+      publisher: "European Commission"
+      detail: "Current list and status"
+      url: "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
+    - name: "Recommendations 01/2020 on measures that supplement transfer tools"
+      publisher: "European Data Protection Board"
+      detail: "Find it in the EDPB guidelines index"
+      url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"

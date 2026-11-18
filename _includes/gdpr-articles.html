@@ -1,0 +1,127 @@
+{% assign phase_names = "Pre-Screening,Verification,Criminal & Legal,Financial,Sanctions,Monitoring" | split: "," %}
+{% assign themes = "Principles and lawfulness,Security and breaches,Third parties and transfers" | split: "," %}
+<section class="gar" id="gdpr-articles">
+
+<h2 class="gar-title">GDPR articles in this research</h2>
+
+<p class="gar-intro">Select an article to see what it requires, why it matters for real estate, and which controls and workflow phases it connects to.</p>
+
+<div class="gar-groups">
+{% for theme in themes %}
+<div class="gar-group">
+<h3>{{ theme }}</h3>
+<div class="gar-chips">
+{% for a in site.data.gdpr_articles %}{% if a.theme == theme %}<button type="button" class="gar-chip" data-id="{{ a.id }}"><b>{{ a.short }}</b><span>{{ a.title }}</span></button>
+{% endif %}{% endfor %}
+</div>
+</div>
+{% endfor %}
+</div>
+
+<div class="gar-profiles">
+{% for a in site.data.gdpr_articles %}
+<div class="gar-profile" id="profile-{{ a.id }}" hidden>
+
+<div class="gar-head">
+<h3>{{ a.number }}</h3>
+<span class="gar-tag">{{ a.theme }}</span>
+</div>
+
+<p class="gar-name">{{ a.title }}</p>
+<p class="gar-summary">{{ a.summary }}</p>
+
+<div class="gar-block">
+<h4>What it requires</h4>
+<p>{{ a.requires }}</p>
+{% if a.points %}<ul>
+{% for p in a.points %}<li>{{ p }}</li>
+{% endfor %}</ul>{% endif %}
+{% if a.after %}<p>{{ a.after }}</p>{% endif %}
+</div>
+
+{% if a.status %}<div class="gar-status">
+<h4>Current status</h4>
+<p>{{ a.status }}</p>
+</div>{% endif %}
+
+{% if a.relevance %}<div class="gar-block">
+<h4>Why it matters for real estate</h4>
+<p>{{ a.relevance }}</p>
+</div>{% endif %}
+
+{% if a.question %}<div class="gar-question">
+<h4>Research question</h4>
+<p>{{ a.question }}</p>
+</div>{% endif %}
+
+<div class="gar-links">
+{% if a.controls %}<div>
+<h4>Connected controls</h4>
+<div class="gar-tags">{% for cid in a.controls %}{% assign ctl = site.data.controls | where: "id", cid | first %}{% capture curl %}/security-controls/#{{ cid }}{% endcapture %}<a href="{{ curl | relative_url }}">{{ ctl.name }}</a>{% endfor %}</div>
+</div>{% endif %}
+{% if a.phases %}<div>
+<h4>Workflow phases</h4>
+<div class="gar-tags">{% for p in a.phases %}{% assign idx = p | minus: 1 %}<a href="{{ '/workflow/' | relative_url }}">Phase {{ p }}: {{ phase_names[idx] }}</a>{% endfor %}</div>
+</div>{% endif %}
+</div>
+
+<div class="gar-refs">
+<h4>Official sources</h4>
+<ul>
+{% for r in a.references %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a><small>{{ r.publisher }}{% if r.detail %} &middot; {{ r.detail }}{% endif %}</small></li>
+{% endfor %}
+</ul>
+</div>
+
+{% if a.page %}<a class="gar-open" href="{{ a.page | relative_url }}">Read the full analysis &rarr;</a>{% endif %}
+
+</div>
+{% endfor %}
+</div>
+
+</section>
+
+<script>
+
+var garChips = document.querySelectorAll('.gar-chip');
+var garProfiles = document.querySelectorAll('.gar-profile');
+
+function showArticle(id) {
+
+  var found = false;
+
+  garChips.forEach(function (chip) {
+    if (chip.dataset.id == id) {
+      found = true;
+    }
+  });
+
+  if (!found) {
+    id = 'art-32';
+  }
+
+  garChips.forEach(function (chip) {
+    chip.classList.toggle('active', chip.dataset.id == id);
+  });
+
+  garProfiles.forEach(function (profile) {
+    profile.hidden = profile.id != 'profile-' + id;
+  });
+}
+
+garChips.forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    showArticle(chip.dataset.id);
+    history.replaceState(null, '', '#' + chip.dataset.id);
+  });
+});
+
+var garHash = window.location.hash.slice(1);
+
+showArticle(garHash);
+
+if (garHash.indexOf('art-') == 0) {
+  document.getElementById('gdpr-articles').scrollIntoView();
+}
+
+</script>

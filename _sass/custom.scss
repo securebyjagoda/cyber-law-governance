@@ -1712,3 +1712,329 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* GDPR ARTICLES */
+
+.gar {
+
+  margin: 2rem 0 3rem;
+}
+
+.page__content .gar-intro {
+
+  color: #9ca3af;
+
+  margin-bottom: 1.2rem;
+}
+
+.gar-groups {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 1.2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.page__content .gar-group h3 {
+
+  margin: 0 0 .5rem 0;
+
+  font-size: .8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+  color: #2dd4bf;
+}
+
+.gar-chips {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .5rem;
+}
+
+.gar-chip {
+
+  text-align: left;
+
+  background: #1f232b;
+
+  color: white;
+
+  border: 1px solid #3a3f4b;
+
+  border-left: 4px solid #2dd4bf;
+
+  border-radius: 10px;
+
+  padding: .6rem .9rem;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.gar-chip b {
+
+  display: block;
+
+  font-size: .95rem;
+}
+
+.gar-chip span {
+
+  font-size: .78rem;
+
+  color: #9ca3af;
+}
+
+.gar-chip:hover {
+
+  background: #252a34;
+}
+
+.gar-chip.active {
+
+  background: #2a2f39;
+
+  border-color: #9ca3af;
+
+  border-left-color: #2dd4bf;
+}
+
+/* PROFILE */
+
+.gar-profile {
+
+  background: #1f232b;
+
+  border: 1px solid #3a3f4b;
+
+  border-radius: 16px;
+
+  padding: 1.5rem;
+}
+
+.gar-profile[hidden] {
+
+  display: none;
+}
+
+.gar-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.page__content .gar-head h3 {
+
+  margin: 0;
+
+  font-size: 1.5rem;
+}
+
+.gar-tag {
+
+  padding: .25rem .8rem;
+
+  border: 1px solid #2dd4bf;
+
+  border-radius: 6px;
+
+  font-size: .7rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .07em;
+
+  color: #2dd4bf;
+}
+
+.page__content .gar-name {
+
+  margin: .3rem 0 .8rem 0;
+
+  font-weight: 700;
+}
+
+.page__content .gar-summary {
+
+  color: #d1d5db;
+
+  margin-bottom: 1.2rem;
+}
+
+.page__content .gar-profile h4 {
+
+  margin: 0 0 .4rem 0;
+
+  font-size: .75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .06em;
+
+  color: #f59e0b;
+}
+
+.gar-block {
+
+  margin-bottom: 1.2rem;
+
+  padding-bottom: 1.2rem;
+
+  border-bottom: 1px solid #3a3f4b;
+}
+
+.page__content .gar-block p {
+
+  margin: 0 0 .6rem 0;
+
+  font-size: .92rem;
+}
+
+.page__content .gar-block ul {
+
+  margin: 0 0 .6rem 0;
+
+  font-size: .92rem;
+}
+
+.gar-status,
+.gar-question {
+
+  background: #252a34;
+
+  border-left: 3px solid #f59e0b;
+
+  border-radius: 8px;
+
+  padding: .8rem 1rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.gar-question {
+
+  border-left-color: #2dd4bf;
+}
+
+.page__content .gar-status p,
+.page__content .gar-question p {
+
+  margin: 0;
+
+  font-size: .92rem;
+}
+
+.gar-links {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1.2rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.gar-tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .4rem;
+}
+
+.gar-tags a {
+
+  padding: .2rem .7rem;
+
+  border: 1px solid #2dd4bf;
+
+  border-radius: 999px;
+
+  font-size: .8rem;
+
+  color: #2dd4bf;
+}
+
+.gar-tags a:hover {
+
+  background: #2a2f39;
+}
+
+.page__content .gar-refs ul {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.gar-refs li {
+
+  margin-bottom: .5rem;
+
+  font-size: .92rem;
+}
+
+.gar-refs a,
+.gar-open {
+
+  color: #2dd4bf;
+}
+
+.gar-refs small {
+
+  display: block;
+
+  color: #9ca3af;
+}
+
+.gar-open {
+
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  font-weight: 700;
+}
+
+.page__content .law-card .law-articles {
+
+  margin: 0 0 .8rem 0;
+
+  font-size: .8rem;
+
+  color: #9ca3af;
+}
+
+/* GDPR ARTICLES MOBILE */
+
+@media (max-width: 900px) {
+
+  .gar-groups,
+  .gar-links {
+
+    grid-template-columns: 1fr;
+  }
+}
