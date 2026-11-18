@@ -23,7 +23,7 @@
       note: "Requires encrypting customer information in transit over external networks and at rest, with approved alternative controls if encryption is infeasible."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-32
       ref: "Art. 32(1)(a)"
       kind: named
       note: "Lists encryption as an example of an appropriate security measure, depending on the risk."
@@ -135,7 +135,7 @@
       note: "Requires multi-factor authentication for anyone accessing an information system, unless the Qualified Individual approves an equivalent or more secure control in writing."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-32
       ref: "Art. 32"
       kind: supports
       note: "Appropriate security measures include controlling who can access personal data."
@@ -240,7 +240,7 @@
       note: "Massachusetts law on destroying paper and electronic records that contain personal information."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-5
       ref: "Art. 5(1)(e)"
       kind: supports
       note: "Personal data may be kept in identifiable form only as long as necessary for its purpose, which makes timely deletion an expectation."
@@ -286,7 +286,7 @@
       note: "Require monitoring of systems for unauthorized use and regular monitoring of whether the program works. Logs are the usual evidence."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-33
       ref: "Art. 5(2), Art. 33"
       kind: supports
       note: "Accountability and breach notification both depend on being able to show what happened."
@@ -403,13 +403,13 @@
       note: "Requires choosing capable service providers, requiring safeguards by contract, and periodically assessing them."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-28
       ref: "Art. 28"
       kind: named
       note: "Requires using only processors that give sufficient guarantees, and binding them with a contract."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#arts-44-46
       ref: "Arts. 44-46"
       kind: supports
       note: "Transfers of personal data to a vendor outside the EU need an adequacy decision or other safeguards."

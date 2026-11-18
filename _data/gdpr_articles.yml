@@ -1,3 +1,27 @@
+- id: art-4
+  number: "Article 4(1)"
+  short: "Art. 4(1)"
+  title: "Definition of personal data"
+  theme: "Principles and lawfulness"
+  summary: "Defines personal data very broadly, which decides what falls under the GDPR at all."
+  requires: "Personal data means any information relating to an identified or identifiable natural person. A person is identifiable if they can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, or an online identifier, or to factors specific to their identity."
+  glance:
+    us: "201 CMR 17.02 (definition of personal information)"
+    diff: "Massachusetts covers a resident's name combined with specified sensitive identifiers. The GDPR covers any information relating to an identifiable individual, so some data falls outside Massachusetts law but inside the GDPR."
+  comparisons:
+    - title: "Art. 4(1) vs. 201 CMR 17.00"
+      question: "201 CMR 17.00 defines personal information narrowly compared to the GDPR's definition, which is much broader. Can information fall outside Massachusetts law but still be protected by the GDPR?"
+      answer: "Yes. Massachusetts 201 CMR 17.00 generally defines personal information through a person's name combined with specified sensitive identifiers, whereas GDPR Article 4(1) covers a much broader range of information relating to identifiable individuals, including email addresses, IP addresses, and certain property-related records. Consequently, an international real estate company could process information outside Massachusetts' defined category while still being subject to GDPR requirements, provided GDPR applies to that processing."
+      links:
+        - name: "201 CMR 17.00"
+          url: /laws/201-cmr-17/
+  scenario: "A company records the email addresses and IP addresses of EU visitors to a virtual property tour, and links property records to named owners. None of this may meet the Massachusetts definition of personal information, but it can still be personal data under the GDPR."
+  references:
+    - name: "GDPR full text, Article 4"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+
 - id: art-5
   number: "Article 5"
   short: "Art. 5"
@@ -12,6 +36,21 @@
     - "Accuracy: kept up to date, with inaccurate data corrected or erased."
     - "Storage limitation: kept in an identifiable form no longer than necessary."
     - "Integrity and confidentiality: processed securely, with protection against unauthorized access, unlawful processing, loss, destruction, or damage."
+  after: "Article 25 requires these principles to be built into systems and defaults. See the Art. 25 profile for the difference between the two."
+  glance:
+    us: "OFAC and BSA recordkeeping, the FCRA Disposal Rule"
+    diff: "U.S. rules set minimum periods for keeping some records, while the GDPR limits storage to what is necessary. Data that must be kept should have restricted use and access, and be deleted when no longer justified."
+  comparisons:
+    - title: "Art. 5 vs. U.S. recordkeeping rules"
+      question: "U.S. rules require keeping some records for years (OFAC: 10 years, BSA: 5 years), while the GDPR requires data minimization and storage limitation. How should companies handle data they have to keep?"
+      answer: "Companies may retain information for legally required periods, even when it is no longer needed for the original business purpose, but should restrict its use, access, and retention to what is necessary. U.S. recordkeeping requirements do not automatically override GDPR obligations, so companies must identify applicable requirements, document their retention schedules, and securely delete information when no longer justified."
+      note: "The FCRA does not set a general retention period. Its Disposal Rule governs how consumer report information is destroyed."
+      links:
+        - name: "OFAC"
+          url: /laws/ofac/
+        - name: "FCRA"
+          url: /laws/fcra/
+  scenario: "A property manager screens an EU-based investor against sanctions lists. A sanctions-screening record may have to be kept for the U.S. recordkeeping period, but the rest of the investor's file should be deleted on a documented schedule, and the retained record should be limited to compliance staff."
   controls: [access-control, secure-data-disposal]
   phases: [2, 3, 4, 5, 6]
   references:
@@ -34,6 +73,17 @@
     - "Necessity to protect someone's vital interests."
     - "Necessity for a task carried out in the public interest or under official authority."
     - "Legitimate interests of the controller or a third party, unless overridden by the individual's rights and interests."
+  glance:
+    us: "BSA and OFAC obligations"
+    diff: "U.S. legal obligations do not by themselves satisfy Art. 6(1)(c), because Art. 6(3) requires the obligation to rest on EU or Member State law. Another basis, such as legitimate interests, may be needed."
+  comparisons:
+    - title: "Art. 6 vs. BSA and OFAC"
+      question: "Do U.S. legal obligations (such as BSA and OFAC) count as a lawful basis under GDPR Art. 6?"
+      answer: "U.S. legal obligations such as BSA or OFAC requirements generally do not independently qualify under Article 6(1)(c), because Article 6(3) requires the legal obligation to be grounded in applicable EU or Member State law. A company may need to identify another lawful basis, such as legitimate interests under Article 6(1)(f), where appropriate and supported by a balancing assessment."
+      links:
+        - name: "OFAC"
+          url: /laws/ofac/
+  scenario: "A U.S. firm screens an EU-resident investor against sanctions lists. It cannot simply cite OFAC as its Art. 6(1)(c) basis, so it documents a legitimate-interests assessment, or another basis, before running the check."
   phases: [2]
   references:
     - name: "GDPR full text, Article 6"
@@ -45,6 +95,31 @@
       detail: "Find it in the EDPB guidelines index"
       url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
 
+- id: art-10
+  number: "Article 10"
+  short: "Art. 10"
+  title: "Processing of data relating to criminal convictions and offences"
+  theme: "Principles and lawfulness"
+  summary: "Restricts who may process data about criminal convictions and offences, and on what legal footing."
+  requires: "Processing of personal data relating to criminal convictions and offences, or related security measures, based on Art. 6(1), may be carried out only under the control of official authority or when it is authorized by EU or Member State law that provides appropriate safeguards for individuals' rights and freedoms. Any comprehensive register of criminal convictions may be kept only under the control of official authority."
+  glance:
+    us: "FCRA"
+    diff: "The FCRA permits criminal background screening, but Art. 10 requires official authority or authorization in EU or Member State law with safeguards, so FCRA compliance alone is not enough."
+  comparisons:
+    - title: "Art. 10 vs. the FCRA"
+      question: "GDPR Art. 10 restricts processing of criminal records, while U.S. law (FCRA) allows criminal background screening and takes a more permissive approach. Are there limitations a U.S. company must meet to run this kind of check on individuals covered by the GDPR?"
+      answer: "Although U.S. law may permit criminal background screening, GDPR Article 10 generally requires processing of criminal conviction and offense data to occur under official authority or specific EU or Member State legal authorization with appropriate safeguards. A U.S. company subject to the GDPR cannot rely solely on FCRA compliance or ordinary consent to justify these checks and must also satisfy Article 6 and any applicable national restrictions."
+      links:
+        - name: "FCRA"
+          url: /laws/fcra/
+  scenario: "A U.S. property manager wants a criminal background check on a rental applicant who lives in the EU. Following the FCRA does not authorize the check under Art. 10. The company needs a basis in EU or Member State law with safeguards, and must also meet Art. 6 and any national restrictions."
+  phases: [3]
+  references:
+    - name: "GDPR full text, Article 10"
+      publisher: "EUR-Lex"
+      detail: "Regulation (EU) 2016/679"
+      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+
 - id: art-25
   number: "Article 25"
   short: "Art. 25"
@@ -52,6 +127,14 @@
   theme: "Principles and lawfulness"
   summary: "Requires privacy to be built into systems from the start and set to the most protective defaults."
   requires: "The controller must implement appropriate technical and organizational measures, such as pseudonymization, designed to apply the data protection principles, both when deciding how the processing will work and while it runs. By default, only personal data necessary for each specific purpose may be processed, which covers how much is collected, how far it is used, how long it is kept, and who can access it. Data should not be made accessible to an indefinite number of people without the individual's involvement. This connects with Article 5."
+  glance:
+    us: "GDPR Art. 5 (a comparison within the GDPR)"
+    diff: "Art. 5 defines what must be achieved. Art. 25 requires building those principles into systems and processing practices."
+  comparisons:
+    - title: "Art. 5 vs. Art. 25"
+      question: "What is the difference between GDPR Articles 5 and 25?"
+      answer: "Article 5 establishes the principles organizations must follow, such as data minimization, accuracy, storage limitation, and confidentiality, while Article 25 requires organizations to implement those principles through privacy by design and by default. In other words, Article 5 defines what organizations must achieve, while Article 25 addresses how privacy protections must be integrated into systems and processing practices."
+  scenario: "A tenant-screening workflow is designed so that each step collects only the fields it needs, and its default settings show results only to the reviewers who need them."
   controls: [access-control]
   references:
     - name: "GDPR full text, Article 25"
@@ -76,6 +159,17 @@
     - "The ability to restore availability of and access to personal data in a timely manner after a physical or technical incident (backup, recovery, and business continuity)."
     - "A process for regularly testing and evaluating how effective the measures are."
   after: "Anyone acting under the authority of the controller or processor who has access to personal data may process it only on the controller's instructions, unless required to do so by law."
+  glance:
+    us: "201 CMR 17.00 (the WISP requirement)"
+    diff: "A compliant WISP is a strong foundation but does not automatically satisfy Art. 32, which requires measures appropriate to the particular risks, possibly with added safeguards, testing, and documentation."
+  comparisons:
+    - title: "Art. 32 vs. 201 CMR 17.00"
+      question: "The WISP required by 201 CMR 17.00 includes many specific controls, while the GDPR often refers to appropriate controls based on risk. Would a compliant WISP satisfy Art. 32?"
+      answer: "A compliant Massachusetts Written Information Security Program (WISP) provides a strong foundation for GDPR Article 32 compliance, but does not automatically satisfy it. GDPR requires security measures appropriate to the particular risks, which may necessitate additional safeguards, testing, and documentation beyond those required under Massachusetts law."
+      links:
+        - name: "201 CMR 17.00"
+          url: /laws/201-cmr-17/
+  scenario: "A cloud property-management system stores tenant IDs and payment details. The WISP baseline (encryption, access control, authentication, monitoring) is a starting point, but for EU tenants a documented risk assessment and regular testing may call for more."
   relevance: "This is the strongest article for a technical cybersecurity analysis. It requires risk-appropriate security measures, potentially including encryption, system resilience, recovery capabilities, and regular security testing."
   question: "What cybersecurity measures must international real estate companies implement to satisfy GDPR security obligations when protecting property transactions and tenant information?"
   controls: [encryption, authentication, access-control, security-monitoring, dlp]
@@ -99,6 +193,18 @@
     - "Describe the likely consequences of the breach."
     - "Describe the measures taken or proposed to address the breach and reduce its possible harm."
   after: "Every breach must be documented, including the facts, its effects, and the remedial action taken, so the supervisory authority can verify compliance. Article 34 separately requires telling affected individuals when the breach is likely to result in a high risk to them."
+  glance:
+    us: "M.G.L. c.93H §3"
+    diff: "Separate notices are needed: the EU supervisory authority within 72 hours, a Massachusetts filing with the Attorney General and OCABR, and notices to individuals. Massachusetts consumer notices omit the nature of the breach and the number of residents affected."
+  comparisons:
+    - title: "Art. 33 vs. M.G.L. c.93H"
+      question: "GDPR Art. 33 requires an explanation of the breach in the notice, while M.G.L. c.93H separates technical details from what goes to users. If a breach affects both U.S. and EU individuals, how does it work in practice? Do companies send separate notices?"
+      answer: "Companies generally prepare separate notifications for EU supervisory authorities, Massachusetts regulators, and affected individuals, because each law has different content and timing requirements. GDPR Article 33 generally requires supervisory authority notification within 72 hours when applicable, while Massachusetts prohibits certain details from consumer notices and requires separate regulator reporting."
+      note: "Under c.93H §3, the notice to a Massachusetts resident may not state the nature of the breach or the number of residents affected. Those details go in the filing with the Attorney General and OCABR, together with a sample of the consumer notice. When individuals must be told under GDPR Art. 34, the notice has to describe the nature of the breach in clear and plain language, which is why one notice cannot serve both."
+      links:
+        - name: "M.G.L. c.93H"
+          url: /laws/mgl-c93h/
+  scenario: "A breach at a third-party property-management vendor exposes both U.S. and EU tenants. The company prepares a notice to the EU supervisory authority (72 hours from becoming aware, where feasible), a Massachusetts filing with the Attorney General and OCABR, and separate notices to affected individuals."
   relevance: "Examines the legal consequences of ransomware, database compromises, and unauthorized disclosure. Where notification is required, controllers generally must notify the supervisory authority within 72 hours of becoming aware of a personal data breach."
   question: "How should multinational real estate organizations coordinate cybersecurity incident response and GDPR breach reporting across jurisdictions?"
   controls: [audit-logging, security-monitoring]
@@ -111,6 +217,10 @@
       publisher: "European Data Protection Board"
       detail: "Final version, 2023 (find it in the EDPB guidelines index)"
       url: "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+    - name: "M.G.L. c.93H, Section 3"
+      publisher: "Massachusetts Legislature"
+      detail: "Duty to report a security breach"
+      url: "https://malegislature.gov/Laws/GeneralLaws/Chapter93H/Section3"
 
 - id: art-35
   number: "Article 35"
