@@ -9,9 +9,7 @@ permalink: /laws/glba/
 
 The Gramm-Leach-Bliley Act (GLBA), also known as the Financial Services Modernization Act, governs how financial institutions collect, use, share, and protect customers' nonpublic personal information (NPI).
 
-Although GLBA is most commonly associated with banks and traditional financial institutions, it may also apply to organizations operating in the real estate sector when they engage in activities such as lending, loan servicing, debt management, evaluating creditworthiness, processing financial transactions, handling investor funds, or obtaining financial information during due diligence and background screening activities.
-
-For organizations conducting corporate due diligence, GLBA becomes relevant whenever financial information is collected, evaluated, stored, or shared as part of the risk assessment process.
+Although GLBA is most commonly associated with banks and traditional financial institutions, it may also apply to organizations operating in the real estate sector when they engage in activities such as loan servicing, debt management, processing financial transactions, handling investor funds, or obtaining financial information during due diligence and background screening activities.
 
 ---
 
@@ -40,15 +38,13 @@ In the real estate industry, organizations may fall within the scope of GLBA whe
 - Collect consumer financial information
 - Obtain consumer reports as part of a due diligence process
 
-The law applies to both the collection and protection of nonpublic personal information obtained through such activities.
+The law applies to both the collection and protection of NPI obtained through such activities.
 
 ---
 
 ## Protected Information
 
-GLBA protects nonpublic personal information (NPI).
-
-Examples of information commonly encountered during due diligence activities include:
+Examples of NPI commonly encountered during due diligence activities include:
 
 - Credit reports
 - Financial statements
@@ -145,10 +141,10 @@ Organizations handling financial information as part of due diligence activities
 
 - Written Information Security Program (WISP)
 - Vendor Management Program
-- Third-Party Risk Assessment Process
+- Third-Party Risk Assessment
 - Data Retention Schedule
 - Records of Processing Activities (ROPA), where applicable
-- Security Awareness and Training Program
+- Security Awareness Training
 - Incident Response Plan
 
 These governance mechanisms support both GLBA compliance and broader information-security objectives.
