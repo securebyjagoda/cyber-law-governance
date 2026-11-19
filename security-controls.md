@@ -7,7 +7,7 @@ classes: wide
 
 <p class="ctl-kicker">Protect. Monitor. Govern.</p>
 
-A reference library of the cybersecurity controls used throughout the third-party due diligence workflow. Select a control to see what it does, which security objective it serves, which laws address it, where it is applied, and which official standards to read next.
+A reference library of the cybersecurity controls used throughout the third-party due diligence process. Learn about specific controls, how they protect the CIA triad, their applicability and official frameworks.
 
 {% assign phase_names = "Pre-Screening,Verification,Criminal & Legal,Financial,Sanctions,Monitoring" | split: "," %}
 {% assign lanes = "Protect,Monitor,Govern" | split: "," %}
