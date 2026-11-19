@@ -7,7 +7,7 @@ classes: wide
 
 <p class="dc-kicker">Classify. Govern. Protect.</p>
 
-A centralized library of the data categories collected during corporate due diligence, third-party screening, and background checks. Select a category for a quick summary of its sensitivity, risks, and governing laws, then open its full page for the details.
+A centralized library of the data categories collected during due diligence and background checks. Select a category for a quick summary of its sensitivity, risks, and governing laws, then open its full page for the details.
 
 <div class="dc-cards">
 {% for type in site.data.data_types %}<button type="button" class="dc-card lvl-{{ type.level }}" data-id="{{ type.id }}">
