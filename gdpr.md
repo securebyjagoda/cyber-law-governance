@@ -9,11 +9,11 @@ classes: wide
 
 ## Overview
 
-The GDPR is the European Union's framework for protecting personal data. It has applied since 25 May 2018 and sets rules for how organizations collect, use, store, share, and secure information about people in the EU. It also gives individuals rights over their data and gives national supervisory authorities the power to enforce the rules.
+The GDPR is the European Union's framework for protecting personal data. Applicable since 25 May 2018, it sets rules for how organizations collect, use, store, share, and secure data related to people in the EU. It also gives individuals rights over their data and gives national supervisory authorities the power to enforce the rules.
 
 ## Who it applies to
 
-The GDPR applies to organizations established in the EU, and also to organizations outside the EU that offer goods or services to people in the EU or monitor their behavior (Article 3). For a US real estate company, that can include European investors, tenants, and counterparties whose information is screened during due diligence.
+The GDPR applies to organizations established in the EU as well as to organizations outside the EU that offer goods or services to people in the EU or monitor their behavior. For a US real estate company, that can include European investors, tenants, and counterparties whose information is screened during due diligence.
 
 ## Key terms
 
