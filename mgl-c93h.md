@@ -8,9 +8,6 @@ permalink: /laws/mgl-c93h/
 ## Overview
 
 Massachusetts General Laws Chapter 93H is the Commonwealth's primary data breach notification law. It governs how organizations must respond when personal information belonging to Massachusetts residents is accessed, used, disclosed, or acquired without authorization.
-
-While 201 CMR 17.00 establishes the security safeguards organizations should implement to prevent breaches, MGL c. 93H defines what organizations must do when a breach occurs. Together, these laws form the foundation of Massachusetts data protection requirements.
-
 For organizations conducting third-party due diligence, background screening, and vendor assessments, MGL c. 93H plays a critical role because the process often involves collecting and maintaining sensitive personal information that may be subject to breach notification obligations.
 
 ---
@@ -103,8 +100,7 @@ A breach involving due diligence records may trigger notification obligations ev
 MGL c. 93H works closely with several other laws relevant to due diligence activities.
 
 Most notably, it is closely connected to 201 CMR 17.00.
-
-While MGL c. 93H focuses on what organizations must do after a breach occurs, 201 CMR 17.00 establishes the administrative, technical, and physical safeguards intended to prevent breaches from occurring in the first place.
+While 201 CMR 17.00 establishes the security safeguards organizations should implement to prevent breaches, MGL c. 93H defines what organizations must do when a breach occurs. Together, these laws form the foundation of Massachusetts data protection requirements.
 
 The law also intersects with:
 
@@ -112,8 +108,6 @@ The law also intersects with:
 - FCRA, which governs consumer reports and background checks.
 - MGL c. 214 § 1B, which establishes privacy rights and limits unreasonable interference with personal information.
 - GDPR, when organizations process information relating to individuals located within the European Union.
-
-Together, these laws create a broader framework governing the collection, use, protection, and disclosure of sensitive information.
 
 ---
 
@@ -127,8 +121,8 @@ Examples include:
 - Incident Response Plan
 - Data Retention Schedule
 - Vendor Management Program
-- Third-Party Risk Assessment Process
-- Security Awareness Training Program
+- Third-Party Risk Assessment
+- Security Awareness Training
 - Breach Notification Procedures
 
 These governance practices help organizations prepare for security incidents and demonstrate compliance with regulatory obligations.
