@@ -1,5 +1,4 @@
 ---
-title: Workflow Explorer
 permalink: /workflow/
 layout: single
 classes: wide
@@ -13,7 +12,7 @@ classes: wide
 
 What is Due Diligence?
 
-Corporate third-party due diligence is a structured process used to collect, verify, and evaluate information about a vendor, investor, contractor, supplier, or other third party before entering or maintaining a business relationship.
+Third-party due diligence is a structured process used to collect, verify, and evaluate information about a vendor, investor, contractor, supplier, or other third party before entering or maintaining a business relationship.
 
 The process helps organizations identify, assess, and manage risks associated with third-party relationships and the data collected throughout the due diligence process.
 
@@ -670,7 +669,7 @@ Monitoring
 
     <ul>
       <li>Written Information Security Program (WISP)</li>
-      <li>Recirds of Processing Activities (ROPA)</li>
+      <li>Records of Processing Activities (ROPA)</li>
       <li>Data Retention Schedule</li>
       <li>Data Disposal Procedure</li>
       <li>Incident Response Plan</li>
