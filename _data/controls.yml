@@ -398,7 +398,7 @@
 
 - id: third-party-risk-assessment
   name: "Third-Party Risk Assessment"
-  short: "Third-Party Risk"
+  short: "Risk Assessment"
   lane: "Govern"
   tagline: "Checks the vendors that hold your data."
   objectives: [confidentiality, integrity, availability]
