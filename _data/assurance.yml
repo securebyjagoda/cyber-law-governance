@@ -1,0 +1,117 @@
+soc2:
+  name: "SOC 2"
+  items_title: "The five Trust Services Criteria"
+  what: "An auditing framework that assesses an organization's security controls and how it handles data availability, processing integrity, confidentiality, and privacy. It is an audit report, not a certificate."
+  applies: "Organizations that provide services such as cloud computing, data storage, SaaS, and IaaS, and that store, process, or transmit sensitive data on behalf of their clients."
+  shows: "The report is issued by an independent auditor and demonstrates the organization's cybersecurity. It builds trust and shows commitment to high standards for security controls, which makes it crucial for vendor credibility, especially in due diligence."
+  facts:
+    - title: "Type 1"
+      text: "A point-in-time evaluation. The report covers the design of the organization's security program and policies."
+    - title: "Type 2"
+      text: "An evaluation over a period of time. The report covers how the program was carried out, so it says more about the ongoing state of security and the organization's commitment to it."
+  items:
+    - id: security
+      name: "Security"
+      tag: "Required"
+      summary: "Required in every SOC 2 report. It covers company management and culture, risk assessments, communication, control monitoring, and cybersecurity strategy."
+      examples: "Access controls, network security, intrusion detection and prevention (IDS/IPS), vulnerability management, incident response, and security awareness training."
+      controls: [access-control, authentication, encryption, audit-logging, security-monitoring, third-party-risk-assessment]
+    - id: availability
+      name: "Availability"
+      tag: "Optional"
+      summary: "The uptime of services. Controls include plans for maximizing uptime and for restoring availability after an outage."
+      examples: "System monitoring, backup and recovery, and business continuity and disaster recovery."
+      controls: [security-monitoring]
+      gap: "This library has no backup and recovery or business continuity control yet, so only monitoring maps here."
+    - id: confidentiality
+      name: "Confidentiality"
+      tag: "Optional"
+      summary: "The ability to identify and protect confidential data."
+      examples: "Data classification, encryption, and secure data handling, including retention and deletion."
+      controls: [encryption, dlp, secure-data-disposal]
+    - id: processing-integrity
+      name: "Processing Integrity"
+      tag: "Optional"
+      summary: "Whether collected data is processed correctly, including how exceptions are handled."
+      examples: "Data validation, authorization, and quality assurance."
+      controls: []
+      gap: "No control in this library maps here directly."
+    - id: privacy
+      name: "Privacy"
+      tag: "Optional"
+      summary: "Covers the privacy policy, legal basis, and secure storage. It matters mostly for business-to-consumer organizations and less for business-to-business ones."
+      examples: "Privacy policies, notice and consent, and data minimization."
+      controls: [secure-data-disposal]
+      links:
+        - name: "GDPR Art. 5"
+          url: /laws/gdpr/#art-5
+        - name: "GDPR Art. 6"
+          url: /laws/gdpr/#art-6
+        - name: "GDPR Art. 25"
+          url: /laws/gdpr/#art-25
+  why: "A vendor holding screening data can show an independent auditor's view of its controls instead of relying on its own statements. A Type 2 report is the more informative of the two, because it shows the controls working over time."
+  check:
+    - "Whether the report is Type 1 or Type 2, and the period it covers."
+    - "Which Trust Services Criteria and which systems are in scope."
+    - "Any exceptions the auditor noted."
+  references:
+    - name: "2017 Trust Services Criteria (With Revised Points of Focus, 2022)"
+      publisher: "AICPA"
+      detail: "TSP Section 100"
+      url: "https://www.aicpa.org/resources/download/get-the-2017-trust-services-criteria"
+
+iso27001:
+  name: "ISO/IEC 27001"
+  items_title: "Annex A: 93 controls in four themes"
+  what: "The standard for information security management systems (ISMS). It defines the requirements an ISMS must meet and provides guidance for establishing, implementing, maintaining, and improving it."
+  applies: "Any organization, of any size or sector, that wants to manage information security risk in a structured way, including vendors that hold customer data."
+  shows: "Certification declares that an organization has systems to manage the security risks of the data it owns or handles, and that it follows recognized best security practices. It ensures the ISMS protects the confidentiality, integrity, and availability of information, which makes it very relevant in due diligence."
+  facts:
+    - title: "Mandatory clauses"
+      text: "Clauses 4 to 10 contain the requirements: context of the organization, leadership, planning, support, operation, performance evaluation, and improvement."
+    - title: "Statement of Applicability"
+      text: "Lists the necessary controls, the justification for including each one, its implementation status, and the justification for excluding any Annex A control."
+    - title: "How controls are chosen"
+      text: "Organizations usually run a risk assessment and check it against Annex A. Decisions come from the risk treatment plan, legal and regulatory requirements (privacy laws, breach notification, industry rules), contractual requirements (such as encryption, breach notification, and retention and deletion terms), and the expectations of interested parties such as customers, regulators, investors, and employees."
+    - title: "Certification"
+      text: "An independent certification body audits the organization in two stages. The certificate is valid for three years, with surveillance audits in between."
+  items:
+    - id: organizational
+      name: "Organizational"
+      tag: "37 controls (A.5)"
+      summary: "Policies, roles, supplier relationships, and legal compliance."
+      examples: "Access control (A.5.15) and information security in supplier relationships (A.5.19 to A.5.22)."
+      controls: [access-control, third-party-risk-assessment]
+    - id: people
+      name: "People"
+      tag: "8 controls (A.6)"
+      summary: "Controls about the people who work with information, such as screening and awareness."
+      examples: "Information security awareness, education, and training (A.6.3)."
+      controls: []
+      gap: "No control in this library maps to this theme yet."
+    - id: physical
+      name: "Physical"
+      tag: "14 controls (A.7)"
+      summary: "Physical security of sites, equipment, and storage media."
+      examples: "Secure disposal or re-use of equipment (A.7.14)."
+      controls: [secure-data-disposal]
+    - id: technological
+      name: "Technological"
+      tag: "34 controls (A.8)"
+      summary: "Technical safeguards for systems and data."
+      examples: "Privileged access rights (A.8.2), secure authentication (A.8.5), information deletion (A.8.10), data leakage prevention (A.8.12), logging (A.8.15), monitoring activities (A.8.16), and use of cryptography (A.8.24)."
+      controls: [encryption, access-control, authentication, dlp, secure-data-disposal, audit-logging, security-monitoring]
+  why: "The certificate shows that a vendor runs a managed process for security risk, and its Statement of Applicability shows which controls it chose and why. That makes both a strong item to request during due diligence."
+  check:
+    - "The scope of the certificate: which business units and systems it covers."
+    - "The certification body and the certificate's validity dates."
+    - "Whether the vendor will share its Statement of Applicability."
+  references:
+    - name: "ISO/IEC 27001: Information security management systems"
+      publisher: "ISO"
+      detail: "Overview page. The standard itself is sold by ISO."
+      url: "https://www.iso.org/standard/27001"
+    - name: "ISO/IEC 27002: Information security controls"
+      publisher: "ISO"
+      detail: "Overview page. Guidance for each Annex A control."
+      url: "https://www.iso.org/standard/75652.html"

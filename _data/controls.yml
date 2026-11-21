@@ -6,6 +6,7 @@
   objectives: [confidentiality, integrity]
   triad: [220, 149]
   label: left
+  protects: all
   purpose: "Converts data into an unreadable, encoded form that can be read only with the correct cryptographic key. It protects data stored on systems and data in transit, so a lost device or intercepted file does not expose its contents."
   phases: [1, 2, 3, 4, 5, 6]
   laws:
@@ -38,6 +39,7 @@
   nist80053: "SC-8, SC-12, SC-13, SC-28"
   cis: "Control 3"
   iso: "8.24"
+  soc2: "Confidentiality, Security"
   references:
     - name: "SP 800-111: Guide to Storage Encryption Technologies for End User Devices"
       publisher: "NIST"
@@ -63,8 +65,9 @@
   lane: "Protect"
   tagline: "Limits who can see or change data."
   objectives: [confidentiality, integrity, availability]
-  triad: [280, 268]
-  label: right
+  triad: [232, 288]
+  label: left
+  protects: all
   purpose: "Grants or denies access to information and resources, keeping confidential data from being viewed, changed, or deleted by unauthorized users. Once a user's identity has been authenticated, access control policies assign specific permissions."
   phases: [1, 2, 3, 4, 5, 6]
   laws:
@@ -82,7 +85,7 @@
       note: "Requires access controls that limit users to the customer information they need, reviewed periodically."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-32
       ref: "Art. 5(1)(f), Art. 25, Art. 32"
       kind: supports
       note: "Confidentiality, data protection by design and by default, and security of processing all point toward need-to-know access."
@@ -91,6 +94,7 @@
   nist80053: "AC family"
   cis: "Control 6"
   iso: "5.15, 8.2"
+  soc2: "Security"
   references:
     - name: "Role Based Access Control (RBAC) project"
       publisher: "NIST"
@@ -118,6 +122,7 @@
   objectives: [confidentiality, integrity]
   triad: [180, 215]
   label: left
+  protects: all
   purpose: "Verifies a claimed identity by checking the validity of authenticators, such as passwords, tokens, or biometrics, that back up the claim. It is the step that confirms who a user is before access control decides what they may do."
   phases: [2]
   laws:
@@ -144,6 +149,7 @@
   nist80053: "IA family"
   cis: "Control 6"
   iso: "8.5"
+  soc2: "Security"
   references:
     - name: "SP 800-63B-4: Authentication and Authenticator Management"
       publisher: "NIST"
@@ -168,12 +174,13 @@
   objectives: [confidentiality]
   triad: [280, 116]
   label: right
+  protects: all
   purpose: "Strategies, processes, and technologies that prevent data from being stolen, lost, or misused, focusing on how data is accessed, used, and shared. It is a proactive measure that reduces the risk of exposure and supports policies for how data should be handled."
   phases: [3, 6]
   laws:
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-32
       ref: "Art. 5(1)(f), Art. 32"
       kind: supports
       note: "Does not mention DLP, but requires protection against unauthorized disclosure and measures appropriate to the risk."
@@ -194,6 +201,7 @@
   nist80053: "AC-4, SC-7"
   cis: "Control 3"
   iso: "8.12"
+  soc2: "Confidentiality"
   references:
     - name: "Data Loss Prevention (Liu and Kuhn, IEEE IT Professional, 2010)"
       publisher: "NIST-authored article"
@@ -218,6 +226,7 @@
   objectives: [confidentiality]
   triad: [280, 150]
   label: right
+  protects: all
   purpose: "Permanently and irretrievably destroys data so it cannot be recovered or accessed by unauthorized parties. NIST SP 800-88 recommends verifying sanitization and documenting it, for example with a certificate listing serial numbers, methods, tools, and verification results."
   phases: [6]
   laws:
@@ -249,6 +258,7 @@
   nist80053: "MP-6"
   cis: "Control 3"
   iso: "8.10, 7.14"
+  soc2: "Confidentiality, Privacy"
   references:
     - name: "SP 800-88 Rev. 2: Guidelines for Media Sanitization"
       publisher: "NIST"
@@ -268,7 +278,10 @@
   tagline: "Records who did what, and when."
   objectives: [integrity]
   marker: "Accountability"
-  outside: detection
+  triad: [140, 347]
+  label: right
+  protects: all
+  protects_label: "Records activity involving"
   purpose: "A chronological record of system activities, including accesses and operations performed. It lets an organization trace actions to the people or systems behind them, investigate incidents, and show what happened."
   phases: [1, 2, 3, 4, 5, 6]
   laws:
@@ -301,6 +314,7 @@
   nist80053: "AU family"
   cis: "Control 8"
   iso: "8.15"
+  soc2: "Security"
   references:
     - name: "SP 800-92: Guide to Computer Security Log Management"
       publisher: "NIST"
@@ -325,7 +339,10 @@
   tagline: "Watches for problems as they happen."
   objectives: [confidentiality, integrity, availability]
   marker: "Detection"
-  outside: detection
+  triad: [328, 288]
+  label: right
+  protects: all
+  protects_label: "Watches over"
   purpose: "Maintains ongoing awareness of information security, vulnerabilities, and threats, using automated procedures where possible, to support risk decisions. It lets an organization notice unusual activity early enough to respond."
   phases: [3, 4, 5, 6]
   laws:
@@ -343,7 +360,7 @@
       note: "Requires continuous monitoring or, without it, annual penetration testing and vulnerability assessments at least every six months."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/
+      url: /laws/gdpr/#art-32
       ref: "Art. 32(1)(d), Art. 33"
       kind: supports
       note: "Requires regularly testing how effective security measures are, and breach detection fast enough for the 72-hour notice."
@@ -358,6 +375,7 @@
   nist80053: "SI-4, CA-7"
   cis: "Control 13"
   iso: "8.16"
+  soc2: "Security, Availability"
   references:
     - name: "SP 800-137: Information Security Continuous Monitoring (ISCM)"
       publisher: "NIST"
@@ -380,12 +398,14 @@
 
 - id: third-party-risk-assessment
   name: "Third-Party Risk Assessment"
-  short: "Third-Party Risk Assessment"
+  short: "Third-Party Risk"
   lane: "Govern"
   tagline: "Checks the vendors that hold your data."
-  objectives: []
+  objectives: [confidentiality, integrity, availability]
   marker: "Program-level"
-  outside: program
+  triad: [280, 248]
+  label: right
+  protects: all
   purpose: "Assesses the risks of outsourcing processes to third-party vendors, since vendors with access to sensitive information widen the organization's exposure to cyberattacks. Assessing and managing those risks strengthens security and supports regulatory compliance."
   phases: [5]
   laws:
@@ -409,7 +429,7 @@
       note: "Requires using only processors that give sufficient guarantees, and binding them with a contract."
     - key: gdpr
       name: "GDPR"
-      url: /laws/gdpr/#arts-44-46
+      url: /laws/gdpr/#art-44-46
       ref: "Arts. 44-46"
       kind: supports
       note: "Transfers of personal data to a vendor outside the EU need an adequacy decision or other safeguards."
@@ -424,6 +444,7 @@
   nist80053: "SR family"
   cis: "Control 15"
   iso: "5.19-5.22"
+  soc2: "Security"
   references:
     - name: "SP 800-161 Rev. 1: Cybersecurity Supply Chain Risk Management Practices"
       publisher: "NIST"

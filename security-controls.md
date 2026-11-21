@@ -11,6 +11,7 @@ A reference library of the cybersecurity controls used throughout the third-part
 
 {% assign phase_names = "Pre-Screening,Verification,Criminal & Legal,Financial,Sanctions,Monitoring" | split: "," %}
 {% assign lanes = "Protect,Monitor,Govern" | split: "," %}
+{% assign fws = "soc2,iso27001" | split: "," %}
 
 <div class="ctl-top">
 
@@ -41,17 +42,10 @@ A reference library of the cybersecurity controls used throughout the third-part
 
 <p class="ctl-caption">Near a corner, a control mainly serves one objective. On an edge, it serves two. In the middle, it serves all three. Click a corner to highlight the controls that serve it.</p>
 
-<div class="ctl-outside">
-<div>
-<b>Detection and accountability</b>
-<span>They record and watch activity instead of preventing it, so they sit outside the triangle.</span>
-{% for c in site.data.controls %}{% if c.outside == "detection" %}<button type="button" class="ctl-chip lane-{{ c.lane | downcase }}" data-id="{{ c.id }}" data-obj="{{ c.objectives | join: ' ' }}">{{ c.name }}</button>{% endif %}{% endfor %}
-</div>
-<div>
-<b>Program-level</b>
-<span>It governs how vendors handle all three objectives.</span>
-{% for c in site.data.controls %}{% if c.outside == "program" %}<button type="button" class="ctl-chip lane-{{ c.lane | downcase }}" data-id="{{ c.id }}" data-obj="{{ c.objectives | join: ' ' }}">{{ c.name }}</button>{% endif %}{% endfor %}
-</div>
+<div class="ctl-legend">
+<span class="lane-protect">Protect</span>
+<span class="lane-monitor">Monitor</span>
+<span class="lane-govern">Govern</span>
 </div>
 
 </div>
@@ -92,27 +86,10 @@ A reference library of the cybersecurity controls used throughout the third-part
 <div class="ctl-map">
 
 <div class="ctl-map-col">
-<h4>Protects</h4>
-
+<h4>{{ c.protects_label | default: "Protects" }}</h4>
 <div class="ctl-tags">
-
-{% for id in c.protects %}
-{% assign t = site.data.data_types | where: "id", id | first %}
-
-<a href="{{ t.url | relative_url }}">
-  {{ t.name }}
-</a>
-
-{% endfor %}
-
+{% if c.protects == "all" %}{% for t in site.data.data_types %}<a href="{{ t.url | relative_url }}">{{ t.name }}</a>{% endfor %}{% else %}{% for did in c.protects %}{% assign t = site.data.data_types | where: "id", did | first %}<a href="{{ t.url | relative_url }}">{{ t.name }}</a>{% endfor %}{% endif %}
 </div>
-
-<div class="ctl-map-col">
-<h4>Required or supported by</h4>
-<ul class="ctl-laws">
-{% for l in c.laws %}<li><span class="ctl-law-name">{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% else %}{{ l.name }}{% endif %}</span> <span class="ctl-ref">{{ l.ref }}</span> <span class="ctl-kind {{ l.kind }}">{% if l.kind == "named" %}Named in the rule{% else %}Supports the rule{% endif %}</span><small>{{ l.note }}</small></li>
-{% endfor %}
-</ul>
 </div>
 
 <div class="ctl-map-col">
@@ -122,12 +99,23 @@ A reference library of the cybersecurity controls used throughout the third-part
 
 </div>
 
-<div class="ctl-gov">
+<div class="ctl-block">
+<h4>Required or supported by</h4>
+<ul class="ctl-laws">
+{% for l in c.laws %}<li>
+<div class="ctl-law-top"><span class="ctl-law-name">{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% else %}{{ l.name }}{% endif %}</span><span class="ctl-ref">{{ l.ref }}</span><span class="ctl-kind {{ l.kind }}">{% if l.kind == "named" %}Named in the rule{% else %}Supports the rule{% endif %}</span></div>
+<small>{{ l.note }}</small>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="ctl-block ctl-gov">
 <h4>Governance considerations</h4>
 <p>{{ c.governance }}</p>
 </div>
 
-<div class="ctl-refs">
+<div class="ctl-block ctl-refs">
 <h4>Authoritative references</h4>
 <ul>
 {% for r in c.references %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a><small>{{ r.publisher }}{% if r.detail %} &middot; {{ r.detail }}{% endif %}{% if r.checked %} &middot; Checked {{ r.checked }}{% endif %}</small></li>
@@ -140,23 +128,101 @@ A reference library of the cybersecurity controls used throughout the third-part
 <span><b>NIST CSF 2.0</b>{{ c.csf }}</span>
 <span><b>NIST SP 800-53</b>{{ c.nist80053 }}</span>
 <span><b>CIS Controls v8.1</b>{{ c.cis }}</span>
-<span><b>ISO/IEC 27002:2022</b>{{ c.iso }}</span>
+<span><b>ISO/IEC 27001 Annex A (27002:2022)</b>{{ c.iso }}</span>
+<span><b>SOC 2 criteria</b>{{ c.soc2 }}</span>
 </div>
 
 </div>
 {% endfor %}
 </div>
 
-<p class="ctl-note">This page is an educational mapping for this project, not legal advice. Reference links point to government and standards bodies. CIS and ISO identifiers are shown only as cross-references, and some rules apply only to certain organizations, so check the current text of each provision before relying on it.</p>
+<section class="asr" id="assurance">
+
+<h2 class="asr-title">How vendors prove their controls: SOC 2 and ISO 27001</h2>
+
+<p class="asr-intro">In due diligence, a vendor saying that it uses encryption is not enough. Two frameworks are requested most often: SOC 2, an independent auditor's report, and ISO 27001, a certified management system. Select a framework, then a criterion or theme, to see which controls from this page it covers.</p>
+
+<div class="asr-tabs">
+<button type="button" class="asr-tab active" data-tab="soc2">SOC 2</button>
+<button type="button" class="asr-tab" data-tab="iso27001">ISO/IEC 27001</button>
+</div>
+
+{% for fw in fws %}{% assign f = site.data.assurance[fw] %}
+<div class="asr-panel" id="asr-{{ fw }}"{% unless forloop.first %} hidden{% endunless %}>
+
+<div class="asr-grid">
+<div class="asr-box"><h4>What it is</h4><p>{{ f.what }}</p></div>
+<div class="asr-box"><h4>Who it applies to</h4><p>{{ f.applies }}</p></div>
+<div class="asr-box"><h4>What it shows</h4><p>{{ f.shows }}</p></div>
+</div>
+
+<div class="asr-grid">
+{% for x in f.facts %}<div class="asr-box"><h4>{{ x.title }}</h4><p>{{ x.text }}</p></div>
+{% endfor %}
+</div>
+
+<h3 class="asr-sub">{{ f.items_title }}</h3>
+
+<div class="asr-chips">
+{% for it in f.items %}<button type="button" class="asr-chip{% if forloop.first %} active{% endif %}" data-fw="{{ fw }}" data-id="{{ it.id }}"><b>{{ it.name }}</b><span>{{ it.tag }}</span></button>
+{% endfor %}
+</div>
+
+{% for it in f.items %}<div class="asr-detail" data-fw="{{ fw }}" data-id="{{ it.id }}"{% unless forloop.first %} hidden{% endunless %}>
+<p>{{ it.summary }}</p>
+<p><b>Examples:</b> {{ it.examples }}</p>
+{% if it.controls.size > 0 %}<h4>Controls on this page</h4>
+<div class="asr-tags">{% for cid in it.controls %}{% assign ctl = site.data.controls | where: "id", cid | first %}<a href="#{{ cid }}">{{ ctl.name }}</a>{% endfor %}</div>{% endif %}
+{% if it.gap %}<p class="asr-gap">{{ it.gap }}</p>{% endif %}
+{% if it.links %}<h4>Related GDPR articles</h4>
+<div class="asr-tags">{% for l in it.links %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% endfor %}</div>{% endif %}
+</div>
+{% endfor %}
+
+<div class="asr-grid">
+<div class="asr-box"><h4>Why it matters in due diligence</h4><p>{{ f.why }}</p></div>
+<div class="asr-box"><h4>What to check</h4>
+<ul>
+{% for ck in f.check %}<li>{{ ck }}</li>
+{% endfor %}
+</ul>
+</div>
+<div class="asr-box"><h4>Official sources</h4>
+<ul>
+{% for r in f.references %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a><small>{{ r.publisher }}{% if r.detail %} &middot; {{ r.detail }}{% endif %}</small></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+
+</div>
+{% endfor %}
+
+</section>
+
+<p class="ctl-note">This page is an educational mapping for this project, not legal advice. Reference links point to government and standards bodies. CIS, ISO, and SOC 2 identifiers are shown only as cross-references, and some rules apply only to certain organizations, so check the current text of each provision before relying on it.</p>
 
 <script>
 
-var controls = document.querySelectorAll('.ctl-node, .ctl-card, .ctl-chip');
+var controls = document.querySelectorAll('.ctl-node, .ctl-card');
 var nodes = document.querySelectorAll('.ctl-node');
 var corners = document.querySelectorAll('.ctl-corner');
 var profiles = document.querySelectorAll('.ctl-profile');
 var objective = '';
 var current = '';
+
+function hasControl(id) {
+
+  var found = false;
+
+  controls.forEach(function (c) {
+    if (c.dataset.id == id) {
+      found = true;
+    }
+  });
+
+  return found;
+}
 
 function objectivesOf(id) {
 
@@ -192,15 +258,7 @@ function refresh() {
 
 function showControl(id, scroll) {
 
-  var found = false;
-
-  controls.forEach(function (c) {
-    if (c.dataset.id == id) {
-      found = true;
-    }
-  });
-
-  if (!found) {
+  if (!hasControl(id)) {
     id = document.querySelector('.ctl-card').dataset.id;
   }
 
@@ -235,6 +293,44 @@ corners.forEach(function (corner) {
   });
 });
 
+window.addEventListener('hashchange', function () {
+  var h = window.location.hash.slice(1);
+  if (hasControl(h)) {
+    showControl(h, true);
+  }
+});
+
 showControl(window.location.hash.slice(1), false);
+
+var asrTabs = document.querySelectorAll('.asr-tab');
+var asrPanels = document.querySelectorAll('.asr-panel');
+var asrChips = document.querySelectorAll('.asr-chip');
+var asrDetails = document.querySelectorAll('.asr-detail');
+
+asrTabs.forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    asrTabs.forEach(function (t) {
+      t.classList.toggle('active', t == tab);
+    });
+    asrPanels.forEach(function (p) {
+      p.hidden = p.id != 'asr-' + tab.dataset.tab;
+    });
+  });
+});
+
+asrChips.forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    asrChips.forEach(function (c) {
+      if (c.dataset.fw == chip.dataset.fw) {
+        c.classList.toggle('active', c == chip);
+      }
+    });
+    asrDetails.forEach(function (d) {
+      if (d.dataset.fw == chip.dataset.fw) {
+        d.hidden = d.dataset.id != chip.dataset.id;
+      }
+    });
+  });
+});
 
 </script>
