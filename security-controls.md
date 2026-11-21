@@ -118,14 +118,14 @@ A reference library of the cybersecurity controls used throughout the third-part
 <h4>Authoritative references</h4>
 <ul>
 {% for r in c.references %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a><small>{{ r.publisher }}{% if r.detail %} &middot; {{ r.detail }}{% endif %}{% if r.checked %} &middot; Checked {{ r.checked }}{% endif %}</small></li>
-{% endfor %}<
+{% endfor %}
 
 </ul>
 </div>
-</div>
+
 {% endfor %}
 </div>
-
+</div>
 <section class="asr" id="assurance">
 
 <h2 class="asr-title">How vendors prove their controls: SOC 2 and ISO 27001</h2>
