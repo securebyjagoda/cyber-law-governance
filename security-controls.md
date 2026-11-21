@@ -118,10 +118,9 @@ A reference library of the cybersecurity controls used throughout the third-part
 <h4>Authoritative references</h4>
 <ul>
 {% for r in c.references %}<li><a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a><small>{{ r.publisher }}{% if r.detail %} &middot; {{ r.detail }}{% endif %}{% if r.checked %} &middot; Checked {{ r.checked }}{% endif %}</small></li>
-{% endfor %}
-</ul>
-</div>
+{% endfor %}</div>
 
+</ul>
 </div>
 
 {% endfor %}
