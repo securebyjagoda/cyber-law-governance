@@ -122,10 +122,11 @@ A reference library of the cybersecurity controls used throughout the third-part
 
 </ul>
 </div>
+</div>
 
 {% endfor %}
 </div>
-</div>
+
 <section class="asr" id="assurance">
 
 <h2 class="asr-title">How vendors prove their controls: SOC 2 and ISO 27001</h2>
