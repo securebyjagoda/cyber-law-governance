@@ -74,7 +74,6 @@ A reference library of the cybersecurity controls used throughout the third-part
 
 <div class="ctl-head">
 <h2>{{ c.name }}</h2>
-<span class="ctl-lane-tag lane-{{ c.lane | downcase }}">{{ c.lane }}</span>
 </div>
 
 <p class="ctl-purpose">{{ c.purpose }}</p>
@@ -103,7 +102,7 @@ A reference library of the cybersecurity controls used throughout the third-part
 <h4>Required or supported by</h4>
 <ul class="ctl-laws">
 {% for l in c.laws %}<li>
-<div class="ctl-law-top"><span class="ctl-law-name">{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% else %}{{ l.name }}{% endif %}</span><span class="ctl-ref">{{ l.ref }}</span><span class="ctl-kind {{ l.kind }}">{% if l.kind == "named" %}Named in the rule{% else %}Supports the rule{% endif %}</span></div>
+<div class="ctl-law-top"><span class="ctl-law-name">{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% else %}{{ l.name }}{% endif %}</span><span class="ctl-ref">{{ l.ref }}</span></div>
 <small>{{ l.note }}</small>
 </li>
 {% endfor %}
@@ -123,16 +122,7 @@ A reference library of the cybersecurity controls used throughout the third-part
 </ul>
 </div>
 
-<div class="ctl-cross">
-<h4>Framework cross-references</h4>
-<span><b>NIST CSF 2.0</b>{{ c.csf }}</span>
-<span><b>NIST SP 800-53</b>{{ c.nist80053 }}</span>
-<span><b>CIS Controls v8.1</b>{{ c.cis }}</span>
-<span><b>ISO/IEC 27001 Annex A (27002:2022)</b>{{ c.iso }}</span>
-<span><b>SOC 2 criteria</b>{{ c.soc2 }}</span>
-</div>
 
-</div>
 {% endfor %}
 </div>
 
