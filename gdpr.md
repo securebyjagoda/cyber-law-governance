@@ -1,41 +1,136 @@
----
-title: GDPR
-permalink: /laws/gdpr/
-layout: single
-classes: wide
----
-
-**General Data Protection Regulation (Regulation (EU) 2016/679)**
+# General Data Protection Regulation (GDPR)
 
 ## Overview
 
-The GDPR is the European Union's framework for protecting personal data. Applicable since 25 May 2018, it sets rules for how organizations collect, use, store, share, and secure data related to people in the EU. It also gives individuals rights over their data and gives national supervisory authorities the power to enforce the rules.
+The General Data Protection Regulation (Regulation (EU) 2016/679) is the primary data protection law of the European Union. It regulates how organizations collect, use, store, transfer, and protect personal data relating to individuals located in the European Economic Area.
 
-## Who it applies to
+For organizations conducting third-party due diligence, the GDPR affects how information is collected, verified, screened, stored, and shared throughout the due diligence process.
 
-The GDPR applies to organizations established in the EU as well as to organizations outside the EU that offer goods or services to people in the EU or monitor their behavior. For a US real estate company, that can include European investors, tenants, and counterparties whose information is screened during due diligence.
+---
 
-## Key terms
+## Why It Matters
 
-- **Personal data:** any information relating to an identified or identifiable person (Article 4(1)). This is much broader than the "personal information" defined in Massachusetts 201 CMR 17.00, which centers on a resident's name combined with specified sensitive identifiers.
-- **Controller:** the organization that decides why and how personal data is processed.
-- **Processor:** an organization that processes personal data on a controller's behalf, such as a screening vendor or a property management platform.
-- **Supervisory authority:** the national regulator that enforces the GDPR.
+Unlike many U.S. laws that focus on specific industries or types of information, the GDPR establishes broad requirements governing both the collection and protection of personal data.
 
-## Why it matters for due diligence
+For organizations conducting due diligence, the GDPR affects:
 
-Screening collects identity, financial, criminal-background, and sanctions information about individuals, and all of it can be personal data. Criminal-offence data has extra conditions under Article 10. In this project's [law-to-workflow matrix]({{ '/laws/' | relative_url }}), the GDPR applies from the Verification phase through Monitoring (see the [workflow]({{ '/workflow/' | relative_url }})).
+- Identity verification
+- Background investigations
+- Financial reviews
+- Sanctions screening
+- Vendor assessments
+- Ongoing monitoring
 
-## How this project compares the GDPR with U.S. law
+The regulation therefore influences nearly every stage of the due diligence lifecycle.
 
-The central comparison in this research sets GDPR Articles 5, 6, 10, 25, 32, and 33 against Massachusetts 201 CMR 17.00 and M.G.L. c.93H. The practical examples are tenant screening, property transaction records, and third-party property management systems. One recurring finding is that information can fall outside Massachusetts's narrower definition of personal information and still be covered by the GDPR, so a U.S. compliance program built only on Massachusetts law can leave gaps. The table below summarizes each comparison, and every article has a profile with the research question, the answer, and an illustrative scenario.
+---
+
+## Scope
+
+The GDPR applies to:
+
+- Organizations established within the European Union
+- Organizations outside the European Union that offer goods or services to individuals in the EU
+- Organizations that monitor the behavior of individuals located in the EU
+
+Its applicability depends primarily on the individuals whose data is being processed rather than solely on the organization's physical location.
+
+---
+
+## Protected Information
+
+The GDPR protects personal data.
+
+Examples include:
+
+- Names
+- Email addresses
+- Phone numbers
+- Government identifiers
+- Financial information
+- Property ownership records
+- Location data
+- Online identifiers
+- Criminal background information
+
+This definition is substantially broader than the definition of personal information contained in Massachusetts 201 CMR 17.00.
+
+---
+
+## Key Requirements
+
+Organizations subject to the GDPR must:
+
+- Establish a lawful basis for processing personal data.
+- Limit collection to what is necessary.
+- Maintain appropriate security safeguards.
+- Implement privacy by design and by default.
+- Maintain records of processing activities.
+- Conduct risk assessments where required.
+- Report qualifying personal data breaches.
+- Manage third-party processors appropriately.
+- Implement safeguards for international data transfers.
+
+---
+
+## Relationship to Due Diligence
+
+The GDPR applies throughout the due diligence process, particularly during:
+
+- Verification
+- Criminal and legal checks
+- Financial reviews
+- Sanctions screening
+- Ongoing monitoring
+
+Activities involving criminal records, sanctions screening, third-party processors, and international data transfers often trigger additional requirements.
+
+---
+
+## Relationship to Other Laws
+
+This research compares key GDPR provisions with:
+
+- 201 CMR 17.00
+- M.G.L. c.93H
+- FCRA
+- GLBA
+- OFAC requirements
+
+Although similarities exist, compliance with U.S. requirements does not automatically satisfy GDPR obligations.
+
+---
+
+## Cybersecurity Implications
+
+Many GDPR obligations rely upon cybersecurity controls such as:
+
+- Encryption
+- Authentication
+- Access Control
+- Audit Logging
+- Security Monitoring
+- Data Loss Prevention
+- Third-Party Risk Assessment
+
+These controls are explored in the Security Controls section of this project.
+
+---
+
+## Article Explorer
+
+The interactive explorer below examines the GDPR provisions that are most relevant to third-party due diligence and compares them to U.S. legal requirements.
 
 {% include gdpr-articles.html %}
 
+---
+
 ## Enforcement
 
-Fines depend on which rules are broken. Violations of the basic processing principles (Articles 5 and 6) and of the international transfer rules (Articles 44-49) can reach EUR 20 million or 4% of worldwide annual turnover, whichever is higher. Violations of the controller and processor duties in Articles 25-39, including security and breach notification, fall in a lower tier of up to EUR 10 million or 2% (Article 83).
+...
 
-## Official text
+---
 
-[Regulation (EU) 2016/679 on EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+## Official Resources
+
+...

@@ -660,7 +660,7 @@ Monitoring
       <li>Failure to Dispose od Data Securely</li>
       <li>Unauthorized Access</li>
       <li>Unauthorized Disclosure</li>
-      <li>Incompleet Audit Trails</li>
+      <li>Incomplete Audit Trails</li>
     </ul>
 </div>
 

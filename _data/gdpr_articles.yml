@@ -15,7 +15,6 @@
       links:
         - name: "201 CMR 17.00"
           url: /laws/201-cmr-17/
-  scenario: "A company records the email addresses and IP addresses of EU visitors to a virtual property tour, and links property records to named owners. None of this may meet the Massachusetts definition of personal information, but it can still be personal data under the GDPR."
   references:
     - name: "GDPR full text, Article 4"
       publisher: "EUR-Lex"
@@ -50,7 +49,6 @@
           url: /laws/ofac/
         - name: "FCRA"
           url: /laws/fcra/
-  scenario: "A property manager screens an EU-based investor against sanctions lists. A sanctions-screening record may have to be kept for the U.S. recordkeeping period, but the rest of the investor's file should be deleted on a documented schedule, and the retained record should be limited to compliance staff."
   controls: [access-control, secure-data-disposal]
   phases: [2, 3, 4, 5, 6]
   references:
@@ -83,7 +81,6 @@
       links:
         - name: "OFAC"
           url: /laws/ofac/
-  scenario: "A U.S. firm screens an EU-resident investor against sanctions lists. It cannot simply cite OFAC as its Art. 6(1)(c) basis, so it documents a legitimate-interests assessment, or another basis, before running the check."
   phases: [2]
   references:
     - name: "GDPR full text, Article 6"
@@ -112,7 +109,6 @@
       links:
         - name: "FCRA"
           url: /laws/fcra/
-  scenario: "A U.S. property manager wants a criminal background check on a rental applicant who lives in the EU. Following the FCRA does not authorize the check under Art. 10. The company needs a basis in EU or Member State law with safeguards, and must also meet Art. 6 and any national restrictions."
   phases: [3]
   references:
     - name: "GDPR full text, Article 10"
@@ -134,7 +130,6 @@
     - title: "Art. 5 vs. Art. 25"
       question: "What is the difference between GDPR Articles 5 and 25?"
       answer: "Article 5 establishes the principles organizations must follow, such as data minimization, accuracy, storage limitation, and confidentiality, while Article 25 requires organizations to implement those principles through privacy by design and by default. In other words, Article 5 defines what organizations must achieve, while Article 25 addresses how privacy protections must be integrated into systems and processing practices."
-  scenario: "A tenant-screening workflow is designed so that each step collects only the fields it needs, and its default settings show results only to the reviewers who need them."
   controls: [access-control]
   references:
     - name: "GDPR full text, Article 25"
@@ -169,7 +164,6 @@
       links:
         - name: "201 CMR 17.00"
           url: /laws/201-cmr-17/
-  scenario: "A cloud property-management system stores tenant IDs and payment details. The WISP baseline (encryption, access control, authentication, monitoring) is a starting point, but for EU tenants a documented risk assessment and regular testing may call for more."
   relevance: "This is the strongest article for a technical cybersecurity analysis. It requires risk-appropriate security measures, potentially including encryption, system resilience, recovery capabilities, and regular security testing."
   question: "What cybersecurity measures must international real estate companies implement to satisfy GDPR security obligations when protecting property transactions and tenant information?"
   controls: [encryption, authentication, access-control, security-monitoring, dlp]
@@ -204,7 +198,6 @@
       links:
         - name: "M.G.L. c.93H"
           url: /laws/mgl-c93h/
-  scenario: "A breach at a third-party property-management vendor exposes both U.S. and EU tenants. The company prepares a notice to the EU supervisory authority (72 hours from becoming aware, where feasible), a Massachusetts filing with the Attorney General and OCABR, and separate notices to affected individuals."
   relevance: "Examines the legal consequences of ransomware, database compromises, and unauthorized disclosure. Where notification is required, controllers generally must notify the supervisory authority within 72 hours of becoming aware of a personal data breach."
   question: "How should multinational real estate organizations coordinate cybersecurity incident response and GDPR breach reporting across jurisdictions?"
   controls: [audit-logging, security-monitoring]
