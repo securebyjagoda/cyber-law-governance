@@ -1,0 +1,231 @@
+<div class="gcmp-cards">
+
+<button type="button" class="gcmp-card active" data-id="screening">
+  <span class="gcmp-card-name">Tenant Screening</span>
+  <span class="gcmp-card-text">
+    Background checks, tenant screenings, and sanctions reviews.
+  </span>
+</button>
+
+<button type="button" class="gcmp-card" data-id="transactions">
+  <span class="gcmp-card-name">Transaction Records</span>
+  <span class="gcmp-card-text">
+    Domestic and international property transactions.
+  </span>
+</button>
+
+<button type="button" class="gcmp-card" data-id="vendors">
+  <span class="gcmp-card-name">Third-Party Systems</span>
+  <span class="gcmp-card-text">
+    Property management, SaaS, cloud, and payment platforms.
+  </span>
+</button>
+
+</div>
+
+
+<div id="gcmp-screening" class="gcmp-profile">
+
+<h3>Tenant Screening</h3>
+
+<div class="gcmp-section">
+
+<h4>Data Collected</h4>
+
+<div class="gcmp-tags">
+<span>Identity & Personal Information</span>
+<span>Corporate Information</span>
+<span>Legal & Regulatory Information</span>
+<span>Criminal & Background Information</span>
+<span>Financial Information</span>
+<span>Sanctions & Watchlist Information</span>
+</div>
+
+</div>
+
+<div class="gcmp-grid">
+
+<div>
+
+<h4>GDPR</h4>
+
+<ul>
+<li>Article 5: Data minimization and storage limitation</li>
+<li>Article 6: Lawful basis for processing</li>
+<li>Article 10: Criminal background information</li>
+<li>Article 25: Privacy by design and default</li>
+<li>Article 32: Security of processing</li>
+<li>Article 33: Breach notification</li>
+</ul>
+
+</div>
+
+<div>
+
+<h4>Massachusetts Laws</h4>
+
+<ul>
+<li>201 CMR 17.00: WISP, security controls, and awareness training</li>
+<li>M.G.L. c.93H: Breach notification and credit-monitoring obligations</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="gcmp-finding">
+
+<strong>Key Finding</strong>
+
+<p>
+An organization may satisfy Massachusetts cybersecurity requirements while still violating GDPR obligations if excessive information is collected or a lawful basis for processing is absent.
+</p>
+
+</div>
+
+</div>
+
+
+<div id="gcmp-transactions" class="gcmp-profile" hidden>
+
+<h3>Transaction Records</h3>
+
+<div class="gcmp-section">
+
+<h4>Data Collected</h4>
+
+<div class="gcmp-tags">
+<span>Identity & Personal Information</span>
+<span>Corporate Information</span>
+<span>Financial Information</span>
+</div>
+
+</div>
+
+<div class="gcmp-grid">
+
+<div>
+
+<h4>GDPR</h4>
+
+<ul>
+<li>Article 5: Data minimization and storage limitation</li>
+<li>Article 6: Lawful basis for processing</li>
+<li>Article 25: Privacy by design and default</li>
+<li>Article 32: Security of processing</li>
+<li>Article 33: Breach notification</li>
+</ul>
+
+</div>
+
+<div>
+
+<h4>Massachusetts Laws</h4>
+
+<ul>
+<li>201 CMR 17.00: WISP and security safeguards</li>
+<li>M.G.L. c.93H: Breach notification requirements</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="gcmp-finding">
+
+<strong>Key Finding</strong>
+
+<p>
+GDPR governs both the collection and protection of personal information throughout the transaction lifecycle, while Massachusetts laws focus primarily on security controls protecting information after collection.
+</p>
+
+</div>
+
+</div>
+
+
+<div id="gcmp-vendors" class="gcmp-profile" hidden>
+
+<h3>Third-Party Systems</h3>
+
+<div class="gcmp-section">
+
+<h4>Examples</h4>
+
+<div class="gcmp-tags">
+<span>Property Management Systems</span>
+<span>SaaS Platforms</span>
+<span>PaaS Providers</span>
+<span>Tenant Screening Vendors</span>
+<span>Payment Platforms</span>
+</div>
+
+</div>
+
+<div class="gcmp-grid">
+
+<div>
+
+<h4>GDPR</h4>
+
+<ul>
+<li>Article 28: Controller-Processor relationship</li>
+<li>Article 32: Security of processing</li>
+<li>Article 33: Breach notification</li>
+</ul>
+
+</div>
+
+<div>
+
+<h4>Massachusetts Laws</h4>
+
+<ul>
+<li>201 CMR 17.00: WISP, vendor oversight, and security safeguards</li>
+<li>M.G.L. c.93H: Breach notification obligations</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="gcmp-finding">
+
+<strong>Key Finding</strong>
+
+<p>
+Both GDPR and Massachusetts laws emphasize cybersecurity controls and risk management; however, GDPR Article 28 imposes significantly more detailed contractual oversight and accountability requirements for third-party providers.
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+const comparisonCards = document.querySelectorAll('.gcmp-card');
+const comparisonProfiles = document.querySelectorAll('.gcmp-profile');
+
+comparisonCards.forEach(card => {
+
+  card.addEventListener('click', function() {
+
+    const id = card.dataset.id;
+
+    comparisonCards.forEach(c =>
+      c.classList.remove('active')
+    );
+
+    card.classList.add('active');
+
+    comparisonProfiles.forEach(profile => {
+      profile.hidden =
+        profile.id !== 'gcmp-' + id;
+    });
+
+  });
+
+});
+
+</script>

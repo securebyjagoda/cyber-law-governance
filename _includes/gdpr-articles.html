@@ -2,25 +2,8 @@
 {% assign themes = "Principles and lawfulness,Security and breaches,Third parties and transfers" | split: "," %}
 <section class="gar" id="gdpr-articles">
 
-<h2 class="gar-title">GDPR articles in this research</h2>
+<h2 class="gar-title">Relationship to Other Laws</h2>
 
-<p class="gar-intro">The core comparison in this project sets GDPR Articles 5, 6, 10, 25, 32, and 33 against Massachusetts 201 CMR 17.00 and M.G.L. c.93H, using tenant screening, property transaction records, and third-party property management systems as practical examples.</p>
-
-<h3 class="gar-sub">GDPR vs. Massachusetts and U.S. law at a glance</h3>
-
-<div class="gar-table-wrap">
-<table class="gar-table">
-<thead><tr><th>GDPR</th><th>Compared with</th><th>Key difference</th></tr></thead>
-<tbody>
-{% for a in site.data.gdpr_articles %}{% if a.glance %}<tr>
-<td><a href="#{{ a.id }}">{{ a.short }}</a><small>{{ a.title }}</small></td>
-<td>{{ a.glance.us }}</td>
-<td>{{ a.glance.diff }}</td>
-</tr>
-{% endif %}{% endfor %}
-</tbody>
-</table>
-</div>
 
 <h3 class="gar-sub">Explore each article</h3>
 

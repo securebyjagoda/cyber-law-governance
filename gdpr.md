@@ -96,16 +96,11 @@ Activities involving criminal records, sanctions screening, third-party processo
 
 ## Relationship to Other Laws
 
-This research compares key GDPR provisions with:
+Although similarities exist, compliance with U.S. requirements does not automatically satisfy all GDPR obligations. For international real estate due diligence, the relationship between U.S. and EU laws laws becomes most visible during common indsutry processes and activities.
 
-- 201 CMR 17.00
-- M.G.L. c.93H
-- FCRA
-- GLBA
-- OFAC requirements
+The examples below illustrate important differences and how these laws intersect.
 
-Although similarities exist, compliance with U.S. requirements does not automatically satisfy GDPR obligations.
-
+{% include gdpr-comparison.html %}
 ---
 
 ## Cybersecurity Implications
