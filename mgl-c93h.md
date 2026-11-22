@@ -1,6 +1,8 @@
 ---
 title: Massachusetts General Laws Chapter 93H
 permalink: /laws/mgl-c93h/
+layout: single
+classes: wide
 ---
 
 # Massachusetts General Laws Chapter 93H (MGL c. 93H)

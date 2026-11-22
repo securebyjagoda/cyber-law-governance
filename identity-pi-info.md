@@ -1,6 +1,8 @@
 ---
 title: Identity & Personal Information
 permalink: /data/identity-personal-information/
+layout: single
+classes: wide
 ---
 
 # Identity & Personal Information

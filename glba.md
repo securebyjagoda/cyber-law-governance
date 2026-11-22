@@ -1,6 +1,8 @@
 ---
 title: Gramm-Leach-Bliley Act (GLBA)
 permalink: /laws/glba/
+layout: single
+classes: wide
 ---
 
 # Gramm-Leach-Bliley Act (GLBA)

@@ -1,6 +1,8 @@
 ---
 title: Criminal & Background Information
 permalink: /data/criminal-background-information/
+layout: single
+classes: wide
 ---
 
 # Criminal & Background Information

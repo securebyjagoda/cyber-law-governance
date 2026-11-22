@@ -1,6 +1,8 @@
 ---
 title: Sanctions & Watchlist Information
 permalink: /data/sanctions-watchlist-information/
+layout: single
+classes: wide
 ---
 
 # Sanctions & Watchlist Information

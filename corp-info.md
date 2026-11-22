@@ -1,6 +1,8 @@
 ---
 title: Corporate Information
 permalink: /data/corporate-information/
+layout: single
+classes: wide
 ---
 
 # Corporate Information

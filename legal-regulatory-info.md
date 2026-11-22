@@ -1,6 +1,8 @@
 ---
 title: Legal & Regulatory Information
 permalink: /data/legal-regulatory-information/
+layout: single
+classes: wide
 ---
 
 # Legal & Regulatory Information

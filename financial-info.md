@@ -1,6 +1,8 @@
 ---
 title: Financial Information
 permalink: /data/financial-information/
+layout: single
+classes: wide
 ---
 
 # Financial Information
