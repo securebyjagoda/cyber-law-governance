@@ -1,3 +1,10 @@
+---
+title: GDPR
+permalink: /laws/gdpr/
+layout: single
+classes: wide
+---
+
 # General Data Protection Regulation (GDPR)
 
 ## Overview
