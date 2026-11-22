@@ -146,7 +146,7 @@ Monitoring
 
 <div id="phase2" class="phase-card">
   
-  <div class="phase-front phase-blue">
+  <div class="phase-front phase-purple">
 
     <h2>Phase 2</h2>
 
@@ -261,7 +261,7 @@ Monitoring
 
 <div id="phase3" class="phase-card">
   
-  <div class="phase-front phase-blue">
+  <div class="phase-front phase-orange">
 
     <h2>Phase 3</h2>
 
@@ -373,7 +373,7 @@ Monitoring
 
 <div id="phase4" class="phase-card">
   
-  <div class="phase-front phase-blue">
+  <div class="phase-front phase-teal">
 
     <h2>Phase 4</h2>
 
@@ -484,7 +484,7 @@ Monitoring
 
 <div id="phase5" class="phase-card">
   
-  <div class="phase-front phase-blue">
+  <div class="phase-front phase-red">
 
     <h2>Phase 5</h2>
 
@@ -598,7 +598,7 @@ Monitoring
 
 <div id="phase6" class="phase-card">
   
-  <div class="phase-front phase-blue">
+  <div class="phase-front phase-gray">
 
     <h2>Phase 6</h2>
 
