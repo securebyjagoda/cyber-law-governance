@@ -5,8 +5,6 @@ layout: single
 classes: wide
 ---
 
-# General Data Protection Regulation (GDPR)
-
 ## Overview
 
 The General Data Protection Regulation (Regulation (EU) 2016/679) is the primary data protection law of the European Union. It regulates how organizations collect, use, store, transfer, and protect personal data relating to individuals located in the European Economic Area.
@@ -136,3 +134,5 @@ The interactive explorer below examines the GDPR provisions that are most releva
 ## Official Resources
 
 ...
+
+	{% include law-page.html accent="eu" keep="Overview,Scope,Why It Matters,Key Articles,Official Text" %}

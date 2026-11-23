@@ -1,0 +1,258 @@
+{% assign keep_default = "Overview,Why It Matters,Scope,Official Resources,Official Law,Official Text" %}
+{% assign keep_list = include.keep | default: keep_default | split: "," %}
+{% assign accent = include.accent | default: "us" %}
+{% assign grid_title = include.title | default: "Explore the details" %}
+<script>
+
+(function () {
+
+  if (typeof HTMLDialogElement != 'function') {
+    return;
+  }
+
+  var root = document.querySelector('.page__content');
+
+  if (!root) {
+    return;
+  }
+
+  var keep = {{ keep_list | jsonify }};
+  var accent = {{ accent | jsonify }};
+  var gridTitle = {{ grid_title | jsonify }};
+
+  keep = keep.map(function (k) {
+    return k.trim().toLowerCase();
+  });
+
+  function slugify(text) {
+    return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function shorten(text, max) {
+
+    text = text.replace(/\s+/g, ' ').trim();
+
+    if (text.length <= max) {
+      return text;
+    }
+
+    var cut = text.slice(0, max);
+
+    return cut.slice(0, cut.lastIndexOf(' ')) + '\u2026';
+  }
+
+  /* split the page into sections at each h2 */
+
+  var kids = Array.prototype.slice.call(root.children);
+  var sections = [];
+  var current = null;
+
+  kids.forEach(function (node) {
+
+    if (node.tagName == 'H2') {
+      current = { head: node, title: node.textContent.trim(), nodes: [] };
+      sections.push(current);
+    } else if (current && node.tagName != 'SCRIPT') {
+      current.nodes.push(node);
+    }
+  });
+
+  /* turn every section that is not kept into a card and a pop-up */
+
+  var cards = [];
+  var grid = null;
+  var afterCard = false;
+  var firstGrid = true;
+
+  sections.forEach(function (s) {
+
+    if (keep.indexOf(s.title.toLowerCase()) != -1) {
+      afterCard = false;
+      return;
+    }
+
+    if (!afterCard) {
+
+      grid = document.createElement('div');
+      grid.className = 'lp-grid lp-' + accent;
+
+      if (firstGrid) {
+
+        var gt = document.createElement('h2');
+        gt.className = 'lp-grid-title';
+        gt.textContent = gridTitle;
+        root.insertBefore(gt, s.head);
+
+        var hint = document.createElement('p');
+        hint.className = 'lp-hint';
+        hint.textContent = 'Select a card to read the section.';
+        root.insertBefore(hint, s.head);
+
+        firstGrid = false;
+      }
+
+      root.insertBefore(grid, s.head);
+    }
+
+    afterCard = true;
+
+    var dialog = document.createElement('dialog');
+    dialog.className = 'lp-dialog lp-' + accent;
+
+    var inner = document.createElement('div');
+    inner.className = 'lp-dialog-inner';
+
+    var head = document.createElement('div');
+    head.className = 'lp-dialog-head';
+
+    var title = document.createElement('h2');
+    title.className = 'lp-dialog-title';
+    title.textContent = s.title;
+
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'lp-close';
+    close.setAttribute('aria-label', 'Close');
+    close.innerHTML = '&times;';
+
+    head.appendChild(title);
+    head.appendChild(close);
+
+    var body = document.createElement('div');
+    body.className = 'lp-dialog-body';
+
+    s.nodes.forEach(function (n) {
+      if (n.tagName == 'HR') {
+        n.remove();
+      } else {
+        body.appendChild(n);
+      }
+    });
+
+    s.head.remove();
+
+    var nav = document.createElement('div');
+    nav.className = 'lp-dialog-nav';
+
+    inner.appendChild(head);
+    inner.appendChild(body);
+    inner.appendChild(nav);
+    dialog.appendChild(inner);
+    root.appendChild(dialog);
+
+    var firstP = body.querySelector('p');
+    var firstLi = body.querySelector('li');
+    var preview = firstP ? firstP.textContent : (firstLi ? firstLi.textContent : '');
+    var count = body.querySelectorAll('li').length;
+
+    var card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'lp-card';
+    card.innerHTML = '<span class="lp-card-title"></span><span class="lp-card-text"></span><span class="lp-card-meta"></span>';
+    card.children[0].textContent = s.title;
+    card.children[1].textContent = shorten(preview, 120);
+    card.children[2].textContent = (count > 0 ? count + ' items \u00B7 ' : '') + 'Open';
+    grid.appendChild(card);
+
+    var item = { title: s.title, slug: slugify(s.title), card: card, dialog: dialog, nav: nav };
+
+    cards.push(item);
+
+    close.addEventListener('click', function () {
+      dialog.close();
+    });
+
+    dialog.addEventListener('click', function (e) {
+
+      if (e.target == dialog) {
+        dialog.close();
+      }
+
+      var link = e.target.closest('a');
+
+      if (link && link.getAttribute('href') && link.getAttribute('href').charAt(0) == '#') {
+        dialog.close();
+      }
+    });
+
+    dialog.addEventListener('close', function () {
+
+      var anyOpen = cards.some(function (c) {
+        return c.dialog.open;
+      });
+
+      if (!anyOpen) {
+        document.documentElement.classList.remove('lp-lock');
+      }
+
+      if (window.location.hash.slice(1) == item.slug) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    });
+  });
+
+  /* opening, previous and next */
+
+  function openAt(i) {
+
+    cards[i].dialog.showModal();
+    cards[i].dialog.querySelector('.lp-dialog-body').scrollTop = 0;
+    document.documentElement.classList.add('lp-lock');
+    history.replaceState(null, '', '#' + cards[i].slug);
+  }
+
+  cards.forEach(function (c, i) {
+
+    c.card.addEventListener('click', function () {
+      openAt(i);
+    });
+
+    if (i > 0) {
+
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.className = 'lp-nav-btn';
+      prev.textContent = '\u2190 ' + cards[i - 1].title;
+
+      prev.addEventListener('click', function () {
+        c.dialog.close();
+        openAt(i - 1);
+      });
+
+      c.nav.appendChild(prev);
+    }
+
+    if (i < cards.length - 1) {
+
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.className = 'lp-nav-btn lp-nav-next';
+      next.textContent = cards[i + 1].title + ' \u2192';
+
+      next.addEventListener('click', function () {
+        c.dialog.close();
+        openAt(i + 1);
+      });
+
+      c.nav.appendChild(next);
+    }
+  });
+
+  function openFromHash() {
+
+    var h = window.location.hash.slice(1);
+
+    cards.forEach(function (c, i) {
+      if (c.slug == h && !c.dialog.open) {
+        openAt(i);
+      }
+    });
+  }
+
+  window.addEventListener('hashchange', openFromHash);
+
+  openFromHash();
+
+})();
+
+</script>

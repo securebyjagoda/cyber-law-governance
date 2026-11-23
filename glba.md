@@ -1,11 +1,9 @@
 ---
-title: Gramm-Leach-Bliley Act (GLBA)
+title: GLBA
 permalink: /laws/glba/
 layout: single
 classes: wide
 ---
-
-# Gramm-Leach-Bliley Act (GLBA)
 
 ## Overview
 
@@ -180,3 +178,4 @@ These controls help reduce the likelihood of unauthorized access, disclosure, al
 ### Official Law
 
 Gramm-Leach-Bliley Act (GLBA)
+{% include law-page.html accent="us" %}

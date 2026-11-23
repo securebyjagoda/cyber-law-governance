@@ -5,8 +5,6 @@ layout: single
 classes: wide
 ---
 
-# Massachusetts General Laws Chapter 93H (MGL c. 93H)
-
 ## Overview
 
 Massachusetts General Laws Chapter 93H is the Commonwealth's primary data breach notification law. It governs how organizations must respond when personal information belonging to Massachusetts residents is accessed, used, disclosed, or acquired without authorization.
@@ -156,3 +154,4 @@ These safeguards help reduce the likelihood of reportable breaches and provide e
 ### Official Law
 
 Massachusetts General Laws Chapter 93H – Security Breaches
+{% include law-page.html accent="ma" %}

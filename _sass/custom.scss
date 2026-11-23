@@ -2475,3 +2475,330 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* LAW PAGES (CARDS AND POP-UPS) */
+
+html.lp-lock {
+
+  overflow: hidden;
+}
+
+.page__content .lp-grid-title {
+
+  margin: 2rem 0 .4rem 0;
+
+  padding: 0;
+
+  border: none;
+
+  font-size: .8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+  color: #9ca3af;
+}
+
+.page__content .lp-hint {
+
+  font-size: .85rem;
+
+  color: #9ca3af;
+
+  margin: 0 0 .8rem 0;
+}
+
+.lp-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 1rem;
+
+  margin: 0 0 2rem 0;
+}
+
+.lp-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .4rem;
+
+  text-align: left;
+
+  background: #1f232b;
+
+  color: white;
+
+  border: 1px solid #3a3f4b;
+
+  border-left: 4px solid #3b82f6;
+
+  border-radius: 12px;
+
+  padding: 1rem 1.1rem;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.lp-grid.lp-ma .lp-card {
+
+  border-left-color: #a78bfa;
+}
+
+.lp-grid.lp-eu .lp-card {
+
+  border-left-color: #2dd4bf;
+}
+
+.lp-card:hover {
+
+  background: #252a34;
+
+  transform: translateY(-3px);
+}
+
+.lp-card-title {
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+}
+
+.lp-card-text {
+
+  font-size: .85rem;
+
+  color: #9ca3af;
+
+  flex-grow: 1;
+}
+
+.lp-card-meta {
+
+  font-size: .75rem;
+
+  color: #2dd4bf;
+}
+
+/* POP-UP */
+
+.lp-dialog {
+
+  width: min(860px, 92vw);
+
+  max-height: 86vh;
+
+  padding: 0;
+
+  border: 1px solid #3a3f4b;
+
+  border-top: 4px solid #3b82f6;
+
+  border-radius: 16px;
+
+  background: #1f232b;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+.lp-dialog.lp-ma {
+
+  border-top-color: #a78bfa;
+}
+
+.lp-dialog.lp-eu {
+
+  border-top-color: #2dd4bf;
+}
+
+.lp-dialog::backdrop {
+
+  background: rgba(2,6,23,.8);
+}
+
+.lp-dialog-inner {
+
+  display: flex;
+
+  flex-direction: column;
+
+  max-height: calc(86vh - 4px);
+}
+
+.lp-dialog-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.1rem 1.5rem;
+
+  border-bottom: 1px solid #3a3f4b;
+}
+
+.page__content .lp-dialog-title {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: none;
+
+  font-size: 1.4rem;
+}
+
+.lp-close {
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  border: none;
+
+  font-size: 2rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.lp-close:hover {
+
+  color: white;
+}
+
+.lp-dialog-body {
+
+  padding: 1.2rem 1.5rem;
+
+  overflow-y: auto;
+
+  flex: 1;
+}
+
+.page__content .lp-dialog-body p {
+
+  margin: 0 0 .9rem 0;
+
+  font-size: .95rem;
+
+  color: #e5e7eb;
+}
+
+.page__content .lp-dialog-body ul,
+.page__content .lp-dialog-body ol {
+
+  margin: 0 0 1rem 0;
+
+  padding-left: 1.3rem;
+
+  font-size: .95rem;
+}
+
+.page__content .lp-dialog-body li {
+
+  margin-bottom: .3rem;
+}
+
+.page__content .lp-dialog-body h3 {
+
+  margin: 1.2rem 0 .5rem 0;
+
+  font-size: 1rem;
+
+  color: #f59e0b;
+}
+
+.lp-dialog-body a {
+
+  color: #2dd4bf;
+}
+
+.lp-dialog-nav {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: .8rem 1.5rem;
+
+  border-top: 1px solid #3a3f4b;
+}
+
+.lp-nav-btn {
+
+  background: transparent;
+
+  color: #9ca3af;
+
+  border: 1px solid #3a3f4b;
+
+  border-radius: 10px;
+
+  padding: .4rem .9rem;
+
+  font-family: inherit;
+
+  font-size: .85rem;
+
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.lp-nav-btn:hover {
+
+  color: white;
+
+  border-color: #9ca3af;
+}
+
+.lp-nav-next {
+
+  margin-left: auto;
+}
+
+/* LAW PAGES MOBILE */
+
+@media (max-width: 900px) {
+
+  .lp-grid {
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .lp-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .lp-dialog-nav {
+
+    flex-direction: column;
+  }
+
+  .lp-nav-next {
+
+    margin-left: 0;
+  }
+}
