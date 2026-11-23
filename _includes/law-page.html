@@ -148,10 +148,9 @@
     var card = document.createElement('button');
     card.type = 'button';
     card.className = 'lp-card';
-    card.innerHTML = '<span class="lp-card-title"></span><span class="lp-card-text"></span><span class="lp-card-meta"></span>';
+    card.innerHTML = '<span class="lp-card-title"></span><span class="lp-card-text"></span>';
     card.children[0].textContent = s.title;
     card.children[1].textContent = shorten(preview, 120);
-    card.children[2].textContent = (count > 0 ? count + ' items \u00B7 ' : '') + 'Open';
     grid.appendChild(card);
 
     var item = { title: s.title, slug: slugify(s.title), card: card, dialog: dialog, nav: nav };
