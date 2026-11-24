@@ -13,6 +13,8 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <select id="filter-type">
 <option value="all">All Data Types</option>
 <option value="identity">Identity Information</option>
+<option value="legal">Legal & Regulatory Information</option>
+<option value="corporate">Corporate Information</option>
 <option value="financial">Financial Information</option>
 <option value="criminal">Criminal Background Information</option>
 <option value="sanctions">Sanctions Information</option>
@@ -45,7 +47,7 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <div>Monitoring</div>
 </div>
 
-<div class="law-row" data-jurisdiction="eu" data-types="identity financial criminal sanctions">
+<div class="law-row" data-jurisdiction="eu" data-types="identity corporate legal financial criminal sanctions">
 <div class="law-name" data-tip="Data protection and privacy requirements.">GDPR</div>
 <div class="heat none"></div>
 <div class="heat yes"></div>
@@ -55,7 +57,7 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <div class="heat yes"></div>
 </div>
 
-<div class="law-row" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<div class="law-row" data-jurisdiction="massachusetts" data-types="identity corporate legal financial criminal sanctions">
 <div class="law-name" data-tip="Massachusetts data security regulation.">201 CMR 17.00</div>
 <div class="heat yes"></div>
 <div class="heat yes"></div>
@@ -65,7 +67,7 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 <div class="heat yes"></div>
 </div>
 
-<div class="law-row" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<div class="law-row" data-jurisdiction="massachusetts" data-types="identity corporate legal financial criminal sanctions">
 <div class="law-name" data-tip="Massachusetts personal information security law.">M.G.L. c.93H</div>
 <div class="heat yes"></div>
 <div class="heat yes"></div>
@@ -112,21 +114,21 @@ Explore how laws and regulations apply throughout the third-party due diligence 
 
 <div class="law-card-grid">
 
-<a class="law-card j-eu" href="{{ '/laws/gdpr/' | relative_url }}" data-jurisdiction="eu" data-types="identity financial criminal sanctions">
+<a class="law-card j-eu" href="{{ '/laws/gdpr/' | relative_url }}" data-jurisdiction="eu" data-types="identity corporate legal financial criminal sanctions">
 <span class="law-badge">European Union</span>
 <h3>GDPR</h3>
 <p>Data protection and privacy requirements.</p>
 <div class="law-tags"><span>Identity</span><span>Financial</span><span>Criminal</span><span>Sanctions</span></div>
 </a>
 
-<a class="law-card j-massachusetts" href="{{ '/laws/201-cmr-17/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<a class="law-card j-massachusetts" href="{{ '/laws/201-cmr-17/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity corporate legal financial criminal sanctions">
 <span class="law-badge">Massachusetts</span>
 <h3>201 CMR 17.00</h3>
 <p>Massachusetts data security regulation.</p>
 <div class="law-tags"><span>Identity</span><span>Financial</span><span>Criminal</span><span>Sanctions</span></div>
 </a>
 
-<a class="law-card j-massachusetts" href="{{ '/laws/mgl-c93h/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity financial criminal sanctions">
+<a class="law-card j-massachusetts" href="{{ '/laws/mgl-c93h/' | relative_url }}" data-jurisdiction="massachusetts" data-types="identity corporate legal financial criminal sanctions">
 <span class="law-badge">Massachusetts</span>
 <h3>M.G.L. c.93H</h3>
 <p>Massachusetts personal information security law.</p>
