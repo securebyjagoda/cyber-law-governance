@@ -40,28 +40,9 @@
 {% if a.after %}<p>{{ a.after }}</p>{% endif %}
 </div>
 
-{% if a.comparisons %}{% for cmp in a.comparisons %}<div class="gar-qa">
-<h4>Research Q&amp;A: {{ cmp.title }}</h4>
-<p><b>Question.</b> {{ cmp.question }}</p>
-<p><b>Answer.</b> {{ cmp.answer }}</p>
-{% if cmp.note %}<p><b>Note.</b> {{ cmp.note }}</p>{% endif %}
-{% if cmp.links %}<div class="gar-tags">{% for l in cmp.links %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% endfor %}</div>{% endif %}
-</div>
-{% endfor %}{% endif %}
-
-{% if a.status %}<div class="gar-status">
-<h4>Current status</h4>
-<p>{{ a.status }}</p>
-</div>{% endif %}
-
 {% if a.relevance %}<div class="gar-block">
 <h4>Why it matters for real estate</h4>
 <p>{{ a.relevance }}</p>
-</div>{% endif %}
-
-{% if a.question %}<div class="gar-question">
-<h4>Open research question</h4>
-<p>{{ a.question }}</p>
 </div>{% endif %}
 
 <div class="gar-links">
@@ -82,8 +63,6 @@
 {% endfor %}
 </ul>
 </div>
-
-{% if a.page %}<a class="gar-open" href="{{ a.page | relative_url }}">Read the full analysis &rarr;</a>{% endif %}
 
 </div>
 {% endfor %}
