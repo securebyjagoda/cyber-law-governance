@@ -1,26 +1,3 @@
-- id: art-4
-  number: "Article 4(1)"
-  short: "Art. 4(1)"
-  title: "Definition of personal data"
-  theme: "Principles and lawfulness"
-  summary: "Defines personal data very broadly, which decides what falls under the GDPR at all."
-  requires: "Personal data means any information relating to an identified or identifiable natural person. A person is identifiable if they can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, or an online identifier, or to factors specific to their identity."
-  glance:
-    us: "201 CMR 17.02 (definition of personal information)"
-    diff: "Massachusetts covers a resident's name combined with specified sensitive identifiers. The GDPR covers any information relating to an identifiable individual, so some data falls outside Massachusetts law but inside the GDPR."
-  comparisons:
-    - title: "Art. 4(1) vs. 201 CMR 17.00"
-      question: "201 CMR 17.00 defines personal information narrowly compared to the GDPR's definition, which is much broader. Can information fall outside Massachusetts law but still be protected by the GDPR?"
-      answer: "Yes. Massachusetts 201 CMR 17.00 generally defines personal information through a person's name combined with specified sensitive identifiers, whereas GDPR Article 4(1) covers a much broader range of information relating to identifiable individuals, including email addresses, IP addresses, and certain property-related records. Consequently, an international real estate company could process information outside Massachusetts' defined category while still being subject to GDPR requirements, provided GDPR applies to that processing."
-      links:
-        - name: "201 CMR 17.00"
-          url: /laws/201-cmr-17/
-  references:
-    - name: "GDPR full text, Article 4"
-      publisher: "EUR-Lex"
-      detail: "Regulation (EU) 2016/679"
-      url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
-
 - id: art-5
   number: "Article 5"
   short: "Art. 5"
